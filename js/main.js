@@ -14,13 +14,6 @@ $('.carousel').slick({
   //   adaptiveHeight: true,
 });
 
-//SECTION Gallery init
-baguetteBox.run('.gallery', {
-  preload: 3,
-  overlayBackgroundColor: 'rgba(0,0,0,0.9)',
-  async: true,
-});
-
 //SECTION Navigation
 /* Navigation */
 const navMob = document.getElementById('navigation-mobile');
@@ -53,8 +46,6 @@ function toggle() {
 
 navMob.addEventListener('click', () => {
   navMob.classList.toggle('navigation-mobile-open');
-  console.log('Loggg');
-
   toggle();
 });
 
