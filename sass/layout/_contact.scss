@@ -2,6 +2,15 @@
   text-align: center;
   padding: 0 20rem;
   // border-bottom: 8px solid #26881b;
+  @include respond(bp-big) {
+    padding: 0 10rem;
+  }
+  @include respond(tab-land) {
+    padding: 0 5rem;
+  }
+  @include respond(bp-700) {
+    padding: 0 3rem;
+  }
 
   &::after {
     content: '';
@@ -27,6 +36,10 @@
       rgb(32, 116, 23) 80%,
       rgba(0, 0, 0, 0) 100%
     );
+    @include respond(tab-land) {
+      width: 100%;
+      left: 0;
+    }
   }
 
   & h1 {
@@ -74,6 +87,9 @@
     margin-bottom: 5rem;
     &-left {
       grid-area: left;
+      display: grid;
+      align-content: center;
+      justify-content: center;
     }
     &-right {
       text-align: left;
@@ -118,6 +134,25 @@
     width: 100%;
     border-radius: 5px;
     box-shadow: 5px 5px 10px #0000003d;
+    width: 450px;
+    height: 450px;
+    @include respond(tab-land) {
+      width: 400px;
+      height: 400px;
+      // width: 40%;
+      // height: max-content;
+      // height: 0;
+      // padding-bottom: 80%;
+      // padding-top: -100%;
+    }
+    @include respond(tab-port) {
+      width: 330px;
+      height: 330px;
+    }
+    @include respond(bp-700) {
+      width: 300px;
+      height: 300px;
+    }
   }
 }
 

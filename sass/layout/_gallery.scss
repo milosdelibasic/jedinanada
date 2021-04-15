@@ -3,6 +3,17 @@
   padding: 5rem 20rem;
   background-color: $color-primary;
   text-align: center;
+  @include respond(bp-big) {
+    padding: 5rem 10rem;
+  }
+
+  @include respond(tab-land) {
+    padding: 5rem;
+  }
+
+  @include respond(bp-700) {
+    padding: 5rem 3rem;
+  }
   &::after {
     content: '';
     display: block;

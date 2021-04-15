@@ -2,9 +2,18 @@
   background: #ffffff;
   //   height: 800px;
   text-align: center;
-  padding: 0 20rem;
+  padding: 0 20rem 5rem 20rem;
   // border-bottom: 8px solid #26881b;
-  padding-bottom: 5rem;
+  // padding-bottom: 5rem;
+  @include respond(bp-big) {
+    padding: 0 10rem 5rem 10rem;
+  }
+  @include respond(tab-land) {
+    padding: 0 5rem 5rem 5rem;
+  }
+  @include respond(bp-700) {
+    padding: 0 3rem 3rem 3rem;
+  }
   &::after {
     content: '';
     display: block;
@@ -12,6 +21,7 @@
     position: relative;
     left: -20rem;
     bottom: calc(-5rem + -7px);
+
     z-index: 3;
     width: calc(100% + 40rem);
     background-image: -webkit-linear-gradient(
@@ -28,6 +38,13 @@
       rgb(32, 116, 23) 80%,
       rgba(0, 0, 0, 0) 100%
     );
+    @include respond(tab-land) {
+      width: 100%;
+      left: 0;
+    }
+    @include respond(bp-700) {
+      bottom: calc(-3rem + -7px);
+    }
   }
   & h1 {
     color: $text-primary;
@@ -75,11 +92,15 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     &--item {
       background-color: $color-primary-light2;
       border-radius: 15px;
       box-shadow: 1px 5px 5px #0f360b3d;
+      @include respond(tab-land) {
+        margin-bottom: 3rem;
+      }
 
       &-heading {
         font-size: 2.6rem;

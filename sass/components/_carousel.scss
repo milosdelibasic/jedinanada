@@ -16,6 +16,13 @@
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 
+  @include respond(tab-land) {
+    margin: 8rem auto;
+  }
+  @include respond(tab-port) {
+    margin: 5rem auto;
+  }
+
   &:focus {
     outline: none;
   }

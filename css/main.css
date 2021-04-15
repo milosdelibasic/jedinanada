@@ -111,6 +111,18 @@ nav {
           box-shadow: 0 3px 2px #0f360b4b;
 }
 
+@media only screen and (max-width: 75em) {
+  .carousel__box {
+    margin: 8rem auto;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .carousel__box {
+    margin: 5rem auto;
+  }
+}
+
 .carousel__box:focus {
   outline: none;
 }
@@ -220,6 +232,24 @@ nav {
   color: #fff;
 }
 
+@media only screen and (max-width: 87.5em) {
+  #footer {
+    padding: 3rem 10rem 0.8rem 10rem;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  #footer {
+    padding: 3rem 5rem 0.8rem 5rem;
+  }
+}
+
+@media only screen and (max-width: 43.75em) {
+  #footer {
+    padding: 3rem 3rem 0.8rem 3rem;
+  }
+}
+
 .footer__container {
   display: -ms-grid;
   display: grid;
@@ -232,10 +262,22 @@ nav {
   width: 100%;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .footer__container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 'logo left' 'middle right';
+  }
+}
+
 .footer__container--location {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: left;
+  display: -ms-grid;
+  display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -262,6 +304,7 @@ nav {
 
 .footer__container--location .contact-map {
   width: 200px;
+  height: 200px;
   margin-bottom: 5px;
 }
 
@@ -593,11 +636,22 @@ nav .logo span {
   display: -ms-grid;
   display: grid;
   background: #83b735;
+  overflow-x: hidden;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
       grid-template-areas: 'left right';
+}
+
+@media only screen and (max-width: 56.25em) {
+  #main {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 'top' 'bottom';
+  }
 }
 
 #main::after {
@@ -623,11 +677,31 @@ nav .logo span {
           justify-content: center;
 }
 
+@media only screen and (max-width: 75em) {
+  .main__left {
+    position: relative;
+    z-index: 20;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .main__left {
+    grid-area: top;
+  }
+}
+
 .main__right {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: right;
   position: relative;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .main__right {
+    grid-area: bottom;
+    bottom: 0;
+  }
 }
 
 .blob1 {
@@ -636,11 +710,26 @@ nav .logo span {
   left: 50px;
 }
 
+@media only screen and (max-width: 75em) {
+  .blob1 {
+    top: 180px;
+  }
+}
+
 .blob2 {
   position: absolute;
   bottom: 0;
   right: -10px;
   width: 600px;
+}
+
+@media only screen and (max-width: 75em) {
+  .blob2 {
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
 }
 
 .bins {
@@ -651,6 +740,30 @@ nav .logo span {
           transform-origin: bottom;
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+}
+
+@media only screen and (max-width: 87.5em) {
+  .bins {
+    right: 40px;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  .bins {
+    right: -100px;
+    -webkit-transform: scale(0.55);
+            transform: scale(0.55);
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .bins {
+    right: -50px;
+    -webkit-transform: scale(0.65);
+            transform: scale(0.65);
+  }
 }
 
 #about {
@@ -704,6 +817,18 @@ nav .logo span {
   position: relative;
 }
 
+@media only screen and (max-width: 75em) {
+  .about--box {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 43.75em) {
+  .about--box {
+    width: 80%;
+  }
+}
+
 .about--box p,
 .about--box li {
   color: white;
@@ -747,8 +872,25 @@ nav .logo span {
 #shop {
   background: #ffffff;
   text-align: center;
-  padding: 0 20rem;
-  padding-bottom: 5rem;
+  padding: 0 20rem 5rem 20rem;
+}
+
+@media only screen and (max-width: 87.5em) {
+  #shop {
+    padding: 0 10rem 5rem 10rem;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  #shop {
+    padding: 0 5rem 5rem 5rem;
+  }
+}
+
+@media only screen and (max-width: 43.75em) {
+  #shop {
+    padding: 0 3rem 3rem 3rem;
+  }
 }
 
 #shop::after {
@@ -762,6 +904,19 @@ nav .logo span {
   width: calc(100% + 40rem);
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(20%, #207417), color-stop(80%, #207417), to(rgba(0, 0, 0, 0)));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #207417 20%, #207417 80%, rgba(0, 0, 0, 0) 100%);
+}
+
+@media only screen and (max-width: 75em) {
+  #shop::after {
+    width: 100%;
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 43.75em) {
+  #shop::after {
+    bottom: calc(-3rem + -7px);
+  }
 }
 
 #shop h1 {
@@ -803,6 +958,8 @@ nav .logo span {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .shop__box--item {
@@ -810,6 +967,12 @@ nav .logo span {
   border-radius: 15px;
   -webkit-box-shadow: 1px 5px 5px #0f360b3d;
           box-shadow: 1px 5px 5px #0f360b3d;
+}
+
+@media only screen and (max-width: 75em) {
+  .shop__box--item {
+    margin-bottom: 3rem;
+  }
 }
 
 .shop__box--item-heading {
@@ -882,6 +1045,24 @@ nav .logo span {
   position: relative;
 }
 
+@media only screen and (max-width: 87.5em) {
+  #recycling {
+    padding: 0 10rem;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  #recycling {
+    padding: 0 5rem;
+  }
+}
+
+@media only screen and (max-width: 43.75em) {
+  #recycling {
+    padding: 0 3rem;
+  }
+}
+
 #recycling::after {
   content: '';
   display: block;
@@ -892,6 +1073,13 @@ nav .logo span {
   width: calc(100% + 40rem);
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(20%, #207417), color-stop(80%, #207417), to(rgba(0, 0, 0, 0)));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #207417 20%, #207417 80%, rgba(0, 0, 0, 0) 100%);
+}
+
+@media only screen and (max-width: 75em) {
+  #recycling::after {
+    width: 100%;
+    left: 0;
+  }
 }
 
 #recycling h1 {
@@ -949,6 +1137,24 @@ nav .logo span {
   padding: 0 20rem;
 }
 
+@media only screen and (max-width: 87.5em) {
+  #contact {
+    padding: 0 10rem;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  #contact {
+    padding: 0 5rem;
+  }
+}
+
+@media only screen and (max-width: 43.75em) {
+  #contact {
+    padding: 0 3rem;
+  }
+}
+
 #contact::after {
   content: '';
   display: block;
@@ -960,6 +1166,13 @@ nav .logo span {
   width: calc(100% + 40rem);
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(20%, #207417), color-stop(80%, #207417), to(rgba(0, 0, 0, 0)));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #207417 20%, #207417 80%, rgba(0, 0, 0, 0) 100%);
+}
+
+@media only screen and (max-width: 75em) {
+  #contact::after {
+    width: 100%;
+    left: 0;
+  }
 }
 
 #contact h1 {
@@ -999,6 +1212,13 @@ nav .logo span {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: left;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .contact__box-right {
@@ -1058,6 +1278,29 @@ nav .logo span {
   border-radius: 5px;
   -webkit-box-shadow: 5px 5px 10px #0000003d;
           box-shadow: 5px 5px 10px #0000003d;
+  width: 450px;
+  height: 450px;
+}
+
+@media only screen and (max-width: 75em) {
+  .contact-map {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .contact-map {
+    width: 330px;
+    height: 330px;
+  }
+}
+
+@media only screen and (max-width: 43.75em) {
+  .contact-map {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 .time {
@@ -1087,6 +1330,24 @@ nav .logo span {
   padding: 5rem 20rem;
   background-color: #83b735;
   text-align: center;
+}
+
+@media only screen and (max-width: 87.5em) {
+  #gallery {
+    padding: 5rem 10rem;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  #gallery {
+    padding: 5rem;
+  }
+}
+
+@media only screen and (max-width: 43.75em) {
+  #gallery {
+    padding: 5rem 3rem;
+  }
 }
 
 #gallery::after {

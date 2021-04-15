@@ -17,6 +17,7 @@
     url('./fonts/slick.svg#slick') format('svg');
 }
 /* Arrows */
+
 .slick-prev,
 .slick-next {
   font-size: 0;
@@ -181,4 +182,19 @@
 .slick-dots li.slick-active button:before {
   opacity: 0.75;
   color: black;
+}
+
+@media screen and (max-width: 75em) {
+  .slick-prev,
+  .slick-next,
+  .slick-dots {
+    bottom: 4rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .slick-prev,
+  .slick-next,
+  .slick-dots {
+    bottom: 0;
+  }
 }

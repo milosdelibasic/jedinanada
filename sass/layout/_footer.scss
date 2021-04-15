@@ -5,6 +5,15 @@
   background: darken($color: #78866b, $amount: 38);
 
   color: #fff;
+  @include respond(bp-big) {
+    padding: 3rem 10rem 0.8rem 10rem;
+  }
+  @include respond(tab-land) {
+    padding: 3rem 5rem 0.8rem 5rem;
+  }
+  @include respond(bp-700) {
+    padding: 3rem 3rem 0.8rem 3rem;
+  }
 }
 
 .footer {
@@ -19,9 +28,17 @@
     // align-items: center;
     margin-bottom: 2rem;
     width: 100%;
+    @include respond(tab-port) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas:
+        'logo left'
+        'middle right';
+    }
 
     &--location {
       grid-area: left;
+      display: grid;
       justify-content: center;
       align-content: center;
       & p {
@@ -38,6 +55,7 @@
       }
       & .contact-map {
         width: 200px;
+        height: 200px;
         margin-bottom: 5px;
       }
     }
@@ -99,6 +117,9 @@
       display: grid;
       justify-content: center;
       align-content: center;
+      // @include respond(tab-port) {
+      //   transform: scale(1.2);
+      // }
     }
   }
   &__copy {
