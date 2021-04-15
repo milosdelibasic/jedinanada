@@ -837,7 +837,7 @@ nav .logo span {
   .main__left {
     position: relative;
     z-index: 20;
-    margin-top: 25rem;
+    margin-top: 10rem;
   }
 }
 
@@ -892,7 +892,7 @@ nav .logo span {
   }
   .main__logo span {
     color: #f3f315;
-    font-size: 1.6em;
+    font-size: 2.8em;
     font-family: 'PT Serif', 'Roboto Condensed', 'Roboto', serif;
     letter-spacing: 1px;
     margin-left: 1rem;
