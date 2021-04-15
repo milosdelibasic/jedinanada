@@ -550,7 +550,7 @@ nav ::after {
         -ms-flex-direction: column;
             flex-direction: column;
     height: 100%;
-    width: 100%;
+    width: 80%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -563,8 +563,7 @@ nav ::after {
     -moz-transform: translate(100%);
     -ms-transform: translate(100%);
     -o-transform: translate(100%);
-    border-bottom: none;
-    border-left: 1px solid var(--border-primary);
+    border-left: 1px solid #26881b;
     opacity: 0;
     transition: all 0.6s;
     -webkit-transition: all 0.6s;
@@ -574,6 +573,18 @@ nav ::after {
   }
   nav ::after {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  nav {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 26.25em) {
+  nav {
+    width: 90%;
   }
 }
 
@@ -601,7 +612,7 @@ nav ul li {
 
 @media only screen and (max-width: 75em) {
   nav ul li {
-    font-size: 2em;
+    font-size: 1.8em;
     margin-bottom: 3px;
     text-align: center;
     padding: 1rem;
@@ -615,7 +626,7 @@ nav ul li:not(:last-child) {
 @media only screen and (max-width: 75em) {
   nav ul li:not(:last-child) {
     border-right: none;
-    border-bottom: 1px solid #26881b;
+    border-bottom: 2px solid #26881b;
   }
 }
 

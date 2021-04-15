@@ -22,7 +22,7 @@ nav {
     padding: 2rem 0;
     flex-direction: column;
     height: 100%;
-    width: 100%;
+    width: 80%;
     align-items: center;
     justify-content: space-between;
     //
@@ -32,8 +32,8 @@ nav {
     -moz-transform: translate(100%);
     -ms-transform: translate(100%);
     -o-transform: translate(100%);
-    border-bottom: none;
-    border-left: 1px solid var(--border-primary);
+    // border-bottom: none;
+    border-left: 1px solid $color-primary-dark;
     opacity: 0;
     transition: all 0.6s;
     -webkit-transition: all 0.6s;
@@ -43,6 +43,12 @@ nav {
     ::after {
       display: none;
     }
+  }
+  @include respond(bp-medium) {
+    width: 85%;
+  }
+  @include respond(bp-420) {
+    width: 90%;
   }
   & > * {
     padding: 0.2rem;
@@ -58,7 +64,7 @@ nav {
       display: inline-block;
       padding: 0.2rem 1.5rem;
       @include respond(tab-land) {
-        font-size: 2em;
+        font-size: 1.8em;
         margin-bottom: 3px;
         text-align: center;
         padding: 1rem;
@@ -68,7 +74,7 @@ nav {
         border-right: 1px solid $color-primary-darkest;
         @include respond(tab-land) {
           border-right: none;
-          border-bottom: 1px solid $color-primary-dark;
+          border-bottom: 2px solid $color-primary-dark;
           // padding-bottom: 5px;
         }
       }
