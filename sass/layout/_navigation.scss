@@ -184,7 +184,7 @@ nav {
     right: 2rem;
     top: 2rem;
     z-index: 15000000;
-    background-color: $color-primary-darkest;
+    background-color: $color-primary-dark2;
     // border: 1px solid var(--color-light);
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -194,8 +194,9 @@ nav {
     padding: 1rem;
     height: 50px;
     width: 50px;
-    box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.75),
-      inset 2px 2px 2px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6),
+      inset 2px 2px 2px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s;
 
     & span {
       background-color: #fff;
@@ -210,8 +211,12 @@ nav {
       -moz-border-radius: 5px;
       -ms-border-radius: 5px;
       -o-border-radius: 5px;
+      transition: all 0.4s ease-in-out;
     }
     &-open {
+      background-color: rgb(189, 0, 0);
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3),
+        inset 2px 2px 2px rgba(255, 255, 255, 0.2);
       & span {
         margin-left: 11px;
       }

@@ -37,6 +37,7 @@
       grid-template-areas:
         'logo left'
         'middle right';
+      row-gap: 10px !important;
     }
     @include respond(bp-medium) {
       grid-template-columns: 1fr;
@@ -183,15 +184,22 @@
       display: grid;
       justify-content: center;
       align-content: center;
-      // @include respond(tab-port) {
-      //   transform: scale(1.2);
-      // }
     }
   }
   &__copy {
     display: flex;
     justify-content: center;
     font-size: 1.4em;
+
+    @include respond(tab-port) {
+      font-size: 1.8em;
+    }
+    @include respond(bp-420) {
+      font-size: 1.55em;
+    }
+    @include respond(bp-small) {
+      font-size: 1.4em;
+    }
 
     & a {
       color: $color-primary;
