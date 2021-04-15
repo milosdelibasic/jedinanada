@@ -123,6 +123,12 @@ nav {
   }
 }
 
+@media only screen and (max-width: 37.5em) {
+  .carousel__box {
+    width: 400px;
+  }
+}
+
 .carousel__box:focus {
   outline: none;
 }
@@ -247,6 +253,12 @@ nav {
 @media only screen and (max-width: 43.75em) {
   #footer {
     padding: 3rem 3rem 0.8rem 3rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  #footer {
+    padding: 3rem 2rem 0.8rem 2rem;
   }
 }
 
@@ -776,6 +788,12 @@ nav .logo span {
   position: relative;
 }
 
+@media only screen and (max-width: 37.5em) {
+  #about {
+    padding: 0 2rem;
+  }
+}
+
 #about::after {
   content: '';
   display: block;
@@ -826,6 +844,12 @@ nav .logo span {
 @media only screen and (max-width: 43.75em) {
   .about--box {
     width: 80%;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .about--box {
+    width: 100%;
   }
 }
 
@@ -890,6 +914,12 @@ nav .logo span {
 @media only screen and (max-width: 43.75em) {
   #shop {
     padding: 0 3rem 3rem 3rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  #shop {
+    padding: 0 2rem 3rem 2rem;
   }
 }
 
@@ -1063,6 +1093,12 @@ nav .logo span {
   }
 }
 
+@media only screen and (max-width: 37.5em) {
+  #recycling {
+    padding: 0 2rem;
+  }
+}
+
 #recycling::after {
   content: '';
   display: block;
@@ -1155,6 +1191,12 @@ nav .logo span {
   }
 }
 
+@media only screen and (max-width: 37.5em) {
+  #contact {
+    padding: 0 2rem;
+  }
+}
+
 #contact::after {
   content: '';
   display: block;
@@ -1208,6 +1250,16 @@ nav .logo span {
   margin-bottom: 5rem;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .contact__box {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 'left' 'right';
+  }
+}
+
 .contact__box-left {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -1219,6 +1271,12 @@ nav .logo span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .contact__box-left {
+    margin-bottom: 2.4rem;
+  }
 }
 
 .contact__box-right {
@@ -1347,6 +1405,12 @@ nav .logo span {
 @media only screen and (max-width: 43.75em) {
   #gallery {
     padding: 5rem 3rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  #gallery {
+    padding: 5rem 2rem;
   }
 }
 

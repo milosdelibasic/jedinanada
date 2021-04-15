@@ -22,6 +22,9 @@
   @include respond(tab-port) {
     margin: 5rem auto;
   }
+  @include respond(phone) {
+    width: 400px;
+  }
 
   &:focus {
     outline: none;

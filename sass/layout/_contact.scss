@@ -11,6 +11,9 @@
   @include respond(bp-700) {
     padding: 0 3rem;
   }
+  @include respond(phone) {
+    padding: 0 2rem;
+  }
 
   &::after {
     content: '';
@@ -85,11 +88,21 @@
     grid-template-rows: 1fr;
     grid-template-areas: 'left right';
     margin-bottom: 5rem;
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas:
+        'left'
+        'right';
+    }
     &-left {
       grid-area: left;
       display: grid;
       align-content: center;
       justify-content: center;
+      @include respond(phone) {
+        margin-bottom: 2.4rem;
+      }
     }
     &-right {
       text-align: left;
@@ -153,6 +166,10 @@
       width: 300px;
       height: 300px;
     }
+    // @include respond(phone) {
+    //   width: 250px;
+    //   height: 250px;
+    // }
   }
 }
 

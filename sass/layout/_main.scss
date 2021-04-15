@@ -47,6 +47,7 @@
     grid-area: left;
     display: grid;
     justify-content: center;
+    // margin: auto 3rem;
 
     @include respond(tab-land) {
       position: relative;

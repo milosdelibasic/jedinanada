@@ -7,10 +7,21 @@ $('.carousel').slick({
   autoplaySpeed: 2500,
   dots: true,
   speed: 600,
+  variableWidth: true,
+  lazyLoad: 'proggresive',
   // easing: easeout,
   // lazyLoad: progressive,
   slidesToShow: 1,
   slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 600,
+      settings: {
+        respondTo: 'min',
+        centerMode: true,
+      },
+    },
+  ],
   //   adaptiveHeight: true,
 });
 

@@ -6,6 +6,9 @@
   background-attachment: fixed;
   text-align: center;
   position: relative;
+  @include respond(phone) {
+    padding: 0 2rem;
+  }
   // border-bottom: 8px solid #26881b;
   &::after {
     content: '';
@@ -80,6 +83,9 @@
     }
     @include respond(bp-700) {
       width: 80%;
+    }
+    @include respond(phone) {
+      width: 100%;
     }
 
     & p,

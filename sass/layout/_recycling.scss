@@ -17,6 +17,9 @@
   @include respond(bp-700) {
     padding: 0 3rem;
   }
+  @include respond(phone) {
+    padding: 0 2rem;
+  }
   &::after {
     content: '';
     display: block;
