@@ -844,6 +844,7 @@ nav .logo span {
 @media only screen and (max-width: 56.25em) {
   .main__left {
     grid-area: top;
+    margin-bottom: -6rem;
   }
 }
 
@@ -878,6 +879,7 @@ nav .logo span {
     background: #75a32f;
     width: 100%;
     padding: 1rem;
+    border-bottom: 1px solid #f3f315;
   }
   .main__logo a {
     display: -webkit-box;
