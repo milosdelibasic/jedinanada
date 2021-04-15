@@ -47,6 +47,10 @@ nav {
   @include respond(bp-medium) {
     width: 85%;
   }
+  @include respond(bp-small) {
+    width: 100%;
+    border-left: none;
+  }
   // @include respond(bp-420) {
   //   // width: 90%;
   //   padding: 6.5rem 0;

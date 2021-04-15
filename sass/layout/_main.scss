@@ -55,6 +55,7 @@
     @include respond(tab-land) {
       position: relative;
       z-index: 20;
+      margin-top: 25rem;
     }
     @include respond(tab-port) {
       grid-area: top;
@@ -72,6 +73,29 @@
       margin-bottom: 15rem;
     }
     // background: $color-primary;
+  }
+  &__logo {
+    display: none;
+    @include respond(tab-land) {
+      display: block;
+      position: absolute;
+      background: darken($color: $color-primary, $amount: 5);
+      width: 100%;
+      padding: 1rem;
+      & a {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      & span {
+        color: rgb(243, 243, 21);
+        // font-weight: bold;
+        font-size: 1.6em;
+        font-family: 'PT Serif', 'Roboto Condensed', 'Roboto', serif;
+        letter-spacing: 1px;
+        margin-left: 1rem;
+      }
+    }
   }
 }
 

@@ -582,6 +582,13 @@ nav ::after {
   }
 }
 
+@media only screen and (max-width: 21.875em) {
+  nav {
+    width: 100%;
+    border-left: none;
+  }
+}
+
 nav > * {
   padding: 0.2rem;
   margin: 10px 0;
@@ -830,6 +837,7 @@ nav .logo span {
   .main__left {
     position: relative;
     z-index: 20;
+    margin-top: 25rem;
   }
 }
 
@@ -856,6 +864,38 @@ nav .logo span {
 @media only screen and (max-width: 26.25em) {
   .main__right {
     margin-bottom: 15rem;
+  }
+}
+
+.main__logo {
+  display: none;
+}
+
+@media only screen and (max-width: 75em) {
+  .main__logo {
+    display: block;
+    position: absolute;
+    background: #75a32f;
+    width: 100%;
+    padding: 1rem;
+  }
+  .main__logo a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main__logo span {
+    color: #f3f315;
+    font-size: 1.6em;
+    font-family: 'PT Serif', 'Roboto Condensed', 'Roboto', serif;
+    letter-spacing: 1px;
+    margin-left: 1rem;
   }
 }
 
