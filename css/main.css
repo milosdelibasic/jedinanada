@@ -361,6 +361,12 @@ nav {
   font-size: 1.4em;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .footer__container--location p {
+    font-size: 1.8em;
+  }
+}
+
 .footer__container--location p:not(:last-child) {
   margin-bottom: 3px;
 }
@@ -410,9 +416,21 @@ nav {
   letter-spacing: 1px;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .footer__container--nav ul p {
+    font-size: 2.2em;
+  }
+}
+
 .footer__container--nav ul li {
   font-size: 1.8em;
   margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .footer__container--nav ul li {
+    font-size: 2em;
+  }
 }
 
 .footer__container--nav ul li a {
@@ -464,6 +482,12 @@ nav {
   color: rgba(255, 255, 255, 0.7);
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .footer__container--btn .a {
+    font-size: 4.5rem;
+  }
 }
 
 .footer__container--btn .a:hover {
