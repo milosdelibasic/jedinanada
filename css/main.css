@@ -544,6 +544,7 @@ nav ::after {
 
 @media only screen and (max-width: 75em) {
   nav {
+    padding: 2rem 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -600,6 +601,7 @@ nav ul li {
 
 @media only screen and (max-width: 75em) {
   nav ul li {
+    font-size: 2em;
     margin-bottom: 3px;
     text-align: center;
     padding: 1rem;
