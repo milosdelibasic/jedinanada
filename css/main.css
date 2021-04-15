@@ -466,6 +466,26 @@ nav {
 
 .footer__container--btn .lang {
   font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.footer__container--btn .lang .sr,
+.footer__container--btn .lang .hu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .footer__container--btn .lang span {
@@ -474,6 +494,20 @@ nav {
 
 .footer__container--btn .lang span:first-child {
   border-right: 1px solid #26881b;
+}
+
+.footer__container--btn .lang span:first-child::before {
+  content: url(/resources/icons/lang/serbia.png);
+  margin-right: 3px;
+  position: relative;
+  top: 2px;
+}
+
+.footer__container--btn .lang span:last-child::before {
+  content: url(/resources/icons/lang/hungary.png);
+  margin-right: 3px;
+  position: relative;
+  top: 2px;
 }
 
 .footer__container--logo {
@@ -666,12 +700,49 @@ nav ul li a:hover::after {
   width: 110%;
 }
 
+nav .lang {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+nav .lang .sr,
+nav .lang .hu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 nav .lang span {
-  padding: 0.2rem 1rem;
+  padding: 0 1rem;
 }
 
 nav .lang span:first-child {
   border-right: 1px solid #0f360b;
+}
+
+nav .lang span:first-child::before {
+  content: url(/resources/icons/lang/serbia.png);
+  margin-right: 3px;
+  position: relative;
+  top: 2px;
+}
+
+nav .lang span:last-child::before {
+  content: url(/resources/icons/lang/hungary.png);
+  margin-right: 3px;
+  position: relative;
+  top: 2px;
 }
 
 nav .logo {
@@ -1745,7 +1816,7 @@ nav .logo span {
   font-size: 4rem;
   display: inline-block;
   letter-spacing: 1px;
-  margin: 5rem 0 3rem 0;
+  margin: 10rem 0 3rem 0;
 }
 
 #gallery h1::after {
@@ -1801,5 +1872,40 @@ nav .logo span {
 
 #baguetteBox-overlay {
   z-index: 150000000;
+}
+
+.gallery__logo {
+  display: none;
+}
+
+@media only screen and (max-width: 75em) {
+  .gallery__logo {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #75a32f;
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 1px solid #f3f315;
+  }
+  .gallery__logo a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .gallery__logo span {
+    color: #f3f315;
+    font-size: 2.8em;
+    font-family: 'PT Serif', 'Roboto Condensed', 'Roboto', serif;
+    letter-spacing: 1px;
+    margin-left: 1rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -116,10 +116,36 @@ nav {
   }
 
   & .lang {
+    display: flex;
+    flex-direction: row;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    & .sr,
+    & .hu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     & span {
-      padding: 0.2rem 1rem;
+      padding: 0 1rem;
+
       &:first-child {
         border-right: 1px solid $color-primary-darkest;
+        &::before {
+          content: url(/resources/icons/lang/serbia.png);
+          margin-right: 3px;
+          position: relative;
+          top: 2px;
+        }
+      }
+      &:last-child {
+        &::before {
+          content: url(/resources/icons/lang/hungary.png);
+          margin-right: 3px;
+          position: relative;
+          top: 2px;
+        }
       }
     }
   }

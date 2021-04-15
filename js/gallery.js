@@ -5,7 +5,3 @@ baguetteBox.run('.gallery', {
   async: true,
   buttons: true,
 });
-console.log(document.getElementById('#baguetteBox-overlay'));
-// .addEventListener('click', function () {
-//   navMob.style.display = 'block';
-// });

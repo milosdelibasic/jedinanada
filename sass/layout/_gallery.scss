@@ -52,7 +52,7 @@
     display: inline-block;
     letter-spacing: 1px;
     // padding-bottom: 3px;
-    margin: 5rem 0 3rem 0;
+    margin: 10rem 0 3rem 0;
     &::after {
       content: '';
       display: block;
@@ -146,4 +146,31 @@
 }
 #baguetteBox-overlay {
   z-index: 150000000;
+}
+
+.gallery__logo {
+  display: none;
+  @include respond(tab-land) {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: darken($color: $color-primary, $amount: 5);
+    width: 100%;
+    padding: 1rem;
+    & a {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    & span {
+      color: rgb(243, 243, 21);
+      // font-weight: bold;
+      font-size: 2.8em;
+      font-family: 'PT Serif', 'Roboto Condensed', 'Roboto', serif;
+      letter-spacing: 1px;
+      margin-left: 1rem;
+    }
+    border-bottom: 1px solid rgb(243, 243, 21);
+  }
 }
