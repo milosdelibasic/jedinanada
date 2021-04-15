@@ -110,6 +110,13 @@
       display: grid;
       justify-content: center;
       align-content: center;
+      @include respond(bp-medium) {
+        // margin-top: -22rem;
+        height: 15rem;
+        // margin-bottom: 22rem;
+        // margin-bottom: -10rem;
+        // padding-bottom: -10rem;
+      }
 
       & .a {
         // align-self: right;

@@ -442,6 +442,12 @@ nav {
       align-content: center;
 }
 
+@media only screen and (max-width: 31.25em) {
+  .footer__container--btn {
+    height: 15rem;
+  }
+}
+
 .footer__container--btn .a {
   display: -webkit-box;
   display: -ms-flexbox;
