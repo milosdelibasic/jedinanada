@@ -189,6 +189,7 @@
   .slick-next,
   .slick-dots {
     bottom: 4rem;
+    /* width: 150%; */
   }
 }
 @media only screen and (max-width: 56.25em) {
@@ -196,5 +197,13 @@
   .slick-next,
   .slick-dots {
     bottom: 0;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .slick-prev {
+    left: 28%;
+  }
+  .slick-next {
+    right: 29%;
   }
 }

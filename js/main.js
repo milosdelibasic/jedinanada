@@ -17,8 +17,8 @@ $('.carousel').slick({
     {
       breakpoint: 600,
       settings: {
-        respondTo: 'min',
-        centerMode: true,
+        // respondTo: 'min',
+        // centerMode: true,
       },
     },
   ],

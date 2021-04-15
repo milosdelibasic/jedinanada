@@ -96,6 +96,16 @@ nav {
   padding-left: 4.5rem;
 }
 
+.carousel {
+  width: 500px;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .carousel {
+    width: 400px;
+  }
+}
+
 .carousel__box {
   margin: 13rem auto;
   width: 500px;
@@ -163,6 +173,22 @@ nav {
   color: #1f6e16;
   -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
           filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+}
+
+.slick-slide {
+  margin: 14rem 27px;
+}
+
+@media only screen and (max-width: 75em) {
+  .slick-slide {
+    margin: 8rem 27px;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .slick-slide {
+    margin: 6rem 27px;
+  }
 }
 
 .btn {
@@ -281,6 +307,16 @@ nav {
     -ms-grid-rows: (1fr)[2];
         grid-template-rows: repeat(2, 1fr);
         grid-template-areas: 'logo left' 'middle right';
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  .footer__container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[4];
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 'logo' 'left' 'middle' 'right';
   }
 }
 
@@ -778,6 +814,14 @@ nav .logo span {
   }
 }
 
+@media only screen and (max-width: 31.25em) {
+  .bins {
+    right: 0;
+    -webkit-transform: scale(0.5) translateX(25%);
+            transform: scale(0.5) translateX(25%);
+  }
+}
+
 #about {
   background-image: url(/resources/bottles1600w.jpg), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.4)));
   background-image: url(/resources/bottles1600w.jpg), linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
@@ -1144,6 +1188,15 @@ nav .logo span {
   position: absolute;
   top: 30px;
   right: 30px;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .recycling-symbol {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    top: 10px;
+    right: 10px;
+  }
 }
 
 .recycling__box {

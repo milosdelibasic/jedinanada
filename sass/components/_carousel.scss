@@ -1,3 +1,10 @@
+.carousel {
+  width: 500px;
+  // padding: 0 2rem;
+  @include respond(phone) {
+    width: 400px;
+  }
+}
 .carousel__box {
   margin: 13rem auto;
   width: 500px;
@@ -65,4 +72,14 @@
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
   // padding: 30px
   // margin: 30px;
+}
+
+.slick-slide {
+  margin: 14rem 27px;
+  @include respond(tab-land) {
+    margin: 8rem 27px;
+  }
+  @include respond(tab-port) {
+    margin: 6rem 27px;
+  }
 }

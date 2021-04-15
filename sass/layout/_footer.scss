@@ -38,6 +38,15 @@
         'logo left'
         'middle right';
     }
+    @include respond(bp-medium) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-areas:
+        'logo'
+        'left'
+        'middle'
+        'right';
+    }
 
     &--location {
       grid-area: left;
