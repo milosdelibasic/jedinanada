@@ -582,12 +582,6 @@ nav ::after {
   }
 }
 
-@media only screen and (max-width: 26.25em) {
-  nav {
-    padding: 6.5rem 0;
-  }
-}
-
 nav > * {
   padding: 0.2rem;
   margin: 10px 0;
@@ -676,6 +670,13 @@ nav .lang span:first-child {
 nav .logo {
   padding: 0.5rem 1rem;
   margin: 0;
+}
+
+@media only screen and (max-width: 75em) {
+  nav .logo {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
 }
 
 nav .logo a {

@@ -47,10 +47,10 @@ nav {
   @include respond(bp-medium) {
     width: 85%;
   }
-  @include respond(bp-420) {
-    // width: 90%;
-    padding: 6.5rem 0;
-  }
+  // @include respond(bp-420) {
+  //   // width: 90%;
+  //   padding: 6.5rem 0;
+  // }
   & > * {
     padding: 0.2rem;
     margin: 10px 0;
@@ -123,6 +123,10 @@ nav {
   & .logo {
     padding: 0.5rem 1rem;
     margin: 0;
+
+    @include respond(tab-land) {
+      align-self: flex-start;
+    }
     & a {
       display: flex;
       justify-content: center;
