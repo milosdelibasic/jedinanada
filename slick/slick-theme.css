@@ -207,3 +207,19 @@
     right: 29%;
   }
 }
+@media only screen and (max-width: 26.25em) {
+  .slick-prev {
+    left: 26%;
+  }
+  .slick-next {
+    right: 28%;
+  }
+}
+@media only screen and (max-width: 21.875em) {
+  .slick-prev {
+    left: 20%;
+  }
+  .slick-next {
+    right: 22%;
+  }
+}

@@ -4,6 +4,12 @@
   @include respond(phone) {
     width: 400px;
   }
+  @include respond(bp-420) {
+    width: 340px;
+  }
+  @include respond(bp-small) {
+    width: 300px;
+  }
 }
 .carousel__box {
   margin: 13rem auto;
@@ -31,6 +37,12 @@
   }
   @include respond(phone) {
     width: 400px;
+  }
+  @include respond(bp-420) {
+    width: 340px;
+  }
+  @include respond(bp-small) {
+    width: 300px;
   }
 
   &:focus {

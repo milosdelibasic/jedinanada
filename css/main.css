@@ -106,6 +106,18 @@ nav {
   }
 }
 
+@media only screen and (max-width: 26.25em) {
+  .carousel {
+    width: 340px;
+  }
+}
+
+@media only screen and (max-width: 21.875em) {
+  .carousel {
+    width: 300px;
+  }
+}
+
 .carousel__box {
   margin: 13rem auto;
   width: 500px;
@@ -136,6 +148,18 @@ nav {
 @media only screen and (max-width: 37.5em) {
   .carousel__box {
     width: 400px;
+  }
+}
+
+@media only screen and (max-width: 26.25em) {
+  .carousel__box {
+    width: 340px;
+  }
+}
+
+@media only screen and (max-width: 21.875em) {
+  .carousel__box {
+    width: 300px;
   }
 }
 
@@ -702,6 +726,12 @@ nav .logo span {
   }
 }
 
+@media only screen and (max-width: 26.25em) {
+  #main {
+    margin-bottom: -15rem;
+  }
+}
+
 #main::after {
   content: '';
   display: block;
@@ -752,6 +782,12 @@ nav .logo span {
   }
 }
 
+@media only screen and (max-width: 26.25em) {
+  .main__right {
+    margin-bottom: 15rem;
+  }
+}
+
 .blob1 {
   position: absolute;
   top: 280px;
@@ -777,6 +813,13 @@ nav .logo span {
             transform-origin: bottom right;
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
+  }
+}
+
+@media only screen and (max-width: 26.25em) {
+  .blob2 {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
   }
 }
 
@@ -819,6 +862,22 @@ nav .logo span {
     right: 0;
     -webkit-transform: scale(0.5) translateX(25%);
             transform: scale(0.5) translateX(25%);
+  }
+}
+
+@media only screen and (max-width: 26.25em) {
+  .bins {
+    right: -10px;
+    -webkit-transform: scale(0.4) translateX(40%);
+            transform: scale(0.4) translateX(40%);
+  }
+}
+
+@media only screen and (max-width: 21.875em) {
+  .bins {
+    right: -50px;
+    -webkit-transform: scale(0.4) translateX(40%);
+            transform: scale(0.4) translateX(40%);
   }
 }
 
@@ -871,9 +930,9 @@ nav .logo span {
 }
 
 .about--box {
+  text-align: justify;
   margin: 0 auto;
   background-color: #729e2fb6;
-  text-align: left;
   width: 50%;
   border-radius: 15px;
   position: relative;
@@ -894,6 +953,12 @@ nav .logo span {
 @media only screen and (max-width: 37.5em) {
   .about--box {
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 26.25em) {
+  .about--box {
+    text-align: left;
   }
 }
 
@@ -1036,6 +1101,18 @@ nav .logo span {
       flex-wrap: wrap;
 }
 
+@media only screen and (max-width: 31.25em) {
+  .shop__box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .shop__box--item {
   background-color: #a9e64f;
   border-radius: 15px;
@@ -1049,6 +1126,12 @@ nav .logo span {
   }
 }
 
+@media only screen and (max-width: 31.25em) {
+  .shop__box--item {
+    min-width: 60%;
+  }
+}
+
 .shop__box--item-heading {
   font-size: 2.6rem;
   font-weight: bold;
@@ -1059,6 +1142,12 @@ nav .logo span {
   border-bottom-right-radius: 10px;
   -webkit-box-shadow: 0 3px #0f360b4b;
           box-shadow: 0 3px #0f360b4b;
+}
+
+@media only screen and (max-width: 31.25em) {
+  .shop__box--item-heading {
+    font-size: 3rem;
+  }
 }
 
 .shop__box--item-img {
@@ -1093,6 +1182,12 @@ nav .logo span {
   padding: 0.2rem 0;
   text-align: left;
   letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 31.25em) {
+  .shop__box--item-list {
+    font-size: 2rem;
+  }
 }
 
 .shop__box--item-list:last-child {
@@ -1169,6 +1264,14 @@ nav .logo span {
   letter-spacing: 1px;
   padding-bottom: 3px;
   margin: 5rem 0;
+  position: relative;
+  z-index: 3;
+}
+
+@media only screen and (max-width: 31.25em) {
+  #recycling h1 {
+    margin: 4rem 0 3rem 0;
+  }
 }
 
 #recycling h1::after {
@@ -1199,6 +1302,22 @@ nav .logo span {
   }
 }
 
+@media only screen and (max-width: 31.25em) {
+  .recycling-symbol {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+    top: -2px;
+    right: -2px;
+  }
+}
+
+@media only screen and (max-width: 26.25em) {
+  .recycling-symbol {
+    top: 7rem;
+    right: 0;
+  }
+}
+
 .recycling__box {
   text-align: justify;
   border-left-width: 8px;
@@ -1209,16 +1328,37 @@ nav .logo span {
   padding: 1rem 3rem;
 }
 
+@media only screen and (max-width: 31.25em) {
+  .recycling__box {
+    padding: 1.5rem;
+  }
+}
+
 .recycling__box-heading {
   color: #ffa600;
   font-size: 2.5rem;
   padding: 1rem 0;
+  letter-spacing: 1.5px;
+  word-spacing: 1px;
+}
+
+@media only screen and (max-width: 31.25em) {
+  .recycling__box-heading {
+    text-align: left;
+  }
 }
 
 .recycling__box-text {
   color: #fff;
   font-size: 1.8rem;
   line-height: 1.3;
+}
+
+@media only screen and (max-width: 31.25em) {
+  .recycling__box-text {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
 }
 
 #contact {
@@ -1414,6 +1554,13 @@ nav .logo span {
   }
 }
 
+@media only screen and (max-width: 21.875em) {
+  .contact-map {
+    width: 260px;
+    height: 260px;
+  }
+}
+
 .time {
   line-height: 1.2;
 }
@@ -1477,6 +1624,13 @@ nav .logo span {
   width: 140%;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(20%, #207417), color-stop(80%, #207417), to(rgba(0, 0, 0, 0)));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #207417 20%, #207417 80%, rgba(0, 0, 0, 0) 100%);
+}
+
+@media only screen and (max-width: 75em) {
+  #gallery::after {
+    width: 100%;
+    left: 0;
+  }
 }
 
 #gallery h1 {

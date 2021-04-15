@@ -71,9 +71,9 @@
 }
 .about {
   &--box {
+    text-align: justify;
     margin: 0 auto;
     background-color: #729e2fb6;
-    text-align: left;
     width: 50%;
     border-radius: 15px;
     position: relative;
@@ -87,7 +87,9 @@
     @include respond(phone) {
       width: 100%;
     }
-
+    @include respond(bp-420) {
+      text-align: left;
+    }
     & p,
     & li {
       color: white;

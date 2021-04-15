@@ -96,6 +96,10 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    @include respond(bp-medium) {
+      flex-direction: column;
+      align-items: center;
+    }
 
     &--item {
       background-color: $color-primary-light2;
@@ -103,6 +107,9 @@
       box-shadow: 1px 5px 5px #0f360b3d;
       @include respond(tab-land) {
         margin-bottom: 3rem;
+      }
+      @include respond(bp-medium) {
+        min-width: 60%;
       }
 
       &-heading {
@@ -114,6 +121,9 @@
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
         box-shadow: 0 3px #0f360b4b;
+        @include respond(bp-medium) {
+          font-size: 3rem;
+        }
       }
 
       &-img {
@@ -141,6 +151,9 @@
         width: 80%;
         margin: 0 auto;
         font-size: 1.8rem;
+        @include respond(bp-medium) {
+          font-size: 2rem;
+        }
         padding: 0.2rem 0;
         text-align: left;
         // font-weight: 500;
