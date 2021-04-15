@@ -111,15 +111,28 @@
       justify-content: center;
       align-content: center;
 
-      & a {
+      & .a {
         // align-self: right;
-
+        display: flex;
+        justify-content: center;
+        align-items: center;
         top: 50%;
         font-size: 3rem;
+        margin-bottom: 6rem;
         color: rgba(255, 255, 255, 0.7);
         transition: color 0.3s ease;
         &:hover {
           color: #fff;
+        }
+      }
+      & .lang {
+        font-size: 2rem;
+        & span {
+          padding: 0.2rem 1rem;
+
+          &:first-child {
+            border-right: 1px solid $color-primary-dark;
+          }
         }
       }
     }

@@ -9,20 +9,8 @@ $('.carousel').slick({
   speed: 600,
   variableWidth: true,
   lazyLoad: 'proggresive',
-  // easing: easeout,
-  // lazyLoad: progressive,
   slidesToShow: 1,
   slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 600,
-      settings: {
-        // respondTo: 'min',
-        // centerMode: true,
-      },
-    },
-  ],
-  //   adaptiveHeight: true,
 });
 
 //SECTION Navigation
@@ -31,11 +19,29 @@ const navMob = document.getElementById('navigation-mobile');
 const navigation = document.getElementById('navigation');
 const navItems = document.getElementsByClassName('navigation-list-item');
 const main = document.getElementById('site-content');
+// const checks = document.querySelector('.check');
+// const body = document.querySelector('body');
+// const check = document.querySelector('.check');
+// check.addEventListener('click', () => {
+//   if (body.classList.contains('baguetteBox-open')) {
+//     console.log('open');
+//   }
+// });
+// Object.keys(checks).forEach(check => {
+//   checks[check].addEventListener('click', function () {
+//     navMob.style.display = 'none';
+//     document
+//       .getElementById('baguetteBox-overlay')
+//       .addEventListener('click', function () {
+//         navMob.style.display = 'flex';
+//       });
+//   });
+// });
 
 function disable() {
   navigation.style.transform = 'translateX(100%)';
   navigation.style.opacity = 0;
-  document.getElementById('main').style.filter = 'blur(0)';
+  main.style.filter = 'blur(0)';
   enableScroll();
 }
 

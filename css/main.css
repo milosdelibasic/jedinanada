@@ -442,16 +442,38 @@ nav {
       align-content: center;
 }
 
-.footer__container--btn a {
+.footer__container--btn .a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   top: 50%;
   font-size: 3rem;
+  margin-bottom: 6rem;
   color: rgba(255, 255, 255, 0.7);
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 
-.footer__container--btn a:hover {
+.footer__container--btn .a:hover {
   color: #fff;
+}
+
+.footer__container--btn .lang {
+  font-size: 2rem;
+}
+
+.footer__container--btn .lang span {
+  padding: 0.2rem 1rem;
+}
+
+.footer__container--btn .lang span:first-child {
+  border-right: 1px solid #26881b;
 }
 
 .footer__container--logo {
@@ -528,9 +550,9 @@ nav ::after {
             flex-direction: column;
     height: 100%;
     width: 100%;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -549,6 +571,9 @@ nav ::after {
     -ms-transition: all 0.6s;
     -o-transition: all 0.6s;
   }
+  nav ::after {
+    display: none;
+  }
 }
 
 nav > * {
@@ -556,13 +581,40 @@ nav > * {
   margin: 10px 0;
 }
 
+@media only screen and (max-width: 75em) {
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 nav ul li {
   display: inline-block;
   padding: 0.2rem 1.5rem;
 }
 
+@media only screen and (max-width: 75em) {
+  nav ul li {
+    margin-bottom: 3px;
+    text-align: center;
+    padding: 1rem;
+  }
+}
+
 nav ul li:not(:last-child) {
   border-right: 1px solid #0f360b;
+}
+
+@media only screen and (max-width: 75em) {
+  nav ul li:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid #26881b;
+  }
 }
 
 nav ul li a {
@@ -600,7 +652,6 @@ nav .lang span {
 
 nav .lang span:first-child {
   border-right: 1px solid #0f360b;
-  font-weight: bold;
 }
 
 nav .logo {
@@ -1045,7 +1096,7 @@ nav .logo span {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #207417 20%, #207417 80%, rgba(0, 0, 0, 0) 100%);
 }
 
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 87.5em) {
   #shop::after {
     width: 100%;
     left: 0;
@@ -1250,7 +1301,7 @@ nav .logo span {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #207417 20%, #207417 80%, rgba(0, 0, 0, 0) 100%);
 }
 
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 87.5em) {
   #recycling::after {
     width: 100%;
     left: 0;
@@ -1297,22 +1348,23 @@ nav .logo span {
   .recycling-symbol {
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
-    top: 10px;
+    top: 7rem;
     right: 10px;
   }
 }
 
 @media only screen and (max-width: 31.25em) {
   .recycling-symbol {
-    -webkit-transform: scale(0.4);
-            transform: scale(0.4);
-    top: -2px;
-    right: -2px;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    top: 7rem;
   }
 }
 
 @media only screen and (max-width: 26.25em) {
   .recycling-symbol {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
     top: 7rem;
     right: 0;
   }
@@ -1403,7 +1455,7 @@ nav .logo span {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #207417 20%, #207417 80%, rgba(0, 0, 0, 0) 100%);
 }
 
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 87.5em) {
   #contact::after {
     width: 100%;
     left: 0;
@@ -1619,18 +1671,11 @@ nav .logo span {
   display: block;
   height: 7px;
   position: relative;
-  left: -20%;
+  left: 0;
   bottom: -5rem;
-  width: 140%;
+  width: 100%;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(20%, #207417), color-stop(80%, #207417), to(rgba(0, 0, 0, 0)));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #207417 20%, #207417 80%, rgba(0, 0, 0, 0) 100%);
-}
-
-@media only screen and (max-width: 75em) {
-  #gallery::after {
-    width: 100%;
-    left: 0;
-  }
 }
 
 #gallery h1 {
@@ -1686,5 +1731,13 @@ nav .logo span {
 .top {
   -o-object-position: 100% 0%;
      object-position: 100% 0%;
+}
+
+.baguetteBox-button svg {
+  z-index: 150000001;
+}
+
+#baguetteBox-overlay {
+  z-index: 150000000;
 }
 /*# sourceMappingURL=main.css.map */

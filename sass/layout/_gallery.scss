@@ -22,9 +22,9 @@
     display: block;
     height: 7px;
     position: relative;
-    left: -20%;
+    left: 0;
     bottom: -5rem;
-    width: 140%;
+    width: 100%;
     background-image: -webkit-linear-gradient(
       left,
       rgba(0, 0, 0, 0) 0%,
@@ -39,10 +39,10 @@
       rgb(32, 116, 23) 80%,
       rgba(0, 0, 0, 0) 100%
     );
-    @include respond(tab-land) {
-      width: 100%;
-      left: 0;
-    }
+    // @include respond(bp-big) {
+    //   width: 100%;
+    //   left: 0;
+    // }
   }
 
   & h1 {
@@ -140,4 +140,10 @@
 // }
 .top {
   object-position: 100% 0%;
+}
+.baguetteBox-button svg {
+  z-index: 150000001;
+}
+#baguetteBox-overlay {
+  z-index: 150000000;
 }

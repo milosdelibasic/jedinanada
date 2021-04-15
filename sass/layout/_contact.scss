@@ -39,7 +39,7 @@
       rgb(32, 116, 23) 80%,
       rgba(0, 0, 0, 0) 100%
     );
-    @include respond(tab-land) {
+    @include respond(bp-big) {
       width: 100%;
       left: 0;
     }
