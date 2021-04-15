@@ -1,0 +1,122 @@
+#footer {
+  padding: 3rem 20rem 0.8rem 20rem;
+  //   background: darken($color: $color-primary, $amount: 50);
+  //   background: #687169;
+  background: darken($color: #78866b, $amount: 38);
+
+  color: #fff;
+}
+
+.footer {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 'left middle logo right';
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-between;
+    // align-items: center;
+    margin-bottom: 2rem;
+    width: 100%;
+
+    &--location {
+      grid-area: left;
+      justify-content: center;
+      align-content: center;
+      & p {
+        font-size: 1.4em;
+        &:not(:last-child) {
+          margin-bottom: 3px;
+        }
+        & a {
+          transition: all 0.5s ease-in-out;
+          &:hover {
+            color: $color-primary-dark;
+          }
+        }
+      }
+      & .contact-map {
+        width: 200px;
+        margin-bottom: 5px;
+      }
+    }
+
+    &--nav {
+      grid-area: middle;
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      & ul {
+        display: flex;
+        flex-direction: column;
+        & p {
+          font-size: 1.8em;
+          margin-bottom: 5px;
+          font-weight: bold;
+          letter-spacing: 1px;
+        }
+        & li {
+          font-size: 1.8em;
+          margin-bottom: 5px;
+          & a {
+            color: $color-primary-light;
+            transition: color 0.4s ease-in-out;
+
+            &::before {
+              content: '· ';
+            }
+
+            &:hover {
+              color: $color-primary-dark;
+            }
+          }
+        }
+      }
+    }
+
+    &--btn {
+      grid-area: right;
+      display: grid;
+      justify-content: center;
+      align-content: center;
+
+      & a {
+        // align-self: right;
+
+        top: 50%;
+        font-size: 3rem;
+        color: rgba(255, 255, 255, 0.7);
+        transition: color 0.3s ease;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+
+    &--logo {
+      grid-area: logo;
+      display: grid;
+      justify-content: center;
+      align-content: center;
+    }
+  }
+  &__copy {
+    display: flex;
+    justify-content: center;
+    font-size: 1.4em;
+
+    & a {
+      color: $color-primary;
+      font-weight: bold;
+      transition: color 0.4s ease-in-out;
+      &:hover {
+        color: #fff;
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: 3px;
+    }
+    // align-items: flex-end;
+  }
+}

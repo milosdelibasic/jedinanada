@@ -1,0 +1,75 @@
+.btn {
+  border: none;
+  padding: 0.8rem;
+  border-radius: 5px;
+  font-size: 2rem;
+  font-weight: bold;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: $color-primary-darkest;
+  background-color: transparent;
+  border: 2px solid $color-primary-dark;
+  margin: 2rem 0 2.3rem 0;
+  transition: color 0.5s ease-out;
+  -webkit-box-shadow: 3px 3px 6px 0px rgba(38, 136, 27, 0.6);
+  -moz-box-shadow: 3px 3px 6px 0px rgba(38, 136, 27, 0.6);
+  box-shadow: 3px 3px 6px 0px rgba(38, 136, 27, 0.6);
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: $color-primary-dark;
+    width: 0;
+    height: 100%;
+    transition: width 0.5s ease-in-out;
+    z-index: -1;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    // background-color: $color-primary-dark;
+    color: white;
+  }
+}
+
+.btn-secondary {
+  color: rgb(245, 245, 30);
+  border: 2px solid rgb(245, 245, 30);
+  -webkit-box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.2);
+  // padding: none;
+  &::before {
+    background-color: rgb(245, 245, 30);
+  }
+  &:hover {
+    // background-color: rgb(245, 245, 30);
+    color: $text-primary;
+  }
+  // color: $color-primary-light;
+  // border: 2px solid $color-primary-light;
+  // &:hover {
+  //   -webkit-box-shadow: 3px 3px 6px 0px rgba(38, 136, 27, 0.6);
+  //   -moz-box-shadow: 3px 3px 6px 0px rgba(61, 207, 44, 0.6);
+  //   box-shadow: 3px 3px 6px 0px rgba(38, 136, 27, 0.6);
+  //   background-color: $color-primary-light;
+  //   color: $text-primary;
+  // }
+}

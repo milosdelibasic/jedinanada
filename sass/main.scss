@@ -1,0 +1,19 @@
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+@import 'base/animations';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
+
+@import 'components/carousel';
+@import 'components/button';
+
+@import 'layout/footer';
+@import 'layout/navigation';
+@import 'layout/main';
+@import 'layout/about';
+@import 'layout/shop';
+@import 'layout/recycling';
+@import 'layout/contact';
+@import 'layout/gallery';

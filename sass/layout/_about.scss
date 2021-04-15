@@ -1,0 +1,114 @@
+#about {
+  background-image: url(/resources/bottles1600w.jpg),
+    linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+  text-align: center;
+  position: relative;
+  // border-bottom: 8px solid #26881b;
+  &::after {
+    content: '';
+    display: block;
+    height: 7px;
+    position: relative;
+    // left: -20%;
+    bottom: -100%;
+    // width: 140%;
+    background-image: -webkit-linear-gradient(
+      left,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(32, 116, 23) 20%,
+      rgb(32, 116, 23) 80%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(32, 116, 23) 20%,
+      rgb(32, 116, 23) 80%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+
+  & h1 {
+    color: white;
+    font-size: 4rem;
+    // border-bottom: 0.8rem solid $color-primary;
+    display: inline-block;
+    letter-spacing: 1px;
+    padding-bottom: 3px;
+    margin: 5rem 0;
+    &::after {
+      content: '';
+      display: block;
+      height: 7px;
+      position: relative;
+      left: -20%;
+      top: 2px;
+      // transform: translateX(50%);
+      width: 140%;
+      border-radius: 10px;
+      background-image: -webkit-linear-gradient(
+        left,
+        rgba(0, 0, 0, 0) 0%,
+        $color-primary 40%,
+        $color-primary 60%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0) 0%,
+        $color-primary 40%,
+        $color-primary 60%,
+        rgba(0, 0, 0, 0) 100%
+      );
+    }
+  }
+}
+.about {
+  &--box {
+    margin: 0 auto;
+    background-color: #729e2fb6;
+    text-align: left;
+    width: 50%;
+    border-radius: 15px;
+    position: relative;
+    // margin-bottom: 3rem;
+
+    & p,
+    & li {
+      color: white;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+      & span {
+        font-weight: bold;
+        // color: $color-primary-light;
+        color: rgb(245, 245, 30);
+      }
+    }
+
+    & p {
+      padding: 2rem 2rem 0 2rem;
+    }
+    & ul {
+      padding-top: 1rem;
+    }
+
+    & li {
+      padding-left: 4rem;
+      &:last-child {
+        padding-bottom: 2rem;
+      }
+    }
+    & .btn {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.space {
+  height: 5rem;
+}

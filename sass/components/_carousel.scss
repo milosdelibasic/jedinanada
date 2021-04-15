@@ -1,0 +1,58 @@
+.carousel__box {
+  margin: 13rem auto;
+  width: 500px;
+  text-align: center;
+  color: $text-primary;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  // SECTION glassmorphism
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  &:focus {
+    outline: none;
+  }
+
+  box-shadow: 0 3px 2px #0f360b4b;
+  & h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    text-shadow: 2px 2px 2px #00000059;
+    margin-bottom: 2rem;
+    // color: $color-primary-darkest;
+    color: $color-primary-dark2;
+    background-color: rgba($color: #ffffff, $alpha: 0.5);
+    border-radius: inherit;
+    padding: 0.5rem;
+    letter-spacing: 2px;
+    box-shadow: 0 3px 2px #0f360b25;
+    // backdrop-filter: none;
+    // text-transform: uppercase;
+  }
+
+  & p {
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 2rem 0 2px 0;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 4px 0;
+  }
+}
+
+.icon {
+  font-size: 6rem;
+  position: relative;
+  margin: 1rem 0;
+  color: $color-primary-dark2;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+  // padding: 30px
+  // margin: 30px;
+}

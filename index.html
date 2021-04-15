@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Reciklaža i neopasan otpad Jedina Nada DOO. Naša firma vrši otkup, preradu i reciklažu sekundarnih sirovina na teritoriji Sente i Srbije."
+    />
+    <title>Jedina Nada DOO - Reciklaža</title>
+    <link
+      rel="shortcut icon"
+      href="resources/recycle.png"
+      type="image/x-icon"
+    />
+
+    <!-- IMPORT Main CSS -->
+    <link rel="stylesheet" href="css/main.min.css" />
+    <!-- IMPORT Carousel -->
+    <link rel="stylesheet" href="slick/slick.css" />
+    <link rel="stylesheet" href="slick/slick-theme.css" />
+    <!-- IMPORT Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <!-- IMPORT Leaflet map -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+  </head>
+  <body>
+    <!-- SECTION Header -->
+    <header>
+      <div class="navigation-mobile" id="navigation-mobile">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav id="navigation">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="/resources/logo/logo50h.png" alt="Jedina Nada Logo" />
+            <span> JEDINA NADA</span></a
+          >
+        </div>
+        <ul>
+          <li class="navigation-list-item">
+            <a href="index.html#main"><i class="fas fa-home"></i> Početna</a>
+          </li>
+          <li class="navigation-list-item">
+            <a href="index.html#about"
+              ><i class="fas fa-id-badge"></i> O Nama</a
+            >
+          </li>
+          <li class="navigation-list-item">
+            <a href="index.html#shop">
+              <i class="fas fa-hand-holding-usd"></i> Otkup</a
+            >
+          </li>
+          <li class="navigation-list-item">
+            <a href="gallery.html"> <i class="fas fa-images"></i> Galerija</a>
+          </li>
+          <li class="navigation-list-item">
+            <a href="index.html#recycling"
+              ><i class="fas fa-recycle"></i> Značaj reciklaže</a
+            >
+          </li>
+          <li class="navigation-list-item">
+            <a href="index.html#contact">
+              <i class="fas fa-id-card"></i> Kontakt</a
+            >
+          </li>
+        </ul>
+        <div class="lang"><span>SR</span><span>HU</span></div>
+      </nav>
+    </header>
+    <div id="site-content">
+      <!-- SECTION Main -->
+      <main id="main">
+        <div class="main__left">
+          <img src="/resources/blob1.png" alt="Green blob" class="blob1" />
+
+          <div class="carousel" style="width: 500px">
+            <div class="carousel__box">
+              <h1>O Nama</h1>
+              <i class="fas fa-id-badge icon"></i>
+              <p>Saznajte više o našem preduzeću.</p>
+              <button class="btn">
+                <a href="index.html#about">Saznajte više</a>
+              </button>
+            </div>
+            <div class="carousel__box">
+              <h1>Otkup</h1>
+              <i class="fas fa-hand-holding-usd icon"></i>
+              <p>Saznajte šta sve otkupljujemo od neopasnog otpada.</p>
+              <button class="btn">Saznajte više</button>
+            </div>
+            <div class="carousel__box">
+              <h1>Galerija</h1>
+              <i class="fas fa-images icon"></i>
+              <p>Pogledajte u galeriji kako izgleda naše preduzeće.</p>
+              <button class="btn">Saznajte više</button>
+            </div>
+            <div class="carousel__box">
+              <h1>Kontakt</h1>
+              <i class="fas fa-id-card icon"></i>
+              <p>Kontaktirajte nas ukoliko imate nekih pitanja.</p>
+              <button class="btn">Kontaktiraj</button>
+            </div>
+          </div>
+        </div>
+        <div class="main__right">
+          <img src="/resources/blob2.png" alt="Blob" class="blob2" />
+          <img src="/resources/bins.png" alt="Recycling bins" class="bins" />
+        </div>
+      </main>
+      <!-- SECTION About Us -->
+      <section id="about">
+        <h1>O Nama</h1>
+        <div class="about--box">
+          <p>
+            <span>·</span> Kompanija <strong>"Jedina Nada DOO"</strong> uspešno
+            posluje od samog osnivanja 2010. godine, sa sedištem na adresi
+            Karađorđeva BB u Senti.
+          </p>
+          <p>
+            <span>·</span> Bavimo se reciklažom neopasnog otpada. Naša firma
+            vrši otkup, preradu i reciklažu sekundarnih sirovina na teritoriji
+            cele Srbije.
+          </p>
+          <p>
+            <span>·</span> Neopasni otpad je svaki otpad koji nema
+            karakteristike opasnog otpada. Ovde svrstavamo:
+          </p>
+          <ul>
+            <li><span>·</span> Staklene i plastične boce</li>
+            <li><span>·</span> Papir</li>
+            <li><span>·</span> Plastika</li>
+            <li><span>·</span> Gvožđe</li>
+            <li><span>·</span> Tekstil</li>
+          </ul>
+          <button class="btn btn-secondary align">
+            <a href="index.html#contact">Gde se nalazimo?</a>
+          </button>
+        </div>
+        <div class="space"></div>
+      </section>
+      <section id="shop">
+        <h1>Otkup</h1>
+        <h2>Vršimo otkup sledećih stvari:</h2>
+        <div class="shop__box">
+          <div class="shop__box--item">
+            <p class="shop__box--item-heading">Plastika</p>
+            <img
+              src="/resources/icons/plastic.png"
+              alt="Plastic"
+              class="shop__box--item-img shop__box--item-img-1"
+              loading="lazy"
+            />
+            <ul>
+              <li class="shop__box--item-list"><span></span>PET Ambalaža</li>
+              <li class="shop__box--item-list"><span></span>Čepove</li>
+              <li class="shop__box--item-list"><span></span>Stolice</li>
+              <li class="shop__box--item-list"><span></span>Stolove</li>
+              <li class="shop__box--item-list"><span></span>Kofe</li>
+              <li class="shop__box--item-list"><span></span>Gajbe</li>
+            </ul>
+          </div>
+          <div class="shop__box--item">
+            <p class="shop__box--item-heading">Metal</p>
+            <img
+              src="/resources/icons/metal.png"
+              alt="Metal"
+              class="shop__box--item-img shop__box--item-img-2"
+              loading="lazy"
+            />
+            <ul>
+              <li class="shop__box--item-list"><span></span>Gvožđe</li>
+              <li class="shop__box--item-list"><span></span>Čelik</li>
+              <li class="shop__box--item-list"><span></span>Bakar</li>
+              <li class="shop__box--item-list"><span></span>Mesing</li>
+              <li class="shop__box--item-list"><span></span>Aluminijum</li>
+              <li class="shop__box--item-list"><span></span>Prohrom</li>
+              <li class="shop__box--item-list"><span></span>Olovo</li>
+            </ul>
+          </div>
+          <div class="shop__box--item">
+            <p class="shop__box--item-heading">Staklo</p>
+            <img
+              src="/resources/icons/glass.png"
+              alt="Glass"
+              class="shop__box--item-img shop__box--item-img-3"
+              loading="lazy"
+            />
+            <ul>
+              <li class="shop__box--item-list"><span></span>Staklene flaše</li>
+              <li class="shop__box--item-list"><span></span>Staklene tegle</li>
+              <li class="shop__box--item-list"><span></span>Prozori</li>
+              <li class="shop__box--item-list">
+                <span></span>Slomljeno staklo
+              </li>
+              <li class="shop__box--item-list">
+                <span></span>Ostale vrste stakala
+              </li>
+            </ul>
+          </div>
+          <div class="shop__box--item">
+            <p class="shop__box--item-heading">Papir</p>
+            <img
+              src="/resources/icons/paper.png"
+              alt="Paper"
+              class="shop__box--item-img shop__box--item-img-4"
+              loading="lazy"
+            />
+            <ul>
+              <li class="shop__box--item-list"><span></span>Papir</li>
+              <li class="shop__box--item-list"><span></span>Arhivski papir</li>
+              <li class="shop__box--item-list"><span></span>Karton</li>
+              <li class="shop__box--item-list"><span></span>Knjige</li>
+              <li class="shop__box--item-list"><span></span>Sveske</li>
+              <li class="shop__box--item-list"><span></span>Novine</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION Recycling -->
+      <section id="recycling">
+        <h1>Značaj reciklaže</h1>
+        <img
+          src="/resources/recycle.png"
+          alt="Recycling symbol"
+          class="recycling-symbol"
+          loading="lazy"
+        />
+        <div class="recycling__box">
+          <h2 class="recycling__box-heading">Šta je reciklaža?</h2>
+          <p class="recycling__box-text">
+            Reciklaža je proces koji obuhvata sakupljanje, izdvajanje, preradu i
+            izradu novih materijala i proizvoda iz iskorišćenih stvari ili
+            materijala. U suprotnom, ti materijali bi završili na deponiji i
+            zagađivali bi životnu sredinu.
+          </p>
+          <h2 class="recycling__box-heading">
+            Reciklažom se smanjuje potrošnja prirodnih resursa
+          </h2>
+          <p class="recycling__box-text">
+            S obzirom na to da se neobnovljivi resursi troše velikom brzinom i
+            očekivanja su da ćemo u narednih 40 godina ostati bez zaliha nafte,
+            neophodno je učiniti sve što je moguće kako bismo to izbegli.
+            Potrebno je da svaka država razvije strategiju koja će se baviti
+            ovim pitanjem. Neophodno je da se narod edukuje o značaju reciklaže
+            i o negativnim posledicama koje zagađenje životne sredine ima na
+            nas. <br />
+            Recikliranjem se čuvaju prirodni resursi poput vode, minerala, nafte
+            i šuma.
+          </p>
+          <h2 class="recycling__box-heading">
+            Reciklažom čuvamo prirodna staništa životinja i biljaka
+          </h2>
+          <p class="recycling__box-text">
+            Poslednjih decenija mnogo životinja je izgubilo svoje domove zbog
+            seča šuma radi proizvodnje proizvoda od papira. Zbog toga veliki
+            broj životinjskih i biljnih vrsta je postao ugrožen. Taj problem
+            bismo mogli rešiti reciklažom, jer reciklažom papira, kartona i
+            ostalih materijala koji se proizvode od drveta smanjujemo potrebu za
+            sečom šuma.
+          </p>
+          <h2 class="recycling__box-heading">
+            Reciklažom smanjujemo zagađenost voda i štitimo vodeni svet
+          </h2>
+          <p class="recycling__box-text">
+            Velika količina otpada završava u rekama, morima i okeanima, time
+            ugrožavajući prirodna staništa za mnoge životinjske vrste. Najveći
+            deo otpada koji završava u tim staništima je upravo plastika koja
+            može i mora da se reciklira. Samim tim što životinje unose zagađene
+            materijale u svoj organizam, unosimo ih i mi pošto ih konzumiramo.
+          </p>
+          <h2 class="recycling__box-heading">Reciklažom štedimo energiju</h2>
+          <p class="recycling__box-text">
+            Kada ambalaža ne završi na reciklaži, uglavnom se spaljuje čime se
+            troši velika količina energije i proizvodi se velika kolicina
+            CO<sub>2</sub>.<br />
+            Pravljenje proizvoda od recikliranog materijala zahteva mnogo manje
+            energije nego kada se pravi od novog, sirovog materijala. Primer je
+            aluminijum, reciklažom se koristi čak 95% manje energije nego
+            pravljenjem iz početka. Ušteda kod papira od recikliranog materijala
+            je oko 40% manje potrošene energije.
+          </p>
+          <h2 class="recycling__box-heading">
+            Reciklažom na deponijama završava manje otpada i manje otpada se
+            spaljuje
+          </h2>
+          <p class="recycling__box-text">
+            Na deponijama završavaju razne stvari koje bi mogle da se
+            recikliraju. Time se zagađuje zemljište, voda i vazduh. Takođe,
+            velika količina otpada se spaljuje što zagađuje životnu sredinu.<br />
+            Zagađenost u našoj zemlji je u konstantnom porastu i potrebno je
+            napraviti korenite promene kako bismo sačuvali našu planetu!
+          </p>
+        </div>
+        <div class="space"></div>
+      </section>
+      <!-- SECTION Kontakt -->
+      <section id="contact">
+        <h1>Kontakt</h1>
+        <div class="contact__box">
+          <div class="contact__box-left">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2775.853178241099!2d20.094086600832522!3d45.914245211800015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDU0JzUxLjMiTiAyMMKwMDUnNDMuNCJF!5e0!3m2!1ssr!2srs!4v1618260878952!5m2!1ssr!2srs"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen="true"
+              loading="lazy"
+              class="contact-map"
+            ></iframe>
+          </div>
+          <div class="contact__box-right">
+            <div class="contact__box-right-container">
+              <div class="contact__box-right-info bold">Kontakt podaci</div>
+              <p class="bold">
+                <i class="fas fa-map-marker-alt mrg-right color-icon"></i>
+                &NonBreakingSpace;Karađorđeva BB, 24400 Senta
+              </p>
+              <p class="bold">
+                <a href="tel:+381621788781"
+                  ><i class="fas fa-phone-alt mrg-right color-icon"></i> 062 178
+                  87 81</a
+                >
+              </p>
+              <p class="bold">
+                <a href="mailto:jedinanada.nc@gmail.com"
+                  ><i class="fas fa-envelope mrg-right color-icon"></i>
+                  jedinanada.nc@gmail.com</a
+                >
+              </p>
+              <p class="bold">
+                <i class="fas fa-clock mrg-right color-icon"></i> Radno vreme:
+              </p>
+              <p class="padding-left time">Ponedeljak - Petak 07:00 - 15:00h</p>
+              <p class="padding-left time">Subota 07:00 - 12:00h</p>
+              <p class="padding-left time">Nedelja neradna</p>
+
+              <a
+                href="https://facebook.com/pages/category/Company/DOO-Jedina-Nada-reciklaza-305049839618844/"
+                target="_blank"
+                class="social-media bold"
+                ><i class="fab fa-facebook-f color-icon mrg-right"></i>
+                Facebook</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- SECTION Footer -->
+    <footer id="footer">
+      <div class="footer__container">
+        <div class="footer__container--location">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2775.853178241099!2d20.094086600832522!3d45.914245211800015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDU0JzUxLjMiTiAyMMKwMDUnNDMuNCJF!5e0!3m2!1ssr!2srs!4v1618260878952!5m2!1ssr!2srs"
+            width="200"
+            height="200"
+            style="border: 0"
+            allowfullscreen="true"
+            loading="lazy"
+            class="contact-map"
+          ></iframe>
+          <p>
+            <i class="fas fa-map-marker-alt color-icon"></i>
+            &NonBreakingSpace;Karađorđeva BB, 24400 Senta
+          </p>
+
+          <p>
+            <a href="tel:+381621788781"
+              ><i class="fas fa-phone-alt color-icon"></i> 062 178 87 81</a
+            >
+          </p>
+
+          <p>
+            <a href="mailto:jedinanada.nc@gmail.com"
+              ><i class="fas fa-envelope color-icon"></i>
+              jedinanada.nc@gmail.com</a
+            >
+          </p>
+        </div>
+        <div class="footer__container--nav">
+          <ul>
+            <p>Navigacija</p>
+            <li>
+              <a href="index.html#main">Početna</a>
+            </li>
+            <li>
+              <a href="index.html#about">O Nama</a>
+            </li>
+            <li>
+              <a href="index.html#shop"> Otkup</a>
+            </li>
+            <li>
+              <a href="gallery.html">Galerija</a>
+            </li>
+            <li>
+              <a href="index.html#recycling">Značaj reciklaže</a>
+            </li>
+            <li>
+              <a href="index.html#contact"> Kontakt</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__container--logo">
+          <img src="/resources/logo/logo150h.png" alt="Logo" />
+        </div>
+        <div class="footer__container--btn">
+          <a href="#main"><i class="fas fa-arrow-circle-up"></i></a>
+        </div>
+      </div>
+      <p class="footer__copy">
+        Copyright &copy; Jedina Nada DOO - 2021. All rights reserved.
+      </p>
+      <p class="footer__copy">
+        Website by&NonBreakingSpace;
+        <a href="https://milosdelibasic.netlify.app/" target="_blank">
+          Miloš Delibašić</a
+        >
+      </p>
+    </footer>
+
+    <!-- IMPORT JS scripts -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="slick/slick.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+      integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <script src="/gallery/baguetteBox.min.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

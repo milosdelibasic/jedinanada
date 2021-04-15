@@ -1,0 +1,70 @@
+#main {
+  position: relative;
+  display: grid;
+  // width: 100%;
+  background: $color-primary;
+
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: 'left right';
+  // border-bottom: 4px solid darken($color: $color-primary, $amount: 20);
+  // border-bottom: 8px solid #26881b;
+  &::after {
+    content: '';
+    display: block;
+    height: 7px;
+    position: relative;
+    left: -10%;
+    bottom: 0;
+    width: 180%;
+    background-image: -webkit-linear-gradient(
+      left,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(32, 116, 23) 20%,
+      rgb(32, 116, 23) 80%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(32, 116, 23) 20%,
+      rgb(32, 116, 23) 80%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+}
+
+.main {
+  &__left {
+    grid-area: left;
+    display: grid;
+    justify-content: center;
+    // background: $color-primary;
+  }
+  &__right {
+    grid-area: right;
+    position: relative;
+    // background: $color-primary;
+  }
+}
+
+//SECTION Art
+.blob1 {
+  position: absolute;
+  top: 280px;
+  left: 50px;
+}
+.blob2 {
+  position: absolute;
+  bottom: 0;
+  right: -10px;
+  width: 600px;
+  // height: 200px;
+}
+.bins {
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+  transform-origin: bottom;
+  transform: scale(0.95);
+}
