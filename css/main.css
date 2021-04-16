@@ -190,6 +190,12 @@ nav {
   padding: 4px 0;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .carousel__box p {
+    font-size: 2.2rem;
+  }
+}
+
 .icon {
   font-size: 6rem;
   position: relative;
@@ -240,6 +246,13 @@ nav {
   .btn {
     padding: 1rem 1.3rem;
     font-size: 2.4rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .btn {
+    padding: 1.1rem 1.3rem;
+    font-size: 2.9rem;
   }
 }
 
