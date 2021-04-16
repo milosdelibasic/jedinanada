@@ -14,29 +14,9 @@
     background-image: url(/resources/bottles/bottles900w.jpg),
       linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
   }
-  // @include respond(bp-700) {
-  //   background-image: url(/resources/bottles/bottles700w.jpg),
-  //     linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
-  // }
-  // @include respond(phone) {
-  //   background-image: url(/resources/bottles/bottles600w.jpg),
-  //     linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
-  // }
-  // @include respond(bp-medium) {
-  //   background-image: url(/resources/bottles/bottles500w.jpg),
-  //     linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
-  // }
-  // @include respond(bp-420) {
-  //   background-image: url(/resources/bottles/bottles420w.jpg),
-  //     linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
-  // }
-  // @include respond(bp-small) {
-  //   background-image: url(/resources/bottles/bottles350w.jpg),
-  //     linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
-  // }
+
   background-blend-mode: overlay;
   background-size: cover;
-  background-repeat: no-repeat;
   background-attachment: fixed;
   text-align: center;
   position: relative;

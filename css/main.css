@@ -1093,7 +1093,6 @@ nav .logo span {
   background-position-x: 50%;
   background-blend-mode: overlay;
   background-size: cover;
-  background-repeat: no-repeat;
   background-attachment: fixed;
   text-align: center;
   position: relative;
@@ -1433,14 +1432,36 @@ nav .logo span {
 }
 
 #recycling {
-  background-image: url(/resources/nature1600w.jpg), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.5)));
-  background-image: url(/resources/nature1600w.jpg), linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+  background-image: url(/resources/nature/nature1600w.jpg), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.5)));
+  background-image: url(/resources/nature/nature1600w.jpg), linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+  background-position-x: 50%;
   background-size: cover;
   background-blend-mode: overlay;
   background-attachment: fixed;
   text-align: center;
   padding: 0 20rem;
   position: relative;
+}
+
+@media only screen and (max-width: 87.5em) {
+  #recycling {
+    background-image: url(/resources/nature/nature1400w.jpg), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.4)));
+    background-image: url(/resources/nature/nature1400w.jpg), linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  #recycling {
+    background-image: url(/resources/nature/nature1200w.jpg), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.4)));
+    background-image: url(/resources/nature/nature1200w.jpg), linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  #recycling {
+    background-image: url(/resources/nature/nature900w.jpg), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.4)));
+    background-image: url(/resources/nature/nature900w.jpg), linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+  }
 }
 
 @media only screen and (max-width: 87.5em) {
