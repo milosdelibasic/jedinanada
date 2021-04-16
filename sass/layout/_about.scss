@@ -1,19 +1,41 @@
-#about {
+.no-webp .about-bg {
   background-image: url(/resources/bottles/bottles1600w.jpg),
+  linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+background-position-x: 50%;
+@include respond(bp-big) {
+  background-image: url(/resources/bottles/bottles1400w.jpg),
+    linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+}
+@include respond(tab-land) {
+  background-image: url(/resources/bottles/bottles1200w.jpg),
+    linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+}
+@include respond(tab-port) {
+  background-image: url(/resources/bottles/bottles900w.jpg),
+    linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+}
+}
+
+.webp .about-bg {
+  background-image: url(/resources/bottles/bottles1600w.webp),
     linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
   background-position-x: 50%;
   @include respond(bp-big) {
-    background-image: url(/resources/bottles/bottles1400w.jpg),
+    background-image: url(/resources/bottles/bottles1400w.webp),
       linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
   }
   @include respond(tab-land) {
-    background-image: url(/resources/bottles/bottles1200w.jpg),
+    background-image: url(/resources/bottles/bottles1200w.webp),
       linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
   }
   @include respond(tab-port) {
-    background-image: url(/resources/bottles/bottles900w.jpg),
+    background-image: url(/resources/bottles/bottles900w.webp),
       linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
   }
+}
+
+#about {
+  
 
   background-blend-mode: overlay;
   background-size: cover;

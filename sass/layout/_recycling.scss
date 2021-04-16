@@ -1,19 +1,26 @@
-#recycling {
+.no-webp .recycling-bg {
   background-image: url(/resources/nature/nature1600w.jpg),
-    linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
-  background-position-x: 50%;
-  @include respond(bp-big) {
-    background-image: url(/resources/nature/nature1400w.jpg),
-      linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
-  }
-  // @include respond(tab-land) {
-  //   background-image: url(/resources/nature/nature1200w.jpg),
-  //     linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
-  // }
-  // @include respond(tab-port) {
-  //   background-image: url(/resources/nature/nature900w.jpg),
-  //     linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
-  // }
+  linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+background-position-x: 50%;
+@include respond(bp-big) {
+  background-image: url(/resources/nature/nature1400w.jpg),
+    linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+}
+}
+
+.webp .recycling-bg {
+  background-image: url(/resources/nature/nature1600w.webp),
+  linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+background-position-x: 50%;
+@include respond(bp-big) {
+  background-image: url(/resources/nature/nature1400w.webp),
+    linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+}
+}
+
+
+#recycling {
+  
   background-size: cover;
   background-blend-mode: overlay;
   background-attachment: fixed;

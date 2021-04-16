@@ -1138,36 +1138,66 @@ nav .logo span {
   }
 }
 
-#about {
+.no-webp .about-bg {
   background-image: url(/resources/bottles/bottles1600w.jpg), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.4)));
   background-image: url(/resources/bottles/bottles1600w.jpg), linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
   background-position-x: 50%;
-  background-blend-mode: overlay;
-  background-size: cover;
-  background-attachment: fixed;
-  text-align: center;
-  position: relative;
 }
 
 @media only screen and (max-width: 87.5em) {
-  #about {
+  .no-webp .about-bg {
     background-image: url(/resources/bottles/bottles1400w.jpg), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.4)));
     background-image: url(/resources/bottles/bottles1400w.jpg), linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
   }
 }
 
 @media only screen and (max-width: 75em) {
-  #about {
+  .no-webp .about-bg {
     background-image: url(/resources/bottles/bottles1200w.jpg), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.4)));
     background-image: url(/resources/bottles/bottles1200w.jpg), linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
   }
 }
 
 @media only screen and (max-width: 56.25em) {
-  #about {
+  .no-webp .about-bg {
     background-image: url(/resources/bottles/bottles900w.jpg), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.4)));
     background-image: url(/resources/bottles/bottles900w.jpg), linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
   }
+}
+
+.webp .about-bg {
+  background-image: url(/resources/bottles/bottles1600w.webp), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.4)));
+  background-image: url(/resources/bottles/bottles1600w.webp), linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+  background-position-x: 50%;
+}
+
+@media only screen and (max-width: 87.5em) {
+  .webp .about-bg {
+    background-image: url(/resources/bottles/bottles1400w.webp), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.4)));
+    background-image: url(/resources/bottles/bottles1400w.webp), linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  .webp .about-bg {
+    background-image: url(/resources/bottles/bottles1200w.webp), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.4)));
+    background-image: url(/resources/bottles/bottles1200w.webp), linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .webp .about-bg {
+    background-image: url(/resources/bottles/bottles900w.webp), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.4)));
+    background-image: url(/resources/bottles/bottles900w.webp), linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+  }
+}
+
+#about {
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  position: relative;
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -1482,23 +1512,39 @@ nav .logo span {
   content: '· ';
 }
 
-#recycling {
+.no-webp .recycling-bg {
   background-image: url(/resources/nature/nature1600w.jpg), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.5)));
   background-image: url(/resources/nature/nature1600w.jpg), linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
   background-position-x: 50%;
+}
+
+@media only screen and (max-width: 87.5em) {
+  .no-webp .recycling-bg {
+    background-image: url(/resources/nature/nature1400w.jpg), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.4)));
+    background-image: url(/resources/nature/nature1400w.jpg), linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+  }
+}
+
+.webp .recycling-bg {
+  background-image: url(/resources/nature/nature1600w.webp), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.5)));
+  background-image: url(/resources/nature/nature1600w.webp), linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+  background-position-x: 50%;
+}
+
+@media only screen and (max-width: 87.5em) {
+  .webp .recycling-bg {
+    background-image: url(/resources/nature/nature1400w.webp), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.4)));
+    background-image: url(/resources/nature/nature1400w.webp), linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+  }
+}
+
+#recycling {
   background-size: cover;
   background-blend-mode: overlay;
   background-attachment: fixed;
   text-align: center;
   padding: 0 20rem;
   position: relative;
-}
-
-@media only screen and (max-width: 87.5em) {
-  #recycling {
-    background-image: url(/resources/nature/nature1400w.jpg), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.4)));
-    background-image: url(/resources/nature/nature1400w.jpg), linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
-  }
 }
 
 @media only screen and (max-width: 87.5em) {

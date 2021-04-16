@@ -126,6 +126,3 @@ function enableScroll() {
   window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
 }
 
-//
-document.addEventListener('touchstart', onTouchStart, {passive: true});
-document.querySelector(".contact-map").addEventListener('touchstart', onTouchStart, {passive: true});
