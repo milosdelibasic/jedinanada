@@ -1450,20 +1450,6 @@ nav .logo span {
   }
 }
 
-@media only screen and (max-width: 75em) {
-  #recycling {
-    background-image: url(/resources/nature/nature1200w.jpg), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.4)));
-    background-image: url(/resources/nature/nature1200w.jpg), linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
-  }
-}
-
-@media only screen and (max-width: 56.25em) {
-  #recycling {
-    background-image: url(/resources/nature/nature900w.jpg), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.4)));
-    background-image: url(/resources/nature/nature900w.jpg), linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
-  }
-}
-
 @media only screen and (max-width: 87.5em) {
   #recycling {
     padding: 0 10rem;
