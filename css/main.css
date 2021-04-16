@@ -554,6 +554,10 @@ nav {
       align-content: center;
 }
 
+.footer__container--logo a img {
+  height: 150px;
+}
+
 .footer__copy {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -799,6 +803,11 @@ nav .logo {
   margin: 0;
 }
 
+nav .logo img {
+  height: 50px;
+  margin-right: 0.8rem;
+}
+
 @media only screen and (max-width: 75em) {
   nav .logo {
     -ms-flex-item-align: start;
@@ -1007,7 +1016,7 @@ nav .logo span {
     position: absolute;
     background: #75a32f;
     width: 100%;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     border-bottom: 1px solid #f3f315;
   }
   .main__logo a {
@@ -1020,6 +1029,9 @@ nav .logo span {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .main__logo a img {
+    height: 90px;
   }
   .main__logo span {
     color: #13440e;
@@ -1944,7 +1956,7 @@ nav .logo span {
     left: 0;
     background: #75a32f;
     width: 100%;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     border-bottom: 1px solid #f3f315;
   }
   .gallery__logo a {
@@ -1957,6 +1969,9 @@ nav .logo span {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .gallery__logo a img {
+    height: 90px;
   }
   .gallery__logo span {
     color: #f3f315;

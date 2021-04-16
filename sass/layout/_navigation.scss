@@ -154,6 +154,11 @@ nav {
     padding: 0.5rem 1rem;
     margin: 0;
 
+    & img {
+      height: 50px;
+      margin-right: 0.8rem;
+    }
+
     @include respond(tab-land) {
       align-self: flex-start;
     }

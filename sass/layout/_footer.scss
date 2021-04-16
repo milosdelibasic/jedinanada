@@ -184,6 +184,9 @@
       display: grid;
       justify-content: center;
       align-content: center;
+      & a img {
+        height: 150px;
+      }
     }
   }
   &__copy {

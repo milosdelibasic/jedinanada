@@ -160,11 +160,14 @@
     left: 0;
     background: darken($color: $color-primary, $amount: 5);
     width: 100%;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     & a {
       display: flex;
       justify-content: flex-start;
       align-items: center;
+      & img {
+        height: 90px;
+      }
     }
     & span {
       color: rgb(243, 243, 21);
