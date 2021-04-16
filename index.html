@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Reciklaža i neopasan otpad Jedina Nada DOO. Naša firma vrši otkup, preradu i reciklažu sekundarnih sirovina na teritoriji Sente i Srbije."
+      content="Reciklaža i neopasan otpad Jedina Nada DOO Senta. Naša firma vrši otkup, preradu i reciklažu sekundarnih sirovina na teritoriji Sente i Srbije."
     />
     <meta property="og:image" content="/resources/logo/logoshare.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="600" />
     <meta property="og:image:height" content="314" />
-    <title>Jedina Nada DOO - Reciklaža</title>
+    <meta name="robots" content="index, follow" />
+    <title>Jedina Nada DOO Senta - Reciklaža</title>
     <link
       rel="shortcut icon"
       href="resources/recycle.png"
@@ -55,28 +56,32 @@
         </div>
         <ul>
           <li class="navigation-list-item">
-            <a href="index.html#main"><i class="fas fa-home"></i> Početna</a>
+            <a href="index.html#main" id="navigation-home"
+              ><i class="fas fa-home"></i> Početna</a
+            >
           </li>
           <li class="navigation-list-item">
-            <a href="index.html#about"
+            <a href="index.html#about" id="navigation-about"
               ><i class="fas fa-id-badge"></i> O Nama</a
             >
           </li>
           <li class="navigation-list-item">
-            <a href="index.html#shop">
+            <a href="index.html#shop" id="navigation-shop">
               <i class="fas fa-hand-holding-usd"></i> Otkup</a
             >
           </li>
           <li class="navigation-list-item">
-            <a href="gallery.html"> <i class="fas fa-images"></i> Galerija</a>
+            <a href="gallery.html" id="navigation-gallery">
+              <i class="fas fa-images"></i> Galerija</a
+            >
           </li>
           <li class="navigation-list-item">
-            <a href="index.html#recycling"
+            <a href="index.html#recycling" id="navigation-recycling"
               ><i class="fas fa-recycle"></i> Značaj reciklaže</a
             >
           </li>
           <li class="navigation-list-item">
-            <a href="index.html#contact">
+            <a href="index.html#contact" id="navigation-contact">
               <i class="fas fa-id-card"></i> Kontakt</a
             >
           </li>
@@ -106,35 +111,49 @@
 
           <div class="carousel">
             <div class="carousel__box">
-              <h1>O Nama</h1>
+              <h1 id="lang-carousel-about">O Nama</h1>
               <i class="fas fa-id-badge icon"></i>
-              <p>Saznajte više o našem preduzeću.</p>
+              <p id="lang-carousel-about-p">Saznajte više o našem preduzeću.</p>
               <button class="btn">
-                <a href="index.html#about">Saznajte više</a>
+                <a href="index.html#about" id="lang-carousel-about-btn"
+                  >Saznajte više</a
+                >
               </button>
             </div>
             <div class="carousel__box">
-              <h1>Otkup</h1>
+              <h1 id="lang-carousel-shop">Otkup</h1>
               <i class="fas fa-hand-holding-usd icon"></i>
-              <p>Saznajte šta sve otkupljujemo od neopasnog otpada.</p>
+              <p id="lang-carousel-shop-p">
+                Saznajte šta sve otkupljujemo od neopasnog otpada.
+              </p>
               <button class="btn">
-                <a href="index.html#shop">Saznajte više</a>
+                <a href="index.html#shop" id="lang-carousel-shop-btn"
+                  >Saznajte više</a
+                >
               </button>
             </div>
             <div class="carousel__box">
-              <h1>Galerija</h1>
+              <h1 id="lang-carousel-gallery">Galerija</h1>
               <i class="fas fa-images icon"></i>
-              <p>Pogledajte u galeriji kako izgleda naše preduzeće.</p>
+              <p id="lang-carousel-gallery-p">
+                Pogledajte u galeriji kako izgleda naše preduzeće.
+              </p>
               <button class="btn">
-                <a href="gallery.html">Saznajte više</a>
+                <a href="gallery.html" id="lang-carousel-gallery-btn"
+                  >Saznajte više</a
+                >
               </button>
             </div>
             <div class="carousel__box">
-              <h1>Kontakt</h1>
+              <h1 id="lang-carousel-contact">Kontakt</h1>
               <i class="fas fa-id-card icon"></i>
-              <p>Kontaktirajte nas ukoliko imate nekih pitanja.</p>
+              <p id="lang-carousel-contact-p">
+                Kontaktirajte nas ukoliko imate nekih pitanja.
+              </p>
               <button class="btn">
-                <a href="index.html#contact">Kontaktiraj</a>
+                <a href="index.html#contact" id="lang-carousel-contact-btn"
+                  >Kontaktiraj</a
+                >
               </button>
             </div>
           </div>
@@ -164,41 +183,45 @@
       </main>
       <!-- SECTION About Us -->
       <section id="about" class="about-bg">
-        <h1>O Nama</h1>
+        <h1 id="lang-about">O Nama</h1>
         <div class="about--box">
-          <p>
+          <p id="lang-about-1">
             <span>·</span> Kompanija <strong>"Jedina Nada DOO"</strong> uspešno
             posluje od samog osnivanja 2010. godine, sa sedištem na adresi
             Karađorđeva BB u Senti.
           </p>
-          <p>
+          <p id="lang-about-2">
             <span>·</span> Bavimo se reciklažom neopasnog otpada. Naša firma
             vrši otkup, preradu i reciklažu sekundarnih sirovina na teritoriji
             cele Srbije.
           </p>
-          <p>
+          <p id="lang-about-3">
             <span>·</span> Neopasni otpad je svaki otpad koji nema
             karakteristike opasnog otpada. Ovde svrstavamo:
           </p>
           <ul>
-            <li><span>·</span> Staklene i plastične boce</li>
-            <li><span>·</span> Papir</li>
-            <li><span>·</span> Plastika</li>
-            <li><span>·</span> Gvožđe</li>
-            <li><span>·</span> Tekstil</li>
+            <li id="lang-about-4"><span>·</span> Staklene i plastične boce</li>
+            <li id="lang-about-5"><span>·</span> Papir</li>
+            <li id="lang-about-6"><span>·</span> Plastika</li>
+            <li id="lang-about-7"><span>·</span> Gvožđe</li>
+            <li id="lang-about-8"><span>·</span> Tekstil</li>
           </ul>
           <button class="btn btn-secondary align">
-            <a href="index.html#contact">Gde se nalazimo?</a>
+            <a href="index.html#contact" id="lang-about-btn"
+              >Gde se nalazimo?</a
+            >
           </button>
         </div>
         <div class="space"></div>
       </section>
       <section id="shop">
-        <h1>Otkup</h1>
-        <h2>Vršimo otkup sledećih stvari:</h2>
+        <h1 id="lang-shop">Otkup</h1>
+        <h2 id="lang-shop-text">Vršimo otkup sledećih stvari:</h2>
         <div class="shop__box">
           <div class="shop__box--item">
-            <p class="shop__box--item-heading">Plastika</p>
+            <p class="shop__box--item-heading" id="lang-shop-plastic">
+              Plastika
+            </p>
             <img
               src="/resources/icons/plastic.png"
               alt="Plastic"
@@ -206,16 +229,28 @@
               loading="lazy"
             />
             <ul>
-              <li class="shop__box--item-list"><span></span>PET Ambalaža</li>
-              <li class="shop__box--item-list"><span></span>Čepove</li>
-              <li class="shop__box--item-list"><span></span>Stolice</li>
-              <li class="shop__box--item-list"><span></span>Stolove</li>
-              <li class="shop__box--item-list"><span></span>Kofe</li>
-              <li class="shop__box--item-list"><span></span>Gajbe</li>
+              <li class="shop__box--item-list" id="lang-shop-plastic-1">
+                <span></span>PET Ambalaža
+              </li>
+              <li class="shop__box--item-list" id="lang-shop-plastic-2">
+                <span></span>Čepove
+              </li>
+              <li class="shop__box--item-list" id="lang-shop-plastic-3">
+                <span></span>Stolice
+              </li>
+              <li class="shop__box--item-list" id="lang-shop-plastic-4">
+                <span></span>Stolove
+              </li>
+              <li class="shop__box--item-list" id="lang-shop-plastic-5">
+                <span></span>Kofe
+              </li>
+              <li class="shop__box--item-list" id="lang-shop-plastic-6">
+                <span></span>Gajbe
+              </li>
             </ul>
           </div>
           <div class="shop__box--item">
-            <p class="shop__box--item-heading">Metal</p>
+            <p class="shop__box--item-heading" id="lang-shop-metal">Metal</p>
             <img
               src="/resources/icons/metal.png"
               alt="Metal"
@@ -223,17 +258,31 @@
               loading="lazy"
             />
             <ul>
-              <li class="shop__box--item-list"><span></span>Gvožđe</li>
-              <li class="shop__box--item-list"><span></span>Čelik</li>
-              <li class="shop__box--item-list"><span></span>Bakar</li>
-              <li class="shop__box--item-list"><span></span>Mesing</li>
-              <li class="shop__box--item-list"><span></span>Aluminijum</li>
-              <li class="shop__box--item-list"><span></span>Prohrom</li>
-              <li class="shop__box--item-list"><span></span>Olovo</li>
+              <li class="shop__box--item-list" id="lang-shop-metal-1">
+                <span></span>Gvožđe
+              </li>
+              <li class="shop__box--item-list" id="lang-shop-metal-2">
+                <span></span>Čelik
+              </li>
+              <li class="shop__box--item-list" id="lang-shop-metal-3">
+                <span></span>Bakar
+              </li>
+              <li class="shop__box--item-list" id="lang-shop-metal-4">
+                <span></span>Mesing
+              </li>
+              <li class="shop__box--item-list" id="lang-shop-metal-5">
+                <span></span>Aluminijum
+              </li>
+              <li class="shop__box--item-list" id="lang-shop-metal-6">
+                <span></span>Prohrom
+              </li>
+              <li class="shop__box--item-list" id="lang-shop-metal-7">
+                <span></span>Olovo
+              </li>
             </ul>
           </div>
           <div class="shop__box--item">
-            <p class="shop__box--item-heading">Staklo</p>
+            <p class="shop__box--item-heading" id="lang-shop-glass">Staklo</p>
             <img
               src="/resources/icons/glass.png"
               alt="Glass"
@@ -241,19 +290,25 @@
               loading="lazy"
             />
             <ul>
-              <li class="shop__box--item-list"><span></span>Staklene flaše</li>
-              <li class="shop__box--item-list"><span></span>Staklene tegle</li>
-              <li class="shop__box--item-list"><span></span>Prozori</li>
-              <li class="shop__box--item-list">
+              <li class="shop__box--item-list" id="lang-shop-glass-1">
+                <span></span>Staklene flaše
+              </li>
+              <li class="shop__box--item-list" id="lang-shop-glass-2">
+                <span></span>Staklene tegle
+              </li>
+              <li class="shop__box--item-list" id="lang-shop-glass-3">
+                <span></span>Prozori
+              </li>
+              <li class="shop__box--item-list" id="lang-shop-glass-4">
                 <span></span>Slomljeno staklo
               </li>
-              <li class="shop__box--item-list">
+              <li class="shop__box--item-list" id="lang-shop-glass-5">
                 <span></span>Ostale vrste stakala
               </li>
             </ul>
           </div>
           <div class="shop__box--item">
-            <p class="shop__box--item-heading">Papir</p>
+            <p class="shop__box--item-heading" id="lang-shop-paper">Papir</p>
             <img
               src="/resources/icons/paper.png"
               alt="Paper"
@@ -261,19 +316,31 @@
               loading="lazy"
             />
             <ul>
-              <li class="shop__box--item-list"><span></span>Papir</li>
-              <li class="shop__box--item-list"><span></span>Arhivski papir</li>
-              <li class="shop__box--item-list"><span></span>Karton</li>
-              <li class="shop__box--item-list"><span></span>Knjige</li>
-              <li class="shop__box--item-list"><span></span>Sveske</li>
-              <li class="shop__box--item-list"><span></span>Novine</li>
+              <li class="shop__box--item-list" id="lang-shop-paper-1">
+                <span></span>Papir
+              </li>
+              <li class="shop__box--item-list" id="lang-shop-paper-2">
+                <span></span>Arhivski papir
+              </li>
+              <li class="shop__box--item-list" id="lang-shop-paper-3">
+                <span></span>Karton
+              </li>
+              <li class="shop__box--item-list" id="lang-shop-paper-4">
+                <span></span>Knjige
+              </li>
+              <li class="shop__box--item-list" id="lang-shop-paper-5">
+                <span></span>Sveske
+              </li>
+              <li class="shop__box--item-list" id="lang-shop-paper-6">
+                <span></span>Novine
+              </li>
             </ul>
           </div>
         </div>
       </section>
       <!-- SECTION Recycling -->
       <section id="recycling" class="recycling-bg">
-        <h1>Značaj reciklaže</h1>
+        <h1 id="lang-recycling">Značaj reciklaže</h1>
         <img
           src="/resources/recycle.png"
           alt="Recycling symbol"
@@ -281,17 +348,19 @@
           loading="lazy"
         />
         <div class="recycling__box">
-          <h2 class="recycling__box-heading">Šta je reciklaža?</h2>
-          <p class="recycling__box-text">
+          <h2 class="recycling__box-heading" id="lang-recycling-1">
+            Šta je reciklaža?
+          </h2>
+          <p class="recycling__box-text" id="lang-recycling-1-text">
             Reciklaža je proces koji obuhvata sakupljanje, izdvajanje, preradu i
             izradu novih materijala i proizvoda iz iskorišćenih stvari ili
             materijala. U suprotnom, ti materijali bi završili na deponiji i
             zagađivali bi životnu sredinu.
           </p>
-          <h2 class="recycling__box-heading">
+          <h2 class="recycling__box-heading" id="lang-recycling-2">
             Reciklažom se smanjuje potrošnja prirodnih resursa
           </h2>
-          <p class="recycling__box-text">
+          <p class="recycling__box-text" id="lang-recycling-2-text">
             S obzirom na to da se neobnovljivi resursi troše velikom brzinom i
             očekivanja su da ćemo u narednih 40 godina ostati bez zaliha nafte,
             neophodno je učiniti sve što je moguće kako bismo to izbegli.
@@ -302,10 +371,10 @@
             Recikliranjem se čuvaju prirodni resursi poput vode, minerala, nafte
             i šuma.
           </p>
-          <h2 class="recycling__box-heading">
+          <h2 class="recycling__box-heading" id="lang-recycling-3">
             Reciklažom čuvamo prirodna staništa životinja i biljaka
           </h2>
-          <p class="recycling__box-text">
+          <p class="recycling__box-text" id="lang-recycling-3-text">
             Poslednjih decenija mnogo životinja je izgubilo svoje domove zbog
             seča šuma radi proizvodnje proizvoda od papira. Zbog toga veliki
             broj životinjskih i biljnih vrsta je postao ugrožen. Taj problem
@@ -313,18 +382,20 @@
             ostalih materijala koji se proizvode od drveta smanjujemo potrebu za
             sečom šuma.
           </p>
-          <h2 class="recycling__box-heading">
+          <h2 class="recycling__box-heading" id="lang-recycling-4">
             Reciklažom smanjujemo zagađenost voda i štitimo vodeni svet
           </h2>
-          <p class="recycling__box-text">
+          <p class="recycling__box-text" id="lang-recycling-4-text">
             Velika količina otpada završava u rekama, morima i okeanima, time
             ugrožavajući prirodna staništa za mnoge životinjske vrste. Najveći
             deo otpada koji završava u tim staništima je upravo plastika koja
             može i mora da se reciklira. Samim tim što životinje unose zagađene
             materijale u svoj organizam, unosimo ih i mi pošto ih konzumiramo.
           </p>
-          <h2 class="recycling__box-heading">Reciklažom štedimo energiju</h2>
-          <p class="recycling__box-text">
+          <h2 class="recycling__box-heading" id="lang-recycling-5">
+            Reciklažom štedimo energiju
+          </h2>
+          <p class="recycling__box-text" id="lang-recycling-5-text">
             Kada ambalaža ne završi na reciklaži, uglavnom se spaljuje čime se
             troši velika količina energije i proizvodi se velika kolicina
             CO<sub>2</sub>.<br />
@@ -334,11 +405,11 @@
             pravljenjem iz početka. Ušteda kod papira od recikliranog materijala
             je oko 40% manje potrošene energije.
           </p>
-          <h2 class="recycling__box-heading">
+          <h2 class="recycling__box-heading" id="lang-recycling-6">
             Reciklažom na deponijama završava manje otpada i manje otpada se
             spaljuje
           </h2>
-          <p class="recycling__box-text">
+          <p class="recycling__box-text" id="lang-recycling-6-text">
             Na deponijama završavaju razne stvari koje bi mogle da se
             recikliraju. Time se zagađuje zemljište, voda i vazduh. Takođe,
             velika količina otpada se spaljuje što zagađuje životnu sredinu.<br />
@@ -350,7 +421,7 @@
       </section>
       <!-- SECTION Kontakt -->
       <section id="contact">
-        <h1>Kontakt</h1>
+        <h1 id="lang-contact">Kontakt</h1>
         <div class="contact__box">
           <div class="contact__box-left">
             <iframe
@@ -365,7 +436,12 @@
           </div>
           <div class="contact__box-right">
             <div class="contact__box-right-container">
-              <div class="contact__box-right-info bold">Kontakt podaci</div>
+              <div
+                class="contact__box-right-info bold"
+                id="lang-contact-heading"
+              >
+                Kontakt podaci
+              </div>
               <p class="bold">
                 <i class="fas fa-map-marker-alt mrg-right color-icon"></i>
                 &NonBreakingSpace;Karađorđeva BB, 24400 Senta
@@ -382,12 +458,18 @@
                   jedinanada.nc@gmail.com</a
                 >
               </p>
-              <p class="bold">
+              <p class="bold" id="lang-contact-hours">
                 <i class="fas fa-clock mrg-right color-icon"></i> Radno vreme:
               </p>
-              <p class="padding-left time">Ponedeljak - Petak 07:00 - 15:00h</p>
-              <p class="padding-left time">Subota 07:00 - 12:00h</p>
-              <p class="padding-left time">Nedelja neradna</p>
+              <p class="padding-left time" id="lang-contact-hours-1">
+                Ponedeljak - Petak 07:00h - 15:00h
+              </p>
+              <p class="padding-left time" id="lang-contact-hours-2">
+                Subota 07:00h - 12:00h
+              </p>
+              <p class="padding-left time" id="lang-contact-hours-3">
+                Nedelja neradna
+              </p>
 
               <a
                 href="https://facebook.com/pages/category/Company/DOO-Jedina-Nada-reciklaza-305049839618844/"
@@ -434,24 +516,26 @@
           </div>
           <div class="footer__container--nav">
             <ul>
-              <p>Navigacija</p>
+              <p id="lang-footer">Navigacija</p>
               <li>
-                <a href="index.html#main">Početna</a>
+                <a href="index.html#main" id="footer-1">Početna</a>
               </li>
               <li>
-                <a href="index.html#about">O Nama</a>
+                <a href="index.html#about" id="footer-2">O Nama</a>
               </li>
               <li>
-                <a href="index.html#shop"> Otkup</a>
+                <a href="index.html#shop" id="footer-3">Otkup</a>
               </li>
               <li>
-                <a href="gallery.html">Galerija</a>
+                <a href="gallery.html" id="footer-4">Galerija</a>
               </li>
               <li>
-                <a href="index.html#recycling">Značaj reciklaže</a>
+                <a href="index.html#recycling" id="footer-5"
+                  >Značaj reciklaže</a
+                >
               </li>
               <li>
-                <a href="index.html#contact"> Kontakt</a>
+                <a href="index.html#contact" id="footer-6">Kontakt</a>
               </li>
             </ul>
           </div>

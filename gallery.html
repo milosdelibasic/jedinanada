@@ -6,18 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Galerija slika preduzeća Jedina Nada DOO koje se bavi reciklažom neopasnih materija."
+      content="Galerija slika preduzeća Jedina Nada DOO iz Sente koje se bavi reciklažom neopasnih materija."
     />
-    <title>Jedina Nada DOO - Galerija</title>
-
+    <title>Jedina Nada DOO Senta - Galerija</title>
     <link
+      rel="shortcut icon"
+      href="resources/recycle.png"
+      type="image/x-icon"
+    />
+
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
       integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
       crossorigin="anonymous"
-    />
+    /> -->
     <link rel="stylesheet" href="/gallery/baguetteBox.min.css" />
-
     <link rel="stylesheet" href="css/main.min.css" />
   </head>
   <body>
@@ -32,45 +36,46 @@
         <div class="logo">
           <a href="index.html"
             ><picture>
-              <source
-              
-                srcset="/resources/logo/logo.webp" type="image/webp"
+              <source srcset="/resources/logo/logo.webp" type="image/webp" />
+              <source srcset="/resources/logo/logo.png" type="image/png" />
+
+              <img
+                src="/resources/logo/logo.png"
+                alt="Jedina Nada Logo"
+                loading="lazy"
               />
-              <source
-              
-                srcset="/resources/logo/logo.png" type="image/png"
-              />
-             
-              
-              <img src="/resources/logo/logo.png" alt="Jedina Nada Logo" loading="lazy" />
             </picture>
             <span> JEDINA NADA</span></a
           >
         </div>
         <ul>
           <li class="navigation-list-item">
-            <a href="index.html#main"><i class="fas fa-home"></i> Početna</a>
+            <a href="index.html#main" id="gallery-nav-1"
+              ><i class="fas fa-home"></i> Početna</a
+            >
           </li>
           <li class="navigation-list-item">
-            <a href="index.html#about"
+            <a href="index.html#about" id="gallery-nav-2"
               ><i class="fas fa-id-badge"></i> O Nama</a
             >
           </li>
           <li class="navigation-list-item">
-            <a href="index.html#shop">
+            <a href="index.html#shop" id="gallery-nav-3">
               <i class="fas fa-hand-holding-usd"></i> Otkup</a
             >
           </li>
           <li class="navigation-list-item">
-            <a href="gallery.html"> <i class="fas fa-images"></i> Galerija</a>
+            <a href="gallery.html" id="gallery-nav-4">
+              <i class="fas fa-images"></i> Galerija</a
+            >
           </li>
           <li class="navigation-list-item">
-            <a href="index.html#recycling"
+            <a href="index.html#recycling" id="gallery-nav-5"
               ><i class="fas fa-recycle"></i> Značaj reciklaže</a
             >
           </li>
           <li class="navigation-list-item">
-            <a href="index.html#contact">
+            <a href="index.html#contact" id="gallery-nav-6">
               <i class="fas fa-id-card"></i> Kontakt</a
             >
           </li>
@@ -86,22 +91,19 @@
         <div class="gallery__logo">
           <a href="index.html">
             <picture>
-              <source
-              
-                srcset="/resources/logo/logo.webp" type="image/webp"
+              <source srcset="/resources/logo/logo.webp" type="image/webp" />
+              <source srcset="/resources/logo/logo.png" type="image/png" />
+
+              <img
+                src="/resources/logo/logo.png"
+                alt="Jedina Nada Logo"
+                loading="lazy"
               />
-              <source
-              
-                srcset="/resources/logo/logo.png" type="image/png"
-              />
-             
-              
-              <img src="/resources/logo/logo.png" alt="Jedina Nada Logo" loading="lazy" />
             </picture>
             <span> JEDINA NADA</span></a
-            >
-          </a></div>
-        <h1>Galerija</h1>
+          >
+        </div>
+        <h1 id="gallery-heading">Galerija</h1>
         <div class="gallery">
           <a href="resources/gallery/1.jpg" class="check">
             <img src="resources/gallery/1.jpg" alt="First image" class="top" />
@@ -205,45 +207,48 @@
           </div>
           <div class="footer__container--nav">
             <ul>
-              <p>Navigacija</p>
+              <p id="gallery-footer-heading">Navigacija</p>
               <li>
-                <a href="index.html">Početna</a>
+                <a href="index.html" id="gallery-footer-1">Početna</a>
               </li>
               <li>
-                <a href="index.html#about">O Nama</a>
+                <a href="index.html#about" id="gallery-footer-2">O Nama</a>
               </li>
               <li>
-                <a href="index.html#shop"> Otkup</a>
+                <a href="index.html#shop" id="gallery-footer-3">Otkup</a>
               </li>
               <li>
-                <a href="gallery.html#gallery">Galerija</a>
+                <a href="gallery.html#gallery" id="gallery-footer-4"
+                  >Galerija</a
+                >
               </li>
               <li>
-                <a href="index.html#recycling">Značaj reciklaže</a>
+                <a href="index.html#recycling" id="gallery-footer-5"
+                  >Značaj reciklaže</a
+                >
               </li>
               <li>
-                <a href="index.html#contact"> Kontakt</a>
+                <a href="index.html#contact" id="gallery-footer-6">Kontakt</a>
               </li>
             </ul>
           </div>
           <div class="footer__container--logo">
-            <a href="index.html">  <picture>
-              <source
-              
-                srcset="/resources/logo/logo.webp" type="image/webp"
-              />
-              <source
-              
-                srcset="/resources/logo/logo.png" type="image/png"
-              />
-             
-              
-              <img src="/resources/logo/logo.png" alt="Jedina Nada Logo" loading="lazy" />
-            </picture></a>
-          
+            <a href="index.html">
+              <picture>
+                <source srcset="/resources/logo/logo.webp" type="image/webp" />
+                <source srcset="/resources/logo/logo.png" type="image/png" />
+
+                <img
+                  src="/resources/logo/logo.png"
+                  alt="Jedina Nada Logo"
+                  loading="lazy"
+                /> </picture
+            ></a>
           </div>
           <div class="footer__container--btn">
-            <a href="#gallery" class="a"><i class="fas fa-arrow-circle-up"></i></a>
+            <a href="#gallery" class="a"
+              ><i class="fas fa-arrow-circle-up"></i
+            ></a>
             <div class="lang">
               <span class="sr">SR</span><span class="hu">HU</span>
             </div>
