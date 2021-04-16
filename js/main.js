@@ -126,10 +126,5 @@ function enableScroll() {
   window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
 }
 
-//SECTION Gallery init
-baguetteBox.run('.gallery', {
-  preload: 3,
-  overlayBackgroundColor: 'rgba(0,0,0,0.9)',
-  async: true,
-  buttons: true,
-});
+//
+document.addEventListener('touchstart', onTouchStart, {passive: true});
