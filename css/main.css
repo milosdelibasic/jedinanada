@@ -236,6 +236,13 @@ nav {
   position: relative;
 }
 
+@media only screen and (max-width: 75em) {
+  .btn {
+    padding: 1rem 1.3rem;
+    font-size: 2.4rem;
+  }
+}
+
 .btn::before {
   content: '';
   position: absolute;
@@ -1091,11 +1098,30 @@ nav .logo span {
   }
 }
 
+@media only screen and (max-width: 75em) {
+  .bins {
+    width: 358px;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .bins {
+    width: 423px;
+  }
+}
+
 @media only screen and (max-width: 31.25em) {
   .bins {
     right: 50%;
     -webkit-transform: translateX(50%);
             transform: translateX(50%);
+    width: 325px;
+  }
+}
+
+@media only screen and (max-width: 26.25em) {
+  .bins {
+    width: 260px;
   }
 }
 

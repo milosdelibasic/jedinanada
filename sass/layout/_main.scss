@@ -139,24 +139,21 @@
     right: 40px;
     // transform: scale(0.8);
   }
-  // @include respond(tab-land) {
-  //   // right: -100px;
-  //   // transform: scale(0.55);
-  // }
-  // @include respond(tab-port) {
-  //   // left: -60%;
-  //   // right: -50px;
-  //   // transform: scale(0.65);
-  // }
+  @include respond(tab-land) {
+    width: 358px;
+  }
+  @include respond(tab-port) {
+    width: 423px;
+  }
   @include respond(bp-medium) {
     right: 50%;
     transform: translateX(50%);
+    width: 325px;
     // transform: translateX(25%); //scale(0.5)
   }
-  // @include respond(bp-420) {
-  //   // right: -10px;
-  //   // transform: translateX(40%); // scale(0.4)
-  // }
+  @include respond(bp-420) {
+    width: 260px;
+  }
   // @include respond(bp-small) {
   //   // right: -50px;
   //   // transform: translateX(40%); // scale(0.4)
