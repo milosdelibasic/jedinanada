@@ -163,7 +163,7 @@ nav {
       align-items: center;
     }
     & span {
-      color: rgb(243, 243, 21);
+      color: darken($color: $color-primary-dark2, $amount: 10);
       // font-weight: bold;
       font-size: 1.2em;
       font-family: 'PT Serif', 'Roboto Condensed', 'Roboto', serif;
