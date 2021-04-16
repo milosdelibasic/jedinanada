@@ -128,3 +128,4 @@ function enableScroll() {
 
 //
 document.addEventListener('touchstart', onTouchStart, {passive: true});
+document.querySelector(".contact-map").addEventListener('touchstart', onTouchStart, {passive: true});
