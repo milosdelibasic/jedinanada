@@ -162,6 +162,9 @@
       padding: 1rem 0;
       letter-spacing: 1.5px;
       word-spacing: 1px;
+      &::first-letter {
+        font-size: 1.4em;
+      }
       @include respond(bp-medium) {
         text-align: left;
       }

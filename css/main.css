@@ -1714,6 +1714,10 @@ nav .logo span {
   word-spacing: 1px;
 }
 
+.recycling__box-heading::first-letter {
+  font-size: 1.4em;
+}
+
 @media only screen and (max-width: 31.25em) {
   .recycling__box-heading {
     text-align: left;
@@ -2035,6 +2039,13 @@ nav .logo span {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+.gallery img:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 
 .gallery a {
@@ -2042,7 +2053,7 @@ nav .logo span {
   height: 180px;
   display: inline-block;
   overflow: hidden;
-  margin: 4px 6px;
+  margin: 7px 7px;
   -webkit-box-shadow: 0 0 4px -1px black, 2px 2px 5px rgba(0, 0, 0, 0.45);
           box-shadow: 0 0 4px -1px black, 2px 2px 5px rgba(0, 0, 0, 0.45);
 }
@@ -2103,5 +2114,15 @@ nav .logo span {
     letter-spacing: 1px;
     margin-left: 1rem;
   }
+}
+
+.last-img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.last-img:hover {
+  -webkit-transform: scale(1.3) !important;
+          transform: scale(1.3) !important;
 }
 /*# sourceMappingURL=main.css.map */
