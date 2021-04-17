@@ -68,6 +68,10 @@ nav {
     & li {
       display: inline-block;
       padding: 0.2rem 1.5rem;
+      @include respond(bp-big) {
+        // font-size: 1.rem;
+        padding: 0.2rem 0.7rem;
+      }
       @include respond(tab-land) {
         font-size: 1.8em;
         margin-bottom: 3px;
@@ -118,14 +122,17 @@ nav {
   & .lang {
     display: flex;
     flex-direction: row;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
     & .sr,
     & .hu {
       display: flex;
       align-items: center;
       justify-content: center;
+      cursor: pointer;
+      // font-weight: bold;
+      transition: all 0.4s ease-out;
+      &:hover {
+        color: $color-primary-darkest;
+      }
     }
     & span {
       padding: 0 1rem;
@@ -248,5 +255,12 @@ nav {
         -o-transform: rotate(-45deg) translateX(-3px) translateY(2px);
       }
     }
+  }
+}
+.lang-active {
+  color: darken($color: $color-primary-dark2, $amount: 5);
+  cursor: default !important;
+  &:hover {
+    color: darken($color: $color-primary-dark2, $amount: 5) !important;
   }
 }

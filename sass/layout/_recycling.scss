@@ -1,26 +1,24 @@
 .no-webp .recycling-bg {
   background-image: url(/resources/nature/nature1600w.jpg),
-  linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
-background-position-x: 50%;
-@include respond(bp-big) {
-  background-image: url(/resources/nature/nature1400w.jpg),
-    linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
-}
+    linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+  background-position-x: 50%;
+  @include respond(bp-big) {
+    background-image: url(/resources/nature/nature1400w.jpg),
+      linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+  }
 }
 
 .webp .recycling-bg {
   background-image: url(/resources/nature/nature1600w.webp),
-  linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
-background-position-x: 50%;
-@include respond(bp-big) {
-  background-image: url(/resources/nature/nature1400w.webp),
-    linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+    linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+  background-position-x: 50%;
+  @include respond(bp-big) {
+    background-image: url(/resources/nature/nature1400w.webp),
+      linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+  }
 }
-}
-
 
 #recycling {
-  
   background-size: cover;
   background-blend-mode: overlay;
   background-attachment: fixed;
@@ -80,6 +78,8 @@ background-position-x: 50%;
     @include respond(bp-medium) {
       margin: 4rem 0 3rem 0;
     }
+    // display: inline-block;
+    // width: 100%;
     &::after {
       content: '';
       display: block;
@@ -90,6 +90,10 @@ background-position-x: 50%;
       // transform: translateX(50%);
       border-radius: 10px;
       width: 120%;
+      @include respond(phone) {
+        width: 100%;
+        left: 0;
+      }
       background-image: -webkit-linear-gradient(
         left,
         rgba(0, 0, 0, 0) 0%,
@@ -114,8 +118,8 @@ background-position-x: 50%;
     top: 30px;
     right: 30px;
     @include respond(phone) {
-      transform: scale(0.7);
-      top: 7rem;
+      transform: scale(0.6);
+      top: 10rem;
       right: 10px;
     }
     @include respond(bp-medium) {

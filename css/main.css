@@ -537,6 +537,14 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+.footer__container--btn .lang .sr:hover,
+.footer__container--btn .lang .hu:hover {
+  color: #a9ec45;
 }
 
 .footer__container--btn .lang span {
@@ -718,6 +726,12 @@ nav ul li {
   padding: 0.2rem 1.5rem;
 }
 
+@media only screen and (max-width: 87.5em) {
+  nav ul li {
+    padding: 0.2rem 0.7rem;
+  }
+}
+
 @media only screen and (max-width: 75em) {
   nav ul li {
     font-size: 1.8em;
@@ -794,6 +808,14 @@ nav .lang .hu {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+nav .lang .sr:hover,
+nav .lang .hu:hover {
+  color: #0f360b;
 }
 
 nav .lang span {
@@ -937,6 +959,15 @@ nav .logo span {
     -ms-transform: rotate(-45deg) translateX(-3px) translateY(2px);
     -o-transform: rotate(-45deg) translateX(-3px) translateY(2px);
   }
+}
+
+.lang-active {
+  color: #195912;
+  cursor: default !important;
+}
+
+.lang-active:hover {
+  color: #195912 !important;
 }
 
 #main {
@@ -1620,6 +1651,13 @@ nav .logo span {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #a9ec45 40%, #a9ec45 60%, rgba(0, 0, 0, 0) 100%);
 }
 
+@media only screen and (max-width: 37.5em) {
+  #recycling h1::after {
+    width: 100%;
+    left: 0;
+  }
+}
+
 .recycling-symbol {
   position: absolute;
   top: 30px;
@@ -1628,9 +1666,9 @@ nav .logo span {
 
 @media only screen and (max-width: 37.5em) {
   .recycling-symbol {
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
-    top: 7rem;
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    top: 10rem;
     right: 10px;
   }
 }
