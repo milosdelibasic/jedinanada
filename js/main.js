@@ -19,6 +19,7 @@ const navMob = document.getElementById('navigation-mobile');
 const navigation = document.getElementById('navigation');
 const navItems = document.getElementsByClassName('navigation-list-item');
 const main = document.getElementById('site-content');
+const body = document.querySelector('body');
 
 function disable() {
   navigation.style.transform = 'translateX(100%)';

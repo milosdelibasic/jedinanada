@@ -107,7 +107,16 @@
           </a>
         </div>
         <div class="main__left">
-          <img src="/resources/blob1.png" alt="Green blob" class="blob1" />
+          <picture>
+            <source srcset="/resources/blobs/blob1.webp" type="image/webp" />
+            <source srcset="/resources/blobs/blob1.png" type="image/png" />
+
+            <img
+              src="/resources/blobs/blob1.png"
+              alt="Green small blob"
+              class="blob1"
+            />
+          </picture>
 
           <div class="carousel">
             <div class="carousel__box">
@@ -159,7 +168,21 @@
           </div>
         </div>
         <div class="main__right">
-          <img src="/resources/blob2.png" alt="Blob" class="blob2" />
+          <!-- <img
+            src="/resources/blobs/blob2.png"
+            alt="Green big blob"
+            class="blob2"
+          /> -->
+          <picture>
+            <source srcset="/resources/blobs/blob2.webp" type="image/webp" />
+            <source srcset="/resources/blobs/blob2.png" type="image/png" />
+
+            <img
+              src="/resources/blobs/blob2.png"
+              alt="Green big blob"
+              class="blob2"
+            />
+          </picture>
 
           <picture>
             <source

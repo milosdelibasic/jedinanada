@@ -112,6 +112,10 @@
   @include respond(tab-land) {
     top: 180px;
   }
+  @include respond(phone) {
+    transform-origin: bottom;
+    transform: scale(0.8);
+  }
 }
 .blob2 {
   position: absolute;
