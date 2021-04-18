@@ -260,7 +260,13 @@ function serbianLang() {
   serbian[0].classList.add('lang-active');
   serbian[1].classList.add('lang-active');
   serbian[2].classList.add('lang-active');
-  recyclingSymbol.style.top = 'inherit';
+  if (viewportwidth <= 500) {
+    recyclingSymbol.style.top = '7rem';
+  } else if (viewportwidth <= 600) {
+    recyclingSymbol.style.top = '10rem';
+  } else {
+    recyclingSymbol.style.top = '30px';
+  }
   //SRPSKI
   try {
     navHome.innerHTML = '<i class="fas fa-home"></i> Početna';
