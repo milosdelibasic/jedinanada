@@ -59,7 +59,7 @@ html {
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   position: relative;
 }
 
@@ -902,8 +902,8 @@ nav .logo span {
         -ms-flex-direction: column;
             flex-direction: column;
     position: fixed;
-    right: 1.5rem;
-    top: 1.5rem;
+    right: 2rem;
+    top: 2rem;
     z-index: 15000000;
     background-color: #1f6e16;
     border-radius: 50%;
