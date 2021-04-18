@@ -244,15 +244,15 @@ nav {
 
 @media only screen and (max-width: 75em) {
   .btn {
-    padding: 1rem 1.3rem;
-    font-size: 2.4rem;
+    padding: 1.3rem 2rem;
+    font-size: 2.1rem;
   }
 }
 
 @media only screen and (max-width: 37.5em) {
   .btn {
-    padding: 1.1rem 1.3rem;
-    font-size: 2.9rem;
+    padding: 1.3rem 2rem;
+    font-size: 2.6rem;
   }
 }
 
@@ -1172,6 +1172,21 @@ nav .logo span {
     font-family: 'PT Serif', 'Roboto Condensed', 'Roboto', serif;
     letter-spacing: 1px;
     margin-left: 1rem;
+  }
+}
+
+@media only screen and (max-width: 75em) and (max-width: 26.25em) {
+  .main__logo span {
+    font-size: 2.6em;
+    letter-spacing: 0.5px;
+    margin-left: 0.45rem;
+  }
+}
+
+@media only screen and (max-width: 75em) and (max-width: 21.875em) {
+  .main__logo span {
+    font-size: 2.4em;
+    letter-spacing: 0;
   }
 }
 

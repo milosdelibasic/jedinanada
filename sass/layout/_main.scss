@@ -152,6 +152,9 @@
       background: darken($color: $color-primary, $amount: 5);
       width: 100%;
       padding: 0.5rem 1rem;
+      // @include respond(bp-small) {
+      //   padding: 0 1rem;
+      // }
       & a {
         display: flex;
         justify-content: flex-start;
@@ -167,6 +170,15 @@
         font-family: 'PT Serif', 'Roboto Condensed', 'Roboto', serif;
         letter-spacing: 1px;
         margin-left: 1rem;
+        @include respond(bp-420) {
+          font-size: 2.6em;
+          letter-spacing: 0.5px;
+          margin-left: 0.45rem;
+        }
+        @include respond(bp-small) {
+          font-size: 2.4em;
+          letter-spacing: 0;
+        }
       }
       border-bottom: 1px solid rgb(243, 243, 21);
     }
