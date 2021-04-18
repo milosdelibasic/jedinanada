@@ -1,4 +1,31 @@
 'use strict';
+
+//SECTION get width
+var viewportwidth;
+var viewportheight;
+
+// the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+
+if (typeof window.innerWidth != 'undefined') {
+  (viewportwidth = window.innerWidth), (viewportheight = window.innerHeight);
+}
+
+// IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+else if (
+  typeof document.documentElement != 'undefined' &&
+  typeof document.documentElement.clientWidth != 'undefined' &&
+  document.documentElement.clientWidth != 0
+) {
+  (viewportwidth = document.documentElement.clientWidth),
+    (viewportheight = document.documentElement.clientHeight);
+}
+
+// older versions of IE
+else {
+  (viewportwidth = document.getElementsByTagName('body')[0].clientWidth),
+    (viewportheight = document.getElementsByTagName('body')[0].clientHeight);
+}
+
 //SECTION Carousel init
 $('.carousel').slick({
   infinite: true,
@@ -19,7 +46,7 @@ const navMob = document.getElementById('navigation-mobile');
 const navigation = document.getElementById('navigation');
 const navItems = document.getElementsByClassName('navigation-list-item');
 const main = document.getElementById('site-content');
-const body = document.querySelector('body');
+// const body = document.querySelector('body');
 
 function disable() {
   navigation.style.transform = 'translateX(100%)';
@@ -205,6 +232,8 @@ const footerFour = document.getElementById('footer-4');
 const footerFive = document.getElementById('footer-5');
 const footerSix = document.getElementById('footer-6');
 
+const recyclingSymbol = document.querySelector('.recycling-symbol');
+
 const localStorage = window.localStorage;
 const serbian = document.getElementsByClassName('sr');
 const hungarian = document.getElementsByClassName('hu');
@@ -231,6 +260,7 @@ function serbianLang() {
   serbian[0].classList.add('lang-active');
   serbian[1].classList.add('lang-active');
   serbian[2].classList.add('lang-active');
+  recyclingSymbol.style.top = 'initial';
   //SRPSKI
   try {
     navHome.innerHTML = '<i class="fas fa-home"></i> Početna';
@@ -348,6 +378,12 @@ function hungarianLang() {
   serbian[0].classList.remove('lang-active');
   serbian[1].classList.remove('lang-active');
   serbian[2].classList.remove('lang-active');
+  if (viewportwidth <= 504) {
+    recyclingSymbol.style.top = '11rem';
+    // recyclingSymbol.style.right = '0';
+  } else if (viewportwidth > 504) {
+    recyclingSymbol.style.top = '7rem';
+  }
   //SECTION PREVOD
   try {
     navHome.innerHTML = '<i class="fas fa-home"></i> Kezdőlap';
