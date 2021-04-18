@@ -260,7 +260,7 @@ function serbianLang() {
   serbian[0].classList.add('lang-active');
   serbian[1].classList.add('lang-active');
   serbian[2].classList.add('lang-active');
-  recyclingSymbol.style.top = 'initial';
+  recyclingSymbol.style.top = 'inherit';
   //SRPSKI
   try {
     navHome.innerHTML = '<i class="fas fa-home"></i> Početna';
