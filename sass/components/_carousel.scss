@@ -95,6 +95,6 @@
     margin: 8rem 27px;
   }
   @include respond(tab-port) {
-    margin: 6rem 27px;
+    margin: 8rem 27px 3rem 27px;
   }
 }

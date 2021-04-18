@@ -42,6 +42,9 @@
       rgb(32, 116, 23) 80%,
       rgba(0, 0, 0, 0) 100%
     );
+    @include respond(tab-port) {
+      bottom: -1px;
+    }
   }
 }
 
@@ -50,6 +53,7 @@
     grid-area: left;
     display: grid;
     justify-content: center;
+    position: relative;
     // margin: auto 3rem;
 
     @include respond(tab-land) {
@@ -59,20 +63,27 @@
     }
     @include respond(tab-port) {
       grid-area: top;
+      // margin-top: -3rem;
       margin-bottom: -6rem;
     }
     // background: $color-primary;
     & .lang {
       position: absolute;
+      display: inline;
       // right: 50%;
       // left: calc(136px + 2rem);
-      top: 2rem;
-      right: 1rem;
+      top: 2.6rem;
+      @include respond(tab-land) {
+        left: 2rem;
+      }
+      @include respond(tab-port) {
+        // left: 0;
+        left: unset;
+        right: 2rem;
+      }
+
       z-index: 3;
-      // bottom: 1px;
-      font-size: 1.6rem;
-      // color: #fff !important;
-      // display: inline-block;
+      font-size: 2rem;
 
       & .sr,
       & .hu {
@@ -103,7 +114,7 @@
           }
           &::after {
             content: '|';
-            margin: 0 5px;
+            margin: 0 3px;
             cursor: default;
           }
         }

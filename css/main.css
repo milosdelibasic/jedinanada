@@ -217,7 +217,7 @@ nav {
 
 @media only screen and (max-width: 56.25em) {
   .slick-slide {
-    margin: 6rem 27px;
+    margin: 8rem 27px 3rem 27px;
   }
 }
 
@@ -1011,6 +1011,12 @@ nav .logo span {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #207417 20%, #207417 80%, rgba(0, 0, 0, 0) 100%);
 }
 
+@media only screen and (max-width: 56.25em) {
+  #main::after {
+    bottom: -1px;
+  }
+}
+
 .main__left {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -1020,6 +1026,7 @@ nav .logo span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 
 @media only screen and (max-width: 75em) {
@@ -1039,10 +1046,23 @@ nav .logo span {
 
 .main__left .lang {
   position: absolute;
-  top: 2rem;
-  right: 1rem;
+  display: inline;
+  top: 2.6rem;
   z-index: 3;
-  font-size: 1.6rem;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 75em) {
+  .main__left .lang {
+    left: 2rem;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .main__left .lang {
+    left: unset;
+    right: 2rem;
+  }
 }
 
 .main__left .lang .sr,
@@ -1082,7 +1102,7 @@ nav .logo span {
 
 .main__left .lang span:first-child::after {
   content: '|';
-  margin: 0 5px;
+  margin: 0 3px;
   cursor: default;
 }
 
