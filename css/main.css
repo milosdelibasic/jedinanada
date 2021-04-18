@@ -902,7 +902,7 @@ nav .logo span {
         -ms-flex-direction: column;
             flex-direction: column;
     position: fixed;
-    right: 2rem;
+    right: 4rem;
     top: 2rem;
     z-index: 15000000;
     background-color: #1f6e16;
