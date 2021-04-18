@@ -211,8 +211,11 @@ const hungarian = document.getElementsByClassName('hu');
 
 hungarian[0].addEventListener('click', hungarianLang);
 hungarian[1].addEventListener('click', hungarianLang);
+hungarian[2].addEventListener('click', hungarianLang);
 serbian[0].addEventListener('click', serbianLang);
 serbian[1].addEventListener('click', serbianLang);
+serbian[2].addEventListener('click', serbianLang);
+console.log(hungarian, serbian);
 
 if (!localStorage.getItem('lang') || localStorage.getItem('lang') === 'sr') {
   serbianLang();
@@ -224,8 +227,10 @@ function serbianLang() {
   if (serbian[0].classList.contains('lang-active')) return;
   hungarian[0].classList.remove('lang-active');
   hungarian[1].classList.remove('lang-active');
+  hungarian[2].classList.remove('lang-active');
   serbian[0].classList.add('lang-active');
   serbian[1].classList.add('lang-active');
+  serbian[2].classList.add('lang-active');
   //SRPSKI
   try {
     navHome.innerHTML = '<i class="fas fa-home"></i> Početna';
@@ -339,8 +344,10 @@ function hungarianLang() {
   if (hungarian[0].classList.contains('lang-active')) return;
   hungarian[0].classList.add('lang-active');
   hungarian[1].classList.add('lang-active');
+  hungarian[2].classList.add('lang-active');
   serbian[0].classList.remove('lang-active');
   serbian[1].classList.remove('lang-active');
+  serbian[2].classList.remove('lang-active');
   //SECTION PREVOD
   try {
     navHome.innerHTML = '<i class="fas fa-home"></i> Kezdőlap';

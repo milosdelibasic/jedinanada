@@ -100,6 +100,60 @@
         margin-left: 1rem;
       }
       border-bottom: 1px solid rgb(243, 243, 21);
+      & .lang {
+        position: absolute;
+        right: 1rem;
+        bottom: 1px;
+        font-size: 0.8em;
+        // color: #fff !important;
+        // display: inline-block;
+
+        & .sr,
+        & .hu {
+          display: inline-flex;
+          align-items: center;
+          justify-content: baseline;
+          cursor: pointer;
+          // font-weight: bold;
+          color: #fff;
+          transition: all 0.4s ease-out;
+          &:hover {
+            color: $color-primary-darkest;
+          }
+        }
+        & span {
+          // padding: 0 0.5rem;
+
+          &:first-child {
+            // border-right: 1px solid $color-primary-darkest;
+            margin: 0;
+
+            &::before {
+              content: url(/resources/icons/lang/serbia.png);
+              margin-right: 3px;
+              position: relative;
+              top: 2px;
+              transform: scale(0.8);
+            }
+            &::after {
+              content: '|';
+              margin: 0 5px;
+              cursor: default;
+            }
+          }
+          &:last-child {
+            margin-left: 1px;
+            &::before {
+              content: url(/resources/icons/lang/hungary.png);
+
+              transform: scale(0.8);
+              margin-right: 3px;
+              position: relative;
+              top: 2px;
+            }
+          }
+        }
+      }
     }
   }
 }
