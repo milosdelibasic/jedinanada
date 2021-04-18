@@ -1783,6 +1783,13 @@ nav .logo span {
   right: 30px;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .recycling-symbol {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+
 @media only screen and (max-width: 37.5em) {
   .recycling-symbol {
     -webkit-transform: scale(0.6);

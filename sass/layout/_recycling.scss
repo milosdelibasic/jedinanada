@@ -117,6 +117,9 @@
     position: absolute;
     top: 30px;
     right: 30px;
+    @include respond(tab-port) {
+      transform: scale(0.9);
+    }
     @include respond(phone) {
       transform: scale(0.6);
       top: 10rem;

@@ -244,7 +244,7 @@ hungarian[2].addEventListener('click', hungarianLang);
 serbian[0].addEventListener('click', serbianLang);
 serbian[1].addEventListener('click', serbianLang);
 serbian[2].addEventListener('click', serbianLang);
-console.log(hungarian, serbian);
+// console.log(hungarian, serbian);
 
 if (!localStorage.getItem('lang') || localStorage.getItem('lang') === 'sr') {
   serbianLang();
