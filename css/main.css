@@ -1037,6 +1037,68 @@ nav .logo span {
   }
 }
 
+.main__left .lang {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  z-index: 3;
+  font-size: 1.6rem;
+}
+
+.main__left .lang .sr,
+.main__left .lang .hu {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
+  cursor: pointer;
+  color: #fff;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+.main__left .lang .sr:hover,
+.main__left .lang .hu:hover {
+  color: #0f360b;
+}
+
+.main__left .lang span:first-child {
+  margin: 0;
+}
+
+.main__left .lang span:first-child::before {
+  content: url(/resources/icons/lang/serbia.png);
+  margin-right: 3px;
+  position: relative;
+  top: 2px;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.main__left .lang span:first-child::after {
+  content: '|';
+  margin: 0 5px;
+  cursor: default;
+}
+
+.main__left .lang span:last-child {
+  margin-left: 1px;
+}
+
+.main__left .lang span:last-child::before {
+  content: url(/resources/icons/lang/hungary.png);
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  margin-right: 3px;
+  position: relative;
+  top: 2px;
+}
+
 .main__right {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
@@ -1090,59 +1152,6 @@ nav .logo span {
     font-family: 'PT Serif', 'Roboto Condensed', 'Roboto', serif;
     letter-spacing: 1px;
     margin-left: 1rem;
-  }
-  .main__logo .lang {
-    position: absolute;
-    right: 1rem;
-    bottom: 1px;
-    font-size: 0.8em;
-  }
-  .main__logo .lang .sr,
-  .main__logo .lang .hu {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: baseline;
-        -ms-flex-pack: baseline;
-            justify-content: baseline;
-    cursor: pointer;
-    color: #fff;
-    -webkit-transition: all 0.4s ease-out;
-    transition: all 0.4s ease-out;
-  }
-  .main__logo .lang .sr:hover,
-  .main__logo .lang .hu:hover {
-    color: #0f360b;
-  }
-  .main__logo .lang span:first-child {
-    margin: 0;
-  }
-  .main__logo .lang span:first-child::before {
-    content: url(/resources/icons/lang/serbia.png);
-    margin-right: 3px;
-    position: relative;
-    top: 2px;
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
-  }
-  .main__logo .lang span:first-child::after {
-    content: '|';
-    margin: 0 5px;
-    cursor: default;
-  }
-  .main__logo .lang span:last-child {
-    margin-left: 1px;
-  }
-  .main__logo .lang span:last-child::before {
-    content: url(/resources/icons/lang/hungary.png);
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
-    margin-right: 3px;
-    position: relative;
-    top: 2px;
   }
 }
 
