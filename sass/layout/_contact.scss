@@ -84,7 +84,7 @@
 }
 .contact {
   &__box {
-    display: grid;
+    // display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     grid-template-areas: 'left right';
@@ -98,9 +98,9 @@
     }
     &-left {
       grid-area: left;
-      display: grid;
-      align-content: center;
-      justify-content: center;
+      // display: grid;
+      // align-content: center;
+      // justify-content: center;
       @include respond(phone) {
         margin-bottom: 2.4rem;
       }
@@ -108,9 +108,9 @@
     &-right {
       text-align: left;
       grid-area: right;
-      display: grid;
-      justify-content: center;
-      align-items: center;
+      // display: grid;
+      // justify-content: center;
+      // align-items: center;
 
       &-info {
         background-color: $color-primary;

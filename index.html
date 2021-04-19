@@ -25,9 +25,7 @@
     <!-- IMPORT Carousel -->
     <link rel="stylesheet" href="slick/slick.css" />
     <link rel="stylesheet" href="slick/slick-theme.css" />
-    <!-- <link rel="stylesheet" href="css/aos.css" /> -->
 
-    <!-- <link rel="stylesheet" href="css/everything.min.css" /> -->
     <!-- IMPORT Icons -->
     <!-- <link
       rel="stylesheet"
@@ -44,7 +42,7 @@
         <span></span>
         <span></span>
       </div>
-      <nav id="navigation">
+      <nav id="navigation" class="flex">
         <div class="logo">
           <a href="index.html"
             ><picture>
@@ -89,14 +87,15 @@
             >
           </li>
         </ul>
-        <div class="lang">
-          <span class="sr">SR</span><span class="hu">HU</span>
+        <div class="lang flex">
+          <span class="sr flex flex-center">SR</span
+          ><span class="hu flex flex-center">HU</span>
         </div>
       </nav>
     </header>
     <div id="site-content">
       <!-- SECTION Main -->
-      <main id="main">
+      <main id="main" class="grid">
         <div class="main__logo">
           <a href="index.html">
             <picture>
@@ -107,7 +106,7 @@
             <span> JEDINA NADA</span>
           </a>
         </div>
-        <div class="main__left">
+        <div class="main__left grid">
           <div class="lang">
             <span class="sr">SR</span><span class="hu">HU</span>
           </div>
@@ -245,7 +244,7 @@
       <section id="shop">
         <h1 id="lang-shop">Otkup</h1>
         <h2 id="lang-shop-text">Vršimo otkup sledećih stvari:</h2>
-        <div class="shop__box">
+        <div class="shop__box flex">
           <div
             class="shop__box--item"
             data-aos="fade-right"
@@ -477,8 +476,8 @@
       <!-- SECTION Kontakt -->
       <section id="contact">
         <h1 id="lang-contact">Kontakt</h1>
-        <div class="contact__box">
-          <div class="contact__box-left">
+        <div class="contact__box grid">
+          <div class="contact__box-left grid grid-center">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2775.853178241099!2d20.094086600832522!3d45.914245211800015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDU0JzUxLjMiTiAyMMKwMDUnNDMuNCJF!5e0!3m2!1ssr!2srs!4v1618260878952!5m2!1ssr!2srs"
               width="600"
@@ -489,7 +488,7 @@
               class="contact-map"
             ></iframe>
           </div>
-          <div class="contact__box-right">
+          <div class="contact__box-right grid grid-center">
             <div class="contact__box-right-container">
               <div
                 class="contact__box-right-info bold"
@@ -549,8 +548,8 @@
 
       <!-- SECTION Footer -->
       <footer id="footer">
-        <div class="footer__container">
-          <div class="footer__container--location">
+        <div class="footer__container grid">
+          <div class="footer__container--location grid">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2775.853178241099!2d20.094086600832522!3d45.914245211800015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDU0JzUxLjMiTiAyMMKwMDUnNDMuNCJF!5e0!3m2!1ssr!2srs!4v1618260878952!5m2!1ssr!2srs"
               width="200"
@@ -586,8 +585,8 @@
               >
             </p>
           </div>
-          <div class="footer__container--nav">
-            <ul>
+          <div class="footer__container--nav grid grid-center">
+            <ul class="flex">
               <p id="lang-footer">Navigacija</p>
               <li>
                 <a href="index.html#main" id="footer-1">Početna</a>
@@ -611,7 +610,7 @@
               </li>
             </ul>
           </div>
-          <div class="footer__container--logo">
+          <div class="footer__container--logo grid grid-center">
             <a href="index.html">
               <picture>
                 <source srcset="/resources/logo/logo.webp" type="image/webp" />
@@ -625,17 +624,20 @@
               </picture>
             </a>
           </div>
-          <div class="footer__container--btn">
-            <a href="#main" class="a"><i class="fas fa-arrow-circle-up"></i></a>
-            <div class="lang">
-              <span class="sr">SR</span><span class="hu">HU</span>
+          <div class="footer__container--btn grid grid-center">
+            <a href="#main" class="a flex flex-center"
+              ><i class="fas fa-arrow-circle-up"></i
+            ></a>
+            <div class="lang flex">
+              <span class="sr flex flex-center">SR</span
+              ><span class="hu flex flex-center">HU</span>
             </div>
           </div>
         </div>
-        <p class="footer__copy">
+        <p class="footer__copy flex">
           Copyright &copy; Jedina Nada DOO - 2021. All rights reserved.
         </p>
-        <p class="footer__copy">
+        <p class="footer__copy flex">
           Website by&NonBreakingSpace;
           <a href="https://milosdelibasic.netlify.app/" target="_blank">
             Miloš Delibašić</a

@@ -10,3 +10,16 @@
 .padding-left {
   padding-left: 4.5rem;
 }
+.grid {
+  display: grid;
+  &-center {
+    place-content: center;
+  }
+}
+.flex {
+  display: flex;
+  &-center {
+    justify-content: center;
+    align-items: center;
+  }
+}

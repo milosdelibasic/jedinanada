@@ -1,6 +1,6 @@
 #main {
   position: relative;
-  display: grid;
+  // display: grid;
   // width: 100%;
   background: $color-primary;
   overflow-x: hidden;
@@ -51,7 +51,7 @@
 .main {
   &__left {
     grid-area: left;
-    display: grid;
+    // display: grid;
     justify-content: center;
     position: relative;
     // margin: auto 3rem;

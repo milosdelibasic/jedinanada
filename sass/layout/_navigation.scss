@@ -1,9 +1,9 @@
 nav {
-  display: flex;
+  // display: flex;
   justify-content: space-between;
   align-items: center;
   background: darken($color: $color-primary, $amount: 5);
-  color: white;
+  color: #fff;
   font-size: 2rem;
   position: fixed;
   width: 100%;
@@ -120,13 +120,13 @@ nav {
   }
 
   & .lang {
-    display: flex;
+    // display: flex;
     flex-direction: row;
     & .sr,
     & .hu {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      // display: flex;
+      // align-items: center;
+      // justify-content: center;
       cursor: pointer;
       // font-weight: bold;
       transition: all 0.4s ease-out;

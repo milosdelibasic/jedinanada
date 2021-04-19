@@ -6,6 +6,8 @@
   top: 0;
   left: 0;
   background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
   will-change: transform;
   z-index: -1;
 }
