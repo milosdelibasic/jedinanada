@@ -1419,65 +1419,75 @@ nav .logo span {
   }
 }
 
-.no-webp .about-bg {
+.about-bg::before {
+  content: '';
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  will-change: transform;
+  z-index: -1;
+}
+
+.no-webp .about-bg::before {
   background-image: url(/resources/bottles/bottles1600w.jpg), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.4)));
   background-image: url(/resources/bottles/bottles1600w.jpg), linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
   background-position-x: 50%;
 }
 
 @media only screen and (max-width: 87.5em) {
-  .no-webp .about-bg {
+  .no-webp .about-bg::before {
     background-image: url(/resources/bottles/bottles1400w.jpg), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.4)));
     background-image: url(/resources/bottles/bottles1400w.jpg), linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
   }
 }
 
 @media only screen and (max-width: 75em) {
-  .no-webp .about-bg {
+  .no-webp .about-bg::before {
     background-image: url(/resources/bottles/bottles1200w.jpg), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.4)));
     background-image: url(/resources/bottles/bottles1200w.jpg), linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
   }
 }
 
 @media only screen and (max-width: 56.25em) {
-  .no-webp .about-bg {
+  .no-webp .about-bg::before {
     background-image: url(/resources/bottles/bottles900w.jpg), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.4)));
     background-image: url(/resources/bottles/bottles900w.jpg), linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
   }
 }
 
-.webp .about-bg {
+.webp .about-bg::before {
   background-image: url(/resources/bottles/bottles1600w.webp), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.4)));
   background-image: url(/resources/bottles/bottles1600w.webp), linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
   background-position-x: 50%;
 }
 
 @media only screen and (max-width: 87.5em) {
-  .webp .about-bg {
+  .webp .about-bg::before {
     background-image: url(/resources/bottles/bottles1400w.webp), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.4)));
     background-image: url(/resources/bottles/bottles1400w.webp), linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
   }
 }
 
 @media only screen and (max-width: 75em) {
-  .webp .about-bg {
+  .webp .about-bg::before {
     background-image: url(/resources/bottles/bottles1200w.webp), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.4)));
     background-image: url(/resources/bottles/bottles1200w.webp), linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
   }
 }
 
 @media only screen and (max-width: 56.25em) {
-  .webp .about-bg {
+  .webp .about-bg::before {
     background-image: url(/resources/bottles/bottles900w.webp), -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.4)));
     background-image: url(/resources/bottles/bottles900w.webp), linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
   }
 }
 
 #about {
-  background-blend-mode: overlay;
-  background-size: cover;
-  background-attachment: fixed;
   text-align: center;
+  overflow: hidden;
   position: relative;
 }
 
@@ -1997,6 +2007,7 @@ nav .logo span {
 #contact {
   text-align: center;
   padding: 0 20rem;
+  background-color: #fff;
 }
 
 @media only screen and (max-width: 87.5em) {

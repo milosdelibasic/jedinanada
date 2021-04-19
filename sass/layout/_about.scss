@@ -1,22 +1,33 @@
-.no-webp .about-bg {
+.about-bg::before {
+  content: '';
+  position: fixed; // instead of background-attachment
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  will-change: transform;
+  z-index: -1;
+}
+.no-webp .about-bg::before {
   background-image: url(/resources/bottles/bottles1600w.jpg),
-  linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
-background-position-x: 50%;
-@include respond(bp-big) {
-  background-image: url(/resources/bottles/bottles1400w.jpg),
     linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
-}
-@include respond(tab-land) {
-  background-image: url(/resources/bottles/bottles1200w.jpg),
-    linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
-}
-@include respond(tab-port) {
-  background-image: url(/resources/bottles/bottles900w.jpg),
-    linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
-}
+  background-position-x: 50%;
+  @include respond(bp-big) {
+    background-image: url(/resources/bottles/bottles1400w.jpg),
+      linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+  }
+  @include respond(tab-land) {
+    background-image: url(/resources/bottles/bottles1200w.jpg),
+      linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+  }
+  @include respond(tab-port) {
+    background-image: url(/resources/bottles/bottles900w.jpg),
+      linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+  }
 }
 
-.webp .about-bg {
+.webp .about-bg::before {
   background-image: url(/resources/bottles/bottles1600w.webp),
     linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
   background-position-x: 50%;
@@ -35,13 +46,13 @@ background-position-x: 50%;
 }
 
 #about {
-  
-
-  background-blend-mode: overlay;
-  background-size: cover;
-  background-attachment: fixed;
+  // background-blend-mode: overlay;
+  // background-size: cover;
+  // background-attachment: fixed;
   text-align: center;
+  overflow: hidden;
   position: relative;
+
   @include respond(phone) {
     padding: 0 2rem;
   }

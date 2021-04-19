@@ -1,6 +1,7 @@
 #contact {
   text-align: center;
   padding: 0 20rem;
+  background-color: #fff;
   // border-bottom: 8px solid #26881b;
   @include respond(bp-big) {
     padding: 0 10rem;
