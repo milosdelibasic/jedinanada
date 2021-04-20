@@ -247,7 +247,6 @@ nav {
 
 .btn {
   border: none;
-  padding: 0.8rem;
   border-radius: 5px;
   font-size: 2rem;
   font-weight: bold;
@@ -266,15 +265,20 @@ nav {
   position: relative;
 }
 
+.btn a {
+  display: inline-block;
+  padding: 0.8rem;
+}
+
 @media only screen and (max-width: 75em) {
-  .btn {
+  .btn a {
     padding: 1.3rem 2rem;
     font-size: 2.1rem;
   }
 }
 
 @media only screen and (max-width: 37.5em) {
-  .btn {
+  .btn a {
     padding: 1.3rem 2rem;
     font-size: 2.6rem;
   }
@@ -324,6 +328,10 @@ nav {
 
 .btn-secondary:hover {
   color: #001600;
+}
+
+a:focus {
+  outline: none;
 }
 
 [data-aos][data-aos][data-aos-delay='100'],
