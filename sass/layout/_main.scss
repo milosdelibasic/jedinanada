@@ -16,8 +16,15 @@
       'bottom';
   }
   @include respond(bp-420) {
-    margin-bottom: -15rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.2fr 0.8fr;
+    grid-template-areas:
+      'top'
+      'bottom';
   }
+  // @include respond(bp-420) {
+  //   margin-bottom: 0;
+  // }
   // border-bottom: 4px solid darken($color: $color-primary, $amount: 20);
   // border-bottom: 8px solid #26881b;
   &::after {
@@ -144,9 +151,9 @@
       grid-area: bottom;
       bottom: 0;
     }
-    @include respond(bp-420) {
-      margin-bottom: 15rem;
-    }
+    // @include respond(bp-420) {
+    //   margin-bottom: 15rem;
+    // }
     // background: $color-primary;
   }
   &__logo {

@@ -41,7 +41,7 @@
     }
     @include respond(bp-medium) {
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr) 150px;
       grid-template-areas:
         'logo'
         'left'
