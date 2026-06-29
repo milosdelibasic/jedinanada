@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Calendar">
+  <rect x="7" y="10" width="34" height="31" rx="7" fill="#edf7e8" stroke="#166b46" stroke-width="3"/>
+  <path d="M15 7v8M33 7v8M8 20h32" stroke="#166b46" stroke-width="3" stroke-linecap="round"/>
+  <path d="M16 27h5M27 27h5M16 34h5M27 34h5" stroke="#72b043" stroke-width="3" stroke-linecap="round"/>
+</svg>

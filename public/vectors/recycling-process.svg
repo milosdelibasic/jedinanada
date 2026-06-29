@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 430" role="img" aria-label="Recycling process">
+  <rect width="560" height="430" rx="28" fill="#fbfdf8"/>
+  <circle cx="112" cy="110" r="54" fill="#e9f7df"/>
+  <circle cx="448" cy="318" r="58" fill="#e7f4f7"/>
+  <path d="M122 96c54-54 141-76 221-52 58 18 104 58 130 110" fill="none" stroke="#188553" stroke-width="14" stroke-linecap="round"/>
+  <path d="m475 97 13 70-63-34" fill="none" stroke="#188553" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M438 334c-61 55-153 72-230 37-52-24-91-67-110-119" fill="none" stroke="#0f6f92" stroke-width="14" stroke-linecap="round"/>
+  <path d="m98 309-8-70 61 37" fill="none" stroke="#0f6f92" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(66 144)">
+    <rect width="128" height="116" rx="18" fill="#fff" stroke="#d8e7d4" stroke-width="4"/>
+    <rect x="23" y="24" width="82" height="50" rx="8" fill="#dff4ff" stroke="#0f6f92" stroke-width="5"/>
+    <path d="M37 42h54M37 57h36" stroke="#0f6f92" stroke-width="5" stroke-linecap="round"/>
+    <text x="64" y="99" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#17231d">Otkup</text>
+  </g>
+  <g transform="translate(216 70)">
+    <rect width="128" height="116" rx="18" fill="#fff" stroke="#d8e7d4" stroke-width="4"/>
+    <path d="M35 28h58l-7 48H42z" fill="#eef2f3" stroke="#60717a" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M48 46h32M45 62h38" stroke="#60717a" stroke-width="5" stroke-linecap="round"/>
+    <text x="64" y="99" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#17231d">Sortiranje</text>
+  </g>
+  <g transform="translate(366 144)">
+    <rect width="128" height="116" rx="18" fill="#fff" stroke="#d8e7d4" stroke-width="4"/>
+    <rect x="28" y="28" width="72" height="48" rx="6" fill="#e9f7df" stroke="#188553" stroke-width="5"/>
+    <path d="M42 43h44M42 60h44" stroke="#188553" stroke-width="5" stroke-linecap="round"/>
+    <text x="64" y="99" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#17231d">Priprema</text>
+  </g>
+  <g transform="translate(216 248)">
+    <rect width="128" height="116" rx="18" fill="#fff" stroke="#d8e7d4" stroke-width="4"/>
+    <path d="M64 25 42 65h17l-11 21h32L69 65h17z" fill="#7bd66f" stroke="#166b46" stroke-width="5" stroke-linejoin="round"/>
+    <text x="64" y="101" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#17231d">Reciklaža</text>
+  </g>
+</svg>

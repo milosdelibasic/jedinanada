@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Purchase of secondary raw materials">
+  <rect x="9" y="31" width="17" height="19" rx="4" fill="#e6f5fb" stroke="#0f6f92" stroke-width="4"/>
+  <path d="M14 22h7v9h-7z" fill="#fff" stroke="#0f6f92" stroke-width="4" stroke-linejoin="round"/>
+  <rect x="25" y="25" width="17" height="25" rx="4" fill="#eef2f3" stroke="#60717a" stroke-width="4"/>
+  <path d="M30 33h7M30 41h7" stroke="#60717a" stroke-width="4" stroke-linecap="round"/>
+  <path d="M40 16h11l7 7v22L47 56 32 41V23z" fill="#fff7dc" stroke="#d99622" stroke-width="4" stroke-linejoin="round"/>
+  <circle cx="48" cy="25" r="3" fill="#d99622"/>
+  <path d="M43 38h9M47.5 33v10" stroke="#176947" stroke-width="4" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Woman led company">
+  <path d="M18 30c0-12 7-20 14-20s14 8 14 20c0 5-2 10-5 13H23c-3-3-5-8-5-13z" fill="#f4d9e6" stroke="#8a315f" stroke-width="4" stroke-linejoin="round"/>
+  <circle cx="32" cy="27" r="9" fill="#fff" stroke="#8a315f" stroke-width="4"/>
+  <path d="M15 56c2.3-9.7 8.8-15 17-15s14.7 5.3 17 15" fill="#fff" stroke="#8a315f" stroke-width="4" stroke-linecap="round"/>
+  <path d="M25 25c3 2 11 2 14-3" fill="none" stroke="#8a315f" stroke-width="4" stroke-linecap="round"/>
+  <path d="M47 14l2.2 4.2 4.8.8-3.4 3.4.7 4.7-4.3-2.1-4.3 2.1.7-4.7L41 19l4.8-.8z" fill="#7bd66f" stroke="#176947" stroke-width="3" stroke-linejoin="round"/>
+</svg>

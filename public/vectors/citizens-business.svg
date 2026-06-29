@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Citizens and businesses">
+  <path d="M8 31l13-11 13 11v21H8z" fill="#e8f7ed" stroke="#176947" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M18 52V40h7v12" fill="#fff" stroke="#176947" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M36 16h18v36H36z" fill="#fff" stroke="#0f6f92" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M42 24h2M50 24h2M42 32h2M50 32h2M42 40h2M50 40h2" stroke="#0f6f92" stroke-width="4" stroke-linecap="round"/>
+  <path d="M6 54h52" stroke="#176947" stroke-width="4" stroke-linecap="round"/>
+</svg>

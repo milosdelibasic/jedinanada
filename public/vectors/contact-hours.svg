@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Working hours">
+  <circle cx="24" cy="24" r="17" fill="#e8f7ed" stroke="#176947" stroke-width="3"/>
+  <path d="M24 13v12l8 5" fill="none" stroke="#176947" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M11 9l5-4M37 9l-5-4" stroke="#d99622" stroke-width="3" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Bottle and paper materials">
+  <path d="M10 17h13l4 6v17a4 4 0 0 1-4 4H11a4 4 0 0 1-4-4V23z" fill="#e6f5fb" stroke="#0f6f92" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M13 8h7v9h-7z" fill="#fff" stroke="#0f6f92" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M13 31h8" stroke="#0f6f92" stroke-width="3" stroke-linecap="round"/>
+  <path d="M27 7h12l5 5v28H27z" fill="#fff7dc" stroke="#d99622" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M39 7v6h5" fill="none" stroke="#d99622" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M32 22h7M32 29h7" stroke="#d99622" stroke-width="3" stroke-linecap="round"/>
+</svg>

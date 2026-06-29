@@ -1,0 +1,566 @@
+export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://jedinanada.rs").replace(/\/$/, "");
+
+export const cleanRoutes = {
+  sr: {
+    home: "/",
+    gallery: "/gallery/"
+  },
+  hu: {
+    home: "/hu/",
+    gallery: "/hu/gallery/"
+  }
+};
+
+export const business = {
+  name: "Jedina Nada DOO",
+  legalName: "Jedina Nada DOO Senta",
+  address: "Karađorđeva 109, 24400 Senta",
+  phone: "+381621788781",
+  phoneDisplay: "062 178 87 81",
+  email: "jedinanada.nc@gmail.com",
+  facebook: "https://facebook.com/pages/category/Company/DOO-Jedina-Nada-reciklaza-305049839618844/",
+  mapUrl: "https://www.google.com/maps/search/?api=1&query=Kara%C4%91or%C4%91eva%20109%2C%2024400%20Senta",
+  person: "Nada Cvijanović",
+  founded: "2010",
+  mapEmbed:
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2775.853178241099!2d20.094086600832522!3d45.914245211800015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDU0JzUxLjMiTiAyMMKwMDUnNDMuNCJF!5e0!3m2!1ssr!2srs!4v1618260878952!5m2!1ssr!2srs",
+  coordinates: {
+    latitude: 45.914245,
+    longitude: 20.095389
+  }
+};
+
+export const galleryImages = [
+  [1, 1536, 2048],
+  [2, 960, 540],
+  [3, 720, 960],
+  [4, 2048, 1152],
+  [5, 1536, 2048],
+  [6, 1152, 2048],
+  [7, 1152, 2048],
+  [8, 1152, 2048],
+  [9, 2048, 1152],
+  [10, 960, 720],
+  [11, 960, 720],
+  [12, 720, 960],
+  [13, 960, 720],
+  [14, 2048, 1152],
+  [15, 1152, 2048],
+  [16, 720, 960],
+  [17, 900, 1600],
+  [18, 1080, 1440],
+  [19, 900, 1600],
+  [20, 900, 1600],
+  [21, 900, 1600],
+  [22, 900, 1600]
+].map(([id, width, height]) => ({
+  id,
+  width,
+  height,
+  thumb: `/assets/gallery/thumbs/${id}.webp`,
+  fullWebp: `/resources/gallery/${id}.webp`,
+  fullJpg: `/resources/gallery/${id}.jpg`
+}));
+
+const common = {
+  navIds: ["about", "services", "gallery", "recycling", "faq", "contact"]
+};
+
+export const locales = {
+  sr: {
+    ...common,
+    lang: "sr",
+    alternateLang: "HU",
+    alternateHref: cleanRoutes.hu.home,
+    galleryAlternateHref: cleanRoutes.hu.gallery,
+    homeHref: cleanRoutes.sr.home,
+    galleryHref: cleanRoutes.sr.gallery,
+    meta: {
+      homeTitle: "Jedina Nada DOO Senta - Otkup i reciklaža neopasnog otpada",
+      galleryTitle: "Galerija - Jedina Nada DOO Senta",
+      homeDescription:
+        "Jedina Nada DOO iz Sente vrši otkup, preradu i reciklažu sekundarnih sirovina i neopasnog otpada: plastike, metala, stakla i papira.",
+      galleryDescription:
+        "Pogledajte galeriju firme Jedina Nada DOO iz Sente, preduzeća za otkup i reciklažu neopasnog otpada."
+    },
+    nav: {
+      home: "Početna",
+      about: "O nama",
+      services: "Otkup",
+      gallery: "Galerija",
+      recycling: "Značaj reciklaže",
+      faq: "FAQ",
+      contact: "Kontakt"
+    },
+    hero: {
+      eyebrow: "Reciklaža i sekundarne sirovine u Senti",
+      title: "Pouzdan otkup i reciklaža neopasnog otpada.",
+      text:
+        "Jedina Nada DOO od 2010. godine prikuplja, otkupljuje i priprema sekundarne sirovine za dalju preradu širom Srbije.",
+      imageAlt: "Vozilo firme Jedina Nada DOO za otkup i reciklažu",
+      primary: "Šta otkupljujemo?",
+      secondary: "Kontaktirajte nas",
+      stats: [
+        { icon: "/vectors/calendar.svg", value: "Od 2010.", label: "iskustvo u reciklaži" },
+        { icon: "/vectors/materials.svg", value: "Širok otkup", label: "plastika, metali, papir, staklo i više" },
+        { icon: "/vectors/location.svg", value: "Senta i okolina", label: "saradnja sa građanima i firmama" }
+      ]
+    },
+    about: {
+      eyebrow: "O preduzeću",
+      title: "Lokalna firma sa jasnim procesom i dugim iskustvom.",
+      paragraphs: [
+        "Kompanija Jedina Nada DOO uspešno posluje od osnivanja 2010. godine, sa sedištem na adresi Karađorđeva 109 u Senti.",
+        "Preduzeće vodi direktorka Nada Cvijanović. Kao firma koju vodi žena, Jedina Nada posebno neguje odgovoran, precizan i dogovoran odnos sa ljudima i firmama koje sarađuju sa nama.",
+        "Bavimo se reciklažom neopasnog otpada. Vršimo otkup, sortiranje, pripremu i reciklažu sekundarnih sirovina na teritoriji Srbije.",
+        "Neopasni otpad je svaki otpad koji nema karakteristike opasnog otpada, uključujući plastične i staklene boce, papir, plastiku, gvožđe i tekstil."
+      ],
+      facts: [
+        {
+          icon: "/vectors/materials.svg",
+          title: "Otkup sekundarnih sirovina",
+          text: "Jasan dogovor i prijem različitih vrsta neopasnog otpada."
+        },
+        {
+          icon: "/vectors/recycling-prepare.svg",
+          title: "Priprema za reciklažu",
+          text: "Sortiranje i priprema materijala za dalju preradu."
+        },
+        {
+          icon: "/vectors/citizens-business.svg",
+          title: "Rad sa građanima i firmama",
+          text: "Praktična saradnja sa domaćinstvima, preduzetnicima i kompanijama."
+        },
+        {
+          icon: "/vectors/woman-led.svg",
+          title: "Firma koju vodi žena",
+          text: "Direktorka Nada Cvijanović vodi poslovanje i svakodnevnu organizaciju."
+        }
+      ]
+    },
+    services: {
+      eyebrow: "Otkup materijala",
+      title: "Materijali koje otkupljujemo",
+      text: "Lista ispod prikazuje glavne grupe. Otkupljujemo i druge sekundarne sirovine, pa nas kontaktirajte za konkretan materijal.",
+      items: [
+        {
+          key: "plastic",
+          title: "Plastika",
+          icon: "/vectors/plastic.svg",
+          items: ["PET ambalaža", "Čepovi", "Stolice", "Stolovi", "Kofe", "Gajbe"]
+        },
+        {
+          key: "metal",
+          title: "Metal",
+          icon: "/vectors/metal.svg",
+          items: ["Gvožđe", "Čelik", "Bakar", "Mesing", "Aluminijum", "Prohrom", "Olovo"]
+        },
+        {
+          key: "glass",
+          title: "Staklo",
+          icon: "/vectors/glass.svg",
+          items: ["Staklene flaše", "Staklene tegle", "Prozori", "Slomljeno staklo", "Ostale vrste stakala"]
+        },
+        {
+          key: "paper",
+          title: "Papir",
+          icon: "/vectors/paper.svg",
+          items: ["Papir", "Arhivski papir", "Karton", "Knjige", "Sveske", "Novine"]
+        }
+      ]
+    },
+    recycling: {
+      eyebrow: "Značaj reciklaže",
+      title: "Reciklaža čuva resurse i smanjuje otpad na deponijama.",
+      text:
+        "Reciklaža obuhvata sakupljanje, izdvajanje, preradu i izradu novih materijala iz iskorišćenih stvari. Tako se smanjuje potreba za novim sirovinama i čuva životna sredina.",
+      imageAlt: "Balirane PET boce pripremljene za dalju reciklažu",
+      imageBadge: "Pripremljeno za dalju reciklažu",
+      points: [
+        "Smanjuje potrošnju prirodnih resursa poput vode, minerala, nafte i šuma.",
+        "Čuva prirodna staništa jer smanjuje potrebu za sečom šuma i vađenjem novih sirovina.",
+        "Smanjuje zagađenje vode, zemlje i vazduha jer manje otpada završava u prirodi.",
+        "Štedi energiju, naročito kod materijala kao što su aluminijum i papir."
+      ]
+    },
+    gallery: {
+      title: "Galerija",
+      eyebrow: "Naše dvorište i materijali",
+      text: "Pogledajte fotografije prostora, materijala i rada preduzeća Jedina Nada DOO.",
+      open: "Otvori fotografiju",
+      close: "Zatvori",
+      previous: "Prethodna",
+      next: "Sledeća",
+      previewAlt: "Sekundarne sirovine pripremljene za transport",
+      imageAlt: "Jedina Nada DOO reciklaža, fotografija"
+    },
+    faq: {
+      eyebrow: "Česta pitanja",
+      title: "Kratko o otkupu i saradnji",
+      items: [
+        {
+          question: "Koje materijale otkupljujete?",
+          answer:
+            "Otkupljujemo plastiku, metale, papir, staklo i druge sekundarne sirovine. Za konkretan materijal najbolje je da nas kontaktirate direktno."
+        },
+        {
+          question: "Da li radite sa građanima i firmama?",
+          answer: "Da. Sarađujemo sa građanima, domaćinstvima, preduzetnicima i firmama iz Sente, okoline i drugih delova Srbije."
+        },
+        {
+          question: "Gde se nalazi Jedina Nada DOO?",
+          answer: "Nalazimo se na adresi Karađorđeva 109, 24400 Senta."
+        },
+        {
+          question: "Koje je radno vreme?",
+          answer: "Radimo od ponedeljka do petka od 07:00 do 15:00, subotom od 07:00 do 12:00, a nedeljom ne radimo."
+        }
+      ]
+    },
+    contact: {
+      eyebrow: "Kontakt",
+      title: "Javite nam koji materijal imate i dogovorićemo prijem.",
+      details: "Kontakt podaci",
+      addressLabel: "Adresa",
+      personLabel: "Kontakt osoba",
+      hoursLabel: "Radno vreme",
+      hours: [
+        { label: "Ponedeljak - Petak", value: "07:00 - 15:00" },
+        { label: "Subota", value: "07:00 - 12:00" },
+        { label: "Nedelja", value: "neradna" }
+      ],
+      call: "Pozovi",
+      email: "Pošalji email"
+    },
+    footer: {
+      navigation: "Navigacija",
+      copyright: "Sva prava zadržana."
+    }
+  },
+  hu: {
+    ...common,
+    lang: "hu",
+    alternateLang: "SR",
+    alternateHref: cleanRoutes.sr.home,
+    galleryAlternateHref: cleanRoutes.sr.gallery,
+    homeHref: cleanRoutes.hu.home,
+    galleryHref: cleanRoutes.hu.gallery,
+    meta: {
+      homeTitle: "Jedina Nada DOO Zenta - Újrahasznosítás",
+      galleryTitle: "Galéria - Jedina Nada DOO Zenta",
+      homeDescription:
+        "A zentai Jedina Nada DOO másodlagos nyersanyagok és nem veszélyes hulladék felvásárlásával, feldolgozásával és újrahasznosításával foglalkozik.",
+      galleryDescription:
+        "Tekintse meg a zentai Jedina Nada DOO galériáját, a nem veszélyes hulladék felvásárlásával és újrahasznosításával foglalkozó vállalkozást."
+    },
+    nav: {
+      home: "Kezdőlap",
+      about: "Rólunk",
+      services: "Felvásárlás",
+      gallery: "Galéria",
+      recycling: "Az újrahasznosítás",
+      faq: "FAQ",
+      contact: "Kapcsolat"
+    },
+    hero: {
+      eyebrow: "Újrahasznosítás és másodlagos nyersanyagok Zentán",
+      title: "Megbízható felvásárlás és újrahasznosítás.",
+      text:
+        "A Jedina Nada DOO 2010 óta gyűjti, vásárolja fel és készíti elő a másodlagos nyersanyagokat további feldolgozásra Szerbia területén.",
+      imageAlt: "A Jedina Nada DOO járműve hulladékfelvásárláshoz és újrahasznosításhoz",
+      primary: "Mit vásárolunk fel?",
+      secondary: "Kapcsolat",
+      stats: [
+        { icon: "/vectors/calendar.svg", value: "2010 óta", label: "tapasztalat az újrahasznosításban" },
+        { icon: "/vectors/materials.svg", value: "Széles körű", label: "műanyag, fém, papír, üveg és egyéb anyagok" },
+        { icon: "/vectors/location.svg", value: "Zenta és környéke", label: "lakossági és céges együttműködés" }
+      ]
+    },
+    about: {
+      eyebrow: "A vállalkozásról",
+      title: "Helyi cég átlátható folyamattal és sokéves tapasztalattal.",
+      paragraphs: [
+        "A Jedina Nada DOO 2010-es alapítása óta sikeresen működik, székhelye Zentán, a Karađorđeva 109 címen található.",
+        "A vállalkozást Nada Cvijanović igazgatónő vezeti. Női vezetésű cégként különösen fontos számunkra a felelős, pontos és korrekt együttműködés.",
+        "Nem veszélyes hulladék újrahasznosításával foglalkozunk. Másodlagos nyersanyagokat vásárolunk fel, válogatunk, előkészítünk és hasznosítunk újra Szerbia területén.",
+        "A nem veszélyes hulladék minden olyan hulladék, amely nem rendelkezik veszélyes tulajdonságokkal, például műanyag és üveg palack, papír, műanyag, vas és textil."
+      ],
+      facts: [
+        {
+          icon: "/vectors/materials.svg",
+          title: "Másodlagos nyersanyagok felvásárlása",
+          text: "Átlátható megállapodás és különböző nem veszélyes anyagok átvétele."
+        },
+        {
+          icon: "/vectors/recycling-prepare.svg",
+          title: "Előkészítés újrahasznosításra",
+          text: "Válogatás és anyag-előkészítés további feldolgozásra."
+        },
+        {
+          icon: "/vectors/citizens-business.svg",
+          title: "Lakossági és céges együttműködés",
+          text: "Gyakorlati együttműködés háztartásokkal, vállalkozókkal és cégekkel."
+        },
+        {
+          icon: "/vectors/woman-led.svg",
+          title: "Női vezetésű cég",
+          text: "A működést és a mindennapi szervezést Nada Cvijanović igazgatónő vezeti."
+        }
+      ]
+    },
+    services: {
+      eyebrow: "Anyagfelvásárlás",
+      title: "Anyagok, amelyeket felvásárolunk",
+      text: "Az alábbiak a fő anyagcsoportok. Más másodlagos nyersanyagokat is átveszünk, ezért konkrét anyag esetén keressen minket.",
+      items: [
+        {
+          key: "plastic",
+          title: "Műanyag",
+          icon: "/vectors/plastic.svg",
+          items: ["PET csomagolás", "Kupakok", "Székek", "Asztalok", "Vödrök", "Ládák"]
+        },
+        {
+          key: "metal",
+          title: "Fém",
+          icon: "/vectors/metal.svg",
+          items: ["Vas", "Acél", "Réz", "Sárgaréz", "Alumínium", "Rozsdamentes acél", "Ólom"]
+        },
+        {
+          key: "glass",
+          title: "Üveg",
+          icon: "/vectors/glass.svg",
+          items: ["Üvegpalackok", "Befőttesüvegek", "Ablaküveg", "Törött üveg", "Egyéb üvegfajták"]
+        },
+        {
+          key: "paper",
+          title: "Papír",
+          icon: "/vectors/paper.svg",
+          items: ["Papír", "Irattári papír", "Karton", "Könyvek", "Füzetek", "Újságok"]
+        }
+      ]
+    },
+    recycling: {
+      eyebrow: "Miért fontos",
+      title: "Az újrahasznosítás erőforrásokat takarít meg és csökkenti a hulladékot.",
+      text:
+        "Az újrahasznosítás a használt tárgyak és anyagok gyűjtését, válogatását, feldolgozását és új termékké alakítását jelenti. Így kevesebb új nyersanyagra van szükség, és kisebb a környezeti terhelés.",
+      imageAlt: "Bálázott PET palackok további újrahasznosításra előkészítve",
+      imageBadge: "Előkészítve további újrahasznosításra",
+      points: [
+        "Csökkenti a víz, ásványi anyagok, kőolaj és erdők felhasználását.",
+        "Védi a természetes élőhelyeket, mert kevesebb új nyersanyagot kell kitermelni.",
+        "Csökkenti a víz, talaj és levegő szennyezését, mert kevesebb hulladék kerül a természetbe.",
+        "Energiát takarít meg, különösen az alumínium és a papír újrahasznosításánál."
+      ]
+    },
+    gallery: {
+      title: "Galéria",
+      eyebrow: "Telephelyünk és anyagaink",
+      text: "Tekintse meg a Jedina Nada DOO telephelyéről, anyagairól és munkájáról készült fotókat.",
+      open: "Fotó megnyitása",
+      close: "Bezárás",
+      previous: "Előző",
+      next: "Következő",
+      previewAlt: "Szállításra előkészített másodlagos nyersanyagok",
+      imageAlt: "Jedina Nada DOO újrahasznosítás, fotó"
+    },
+    faq: {
+      eyebrow: "Gyakori kérdések",
+      title: "Röviden az átvételről és az együttműködésről",
+      items: [
+        {
+          question: "Milyen anyagokat vásárolnak fel?",
+          answer:
+            "Műanyagot, fémeket, papírt, üveget és más másodlagos nyersanyagokat vásárolunk fel. Konkrét anyag esetén érdemes közvetlenül felvenni velünk a kapcsolatot."
+        },
+        {
+          question: "Lakossággal és cégekkel is dolgoznak?",
+          answer: "Igen. Háztartásokkal, vállalkozókkal és cégekkel is együttműködünk Zentáról, a környékről és Szerbia más részeiről."
+        },
+        {
+          question: "Hol található a Jedina Nada DOO?",
+          answer: "Címünk: Karađorđeva 109, 24400 Senta."
+        },
+        {
+          question: "Mi a munkaidő?",
+          answer: "Hétfőtől péntekig 07:00 és 15:00 között, szombaton 07:00 és 12:00 között dolgozunk. Vasárnap zárva vagyunk."
+        }
+      ]
+    },
+    contact: {
+      eyebrow: "Kapcsolat",
+      title: "Írja meg, milyen anyaga van, és egyeztetjük az átvételt.",
+      details: "Elérhetőségek",
+      addressLabel: "Cím",
+      personLabel: "Kapcsolattartó",
+      hoursLabel: "Munkaidő",
+      hours: [
+        { label: "Hétfő - Péntek", value: "07:00 - 15:00" },
+        { label: "Szombat", value: "07:00 - 12:00" },
+        { label: "Vasárnap", value: "zárva" }
+      ],
+      call: "Hívás",
+      email: "Email küldése"
+    },
+    footer: {
+      navigation: "Navigáció",
+      copyright: "Minden jog fenntartva."
+    }
+  }
+};
+
+export function createPageMetadata(locale, page) {
+  const content = locales[locale];
+  const isGallery = page === "gallery";
+  const route = cleanRoutes[locale][isGallery ? "gallery" : "home"];
+  const otherLocale = locale === "sr" ? "hu" : "sr";
+  const otherRoute = cleanRoutes[otherLocale][isGallery ? "gallery" : "home"];
+  const title = isGallery ? content.meta.galleryTitle : content.meta.homeTitle;
+  const description = isGallery ? content.meta.galleryDescription : content.meta.homeDescription;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `${siteUrl}${route}`,
+      languages: {
+        sr: `${siteUrl}${cleanRoutes.sr[isGallery ? "gallery" : "home"]}`,
+        hu: `${siteUrl}${cleanRoutes.hu[isGallery ? "gallery" : "home"]}`,
+        "x-default": `${siteUrl}${cleanRoutes.sr[isGallery ? "gallery" : "home"]}`
+      }
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${siteUrl}${route}`,
+      siteName: "Jedina Nada DOO",
+      locale: locale === "sr" ? "sr_RS" : "hu_HU",
+      alternateLocale: locale === "sr" ? "hu_HU" : "sr_RS",
+      type: "website",
+      images: [
+        {
+          url: `${siteUrl}/og-image.jpg`,
+          width: 1200,
+          height: 630,
+          alt: "Jedina Nada DOO Senta"
+        }
+      ]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [`${siteUrl}/og-image.jpg`]
+    },
+    other: {
+      "content-language": locale,
+      "alternate-language": otherRoute
+    }
+  };
+}
+
+export function localBusinessJsonLd(locale = "sr") {
+  const content = locales[locale];
+
+  return {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "RecyclingCenter"],
+    "@id": `${siteUrl}/#jedina-nada`,
+    name: business.name,
+    legalName: business.legalName,
+    description: content.meta.homeDescription,
+    url: siteUrl,
+    logo: `${siteUrl}/resources/logo/logo.png`,
+    image: `${siteUrl}/og-image.jpg`,
+    telephone: business.phone,
+    email: business.email,
+    foundingDate: business.founded,
+    priceRange: "$$",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Karađorđeva 109",
+      postalCode: "24400",
+      addressLocality: locale === "hu" ? "Zenta" : "Senta",
+      addressCountry: "RS"
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: business.coordinates.latitude,
+      longitude: business.coordinates.longitude
+    },
+    areaServed: [
+      {
+        "@type": "City",
+        name: locale === "hu" ? "Zenta" : "Senta"
+      },
+      {
+        "@type": "Country",
+        name: "Serbia"
+      }
+    ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: business.phone,
+      email: business.email,
+      contactType: "customer service",
+      areaServed: "RS",
+      availableLanguage: ["sr", "hu"]
+    },
+    makesOffer: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: locale === "hu" ? "Másodlagos nyersanyagok felvásárlása" : "Otkup sekundarnih sirovina",
+          serviceType: "Waste purchase and recycling preparation",
+          areaServed: "Serbia"
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: locale === "hu" ? "Nem veszélyes hulladék újrahasznosítása" : "Reciklaža neopasnog otpada",
+          serviceType: "Non-hazardous waste recycling",
+          areaServed: "Serbia"
+        }
+      }
+    ],
+    knowsAbout:
+      locale === "hu"
+        ? ["műanyag", "fém", "papír", "üveg", "másodlagos nyersanyagok", "nem veszélyes hulladék"]
+        : ["plastika", "metal", "papir", "staklo", "sekundarne sirovine", "neopasan otpad"],
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "07:00",
+        closes: "15:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Saturday",
+        opens: "07:00",
+        closes: "12:00"
+      }
+    ],
+    sameAs: [business.facebook]
+  };
+}
+
+export function faqJsonLd(locale = "sr") {
+  const content = locales[locale];
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: content.faq.items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer
+      }
+    }))
+  };
+}

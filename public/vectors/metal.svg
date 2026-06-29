@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Metal">
+  <rect x="16" y="57" width="54" height="14" rx="4" fill="#e6ecef" stroke="#4b5d67" stroke-width="5"/>
+  <rect x="25" y="41" width="54" height="14" rx="4" fill="#f6f9fa" stroke="#60717a" stroke-width="5"/>
+  <rect x="13" y="25" width="54" height="14" rx="4" fill="#dce4e7" stroke="#4b5d67" stroke-width="5"/>
+  <circle cx="24" cy="32" r="3" fill="#8aa0aa"/>
+  <circle cx="36" cy="48" r="3" fill="#8aa0aa"/>
+  <circle cx="27" cy="64" r="3" fill="#8aa0aa"/>
+  <path d="M76 18l2.5 7 7 2.5-7 2.5-2.5 7-2.5-7-7-2.5 7-2.5z" fill="#f4b13d" stroke="#9b6b15" stroke-width="3" stroke-linejoin="round"/>
+</svg>
