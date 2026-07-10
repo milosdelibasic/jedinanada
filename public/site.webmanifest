@@ -1,0 +1,30 @@
+{
+  "name": "Jedina Nada DOO",
+  "short_name": "Jedina Nada",
+  "description": "Otkup, prerada i reciklaža sekundarnih sirovina i neopasnog otpada u Senti.",
+  "lang": "sr",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f8fbf5",
+  "theme_color": "#0f3d2e",
+  "icons": [
+    {
+      "src": "/resources/logo/logo150h.png",
+      "sizes": "227x150",
+      "type": "image/png"
+    },
+    {
+      "src": "/resources/logo/logo.png",
+      "sizes": "378x250",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

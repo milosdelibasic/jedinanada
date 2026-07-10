@@ -92,23 +92,25 @@ export default function Header({ locale, content, active = "home" }) {
   ];
 
   return (
-    <header className="site-header">
-      <a className="brand" href={content.homeHref} aria-label="Jedina Nada DOO">
-        <img src="/resources/logo/logo.webp" alt="" width="76" height="50" />
-        <span>Jedina Nada</span>
-      </a>
+    <>
+      <header className="site-header">
+        <a className="brand" href={content.homeHref} aria-label="Jedina Nada DOO">
+          <img src="/resources/logo/logo.webp" alt="" width="76" height="50" />
+          <span>Jedina Nada</span>
+        </a>
 
-      <button
-        className={open ? "menu-button is-open" : "menu-button"}
-        type="button"
-        aria-label={open ? "Close navigation" : "Open navigation"}
-        aria-expanded={open}
-        onClick={() => setOpen((value) => !value)}
-      >
-        <span />
-        <span />
-        <span />
-      </button>
+        <button
+          className={open ? "menu-button is-open" : "menu-button"}
+          type="button"
+          aria-label={open ? "Close navigation" : "Open navigation"}
+          aria-expanded={open}
+          onClick={() => setOpen((value) => !value)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+      </header>
 
       <button
         className={open ? "nav-backdrop is-open" : "nav-backdrop"}
@@ -142,6 +144,6 @@ export default function Header({ locale, content, active = "home" }) {
           {content.alternateLang}
         </a>
       </nav>
-    </header>
+    </>
   );
 }

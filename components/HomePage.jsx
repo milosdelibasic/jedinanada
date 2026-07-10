@@ -1,13 +1,26 @@
 import Footer from "@/components/Footer";
+import FaqAccordion from "@/components/FaqAccordion";
 import Header from "@/components/Header";
 import StructuredData from "@/components/StructuredData";
-import { business, faqJsonLd, localBusinessJsonLd } from "@/data/site";
+import {
+  breadcrumbJsonLd,
+  business,
+  faqJsonLd,
+  localBusinessJsonLd,
+  organizationJsonLd,
+  serviceCatalogJsonLd,
+  websiteJsonLd
+} from "@/data/site";
 
 export default function HomePage({ locale, content }) {
   return (
     <>
+      <StructuredData data={organizationJsonLd()} />
+      <StructuredData data={websiteJsonLd(locale)} />
       <StructuredData data={localBusinessJsonLd(locale)} />
+      <StructuredData data={serviceCatalogJsonLd(locale)} />
       <StructuredData data={faqJsonLd(locale)} />
+      <StructuredData data={breadcrumbJsonLd(locale, "home")} />
       <Header locale={locale} content={content} />
       <main>
         <section className="hero section-shell" id="home">
@@ -74,7 +87,7 @@ export default function HomePage({ locale, content }) {
 
         <section className="services-section" id="services">
           <div className="section-shell">
-            <div className="section-heading section-heading-centered">
+            <div className="section-heading">
               <p className="eyebrow">{content.services.eyebrow}</p>
               <h2>{content.services.title}</h2>
               <p>{content.services.text}</p>
@@ -138,20 +151,11 @@ export default function HomePage({ locale, content }) {
 
         <section className="faq-section" id="faq">
           <div className="section-shell">
-            <div className="section-heading section-heading-centered">
+            <div className="section-heading">
               <p className="eyebrow">{content.faq.eyebrow}</p>
               <h2>{content.faq.title}</h2>
             </div>
-            <div className="faq-list">
-              {content.faq.items.map((item, index) => (
-                <details className="faq-item" key={item.question} open={index === 0}>
-                  <summary>
-                    <span>{item.question}</span>
-                  </summary>
-                  <p>{item.answer}</p>
-                </details>
-              ))}
-            </div>
+            <FaqAccordion items={content.faq.items} />
           </div>
         </section>
 

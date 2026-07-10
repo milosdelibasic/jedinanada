@@ -1,4 +1,5 @@
 export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://jedinanada.rs").replace(/\/$/, "");
+export const siteName = "Jedina Nada DOO";
 
 export const cleanRoutes = {
   sr: {
@@ -12,7 +13,7 @@ export const cleanRoutes = {
 };
 
 export const business = {
-  name: "Jedina Nada DOO",
+  name: siteName,
   legalName: "Jedina Nada DOO Senta",
   address: "Karađorđeva 109, 24400 Senta",
   phone: "+381621788781",
@@ -29,6 +30,12 @@ export const business = {
     longitude: 20.095389
   }
 };
+
+const absoluteUrl = (path = "/") => `${siteUrl}${path}`;
+const pageRouteKey = (page) => (page === "gallery" ? "gallery" : "home");
+const pageTitle = (content, page) => (page === "gallery" ? content.meta.galleryTitle : content.meta.homeTitle);
+const pageDescription = (content, page) => (page === "gallery" ? content.meta.galleryDescription : content.meta.homeDescription);
+const pageKeywords = (content, page) => (page === "gallery" ? content.meta.galleryKeywords : content.meta.homeKeywords);
 
 export const galleryImages = [
   [1, 1536, 2048],
@@ -81,7 +88,23 @@ export const locales = {
       homeDescription:
         "Jedina Nada DOO iz Sente vrši otkup, preradu i reciklažu sekundarnih sirovina i neopasnog otpada: plastike, metala, stakla i papira.",
       galleryDescription:
-        "Pogledajte galeriju firme Jedina Nada DOO iz Sente, preduzeća za otkup i reciklažu neopasnog otpada."
+        "Pogledajte galeriju firme Jedina Nada DOO iz Sente, preduzeća za otkup i reciklažu neopasnog otpada.",
+      homeKeywords: [
+        "Jedina Nada DOO",
+        "reciklaža Senta",
+        "otkup sekundarnih sirovina",
+        "otkup plastike",
+        "otkup metala",
+        "otkup papira",
+        "otkup stakla",
+        "neopasan otpad"
+      ],
+      galleryKeywords: [
+        "Jedina Nada galerija",
+        "reciklažno dvorište Senta",
+        "sekundarne sirovine fotografije",
+        "otkup otpada Senta"
+      ]
     },
     nav: {
       home: "Početna",
@@ -251,7 +274,23 @@ export const locales = {
       homeDescription:
         "A zentai Jedina Nada DOO másodlagos nyersanyagok és nem veszélyes hulladék felvásárlásával, feldolgozásával és újrahasznosításával foglalkozik.",
       galleryDescription:
-        "Tekintse meg a zentai Jedina Nada DOO galériáját, a nem veszélyes hulladék felvásárlásával és újrahasznosításával foglalkozó vállalkozást."
+        "Tekintse meg a zentai Jedina Nada DOO galériáját, a nem veszélyes hulladék felvásárlásával és újrahasznosításával foglalkozó vállalkozást.",
+      homeKeywords: [
+        "Jedina Nada DOO",
+        "újrahasznosítás Zenta",
+        "másodlagos nyersanyagok felvásárlása",
+        "műanyag felvásárlás",
+        "fém felvásárlás",
+        "papír felvásárlás",
+        "üveg felvásárlás",
+        "nem veszélyes hulladék"
+      ],
+      galleryKeywords: [
+        "Jedina Nada galéria",
+        "újrahasznosító telephely Zenta",
+        "másodlagos nyersanyagok fotók",
+        "hulladékfelvásárlás Zenta"
+      ]
     },
     nav: {
       home: "Kezdőlap",
@@ -411,29 +450,40 @@ export const locales = {
 
 export function createPageMetadata(locale, page) {
   const content = locales[locale];
-  const isGallery = page === "gallery";
-  const route = cleanRoutes[locale][isGallery ? "gallery" : "home"];
-  const otherLocale = locale === "sr" ? "hu" : "sr";
-  const otherRoute = cleanRoutes[otherLocale][isGallery ? "gallery" : "home"];
-  const title = isGallery ? content.meta.galleryTitle : content.meta.homeTitle;
-  const description = isGallery ? content.meta.galleryDescription : content.meta.homeDescription;
+  const routeKey = pageRouteKey(page);
+  const route = cleanRoutes[locale][routeKey];
+  const title = pageTitle(content, page);
+  const description = pageDescription(content, page);
 
   return {
     title,
     description,
+    keywords: pageKeywords(content, page),
+    category: "recycling",
     alternates: {
-      canonical: `${siteUrl}${route}`,
+      canonical: absoluteUrl(route),
       languages: {
-        sr: `${siteUrl}${cleanRoutes.sr[isGallery ? "gallery" : "home"]}`,
-        hu: `${siteUrl}${cleanRoutes.hu[isGallery ? "gallery" : "home"]}`,
-        "x-default": `${siteUrl}${cleanRoutes.sr[isGallery ? "gallery" : "home"]}`
+        sr: absoluteUrl(cleanRoutes.sr[routeKey]),
+        hu: absoluteUrl(cleanRoutes.hu[routeKey]),
+        "x-default": absoluteUrl(cleanRoutes.sr[routeKey])
+      }
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1
       }
     },
     openGraph: {
       title,
       description,
-      url: `${siteUrl}${route}`,
-      siteName: "Jedina Nada DOO",
+      url: absoluteUrl(route),
+      siteName,
       locale: locale === "sr" ? "sr_RS" : "hu_HU",
       alternateLocale: locale === "sr" ? "hu_HU" : "sr_RS",
       type: "website",
@@ -454,8 +504,54 @@ export function createPageMetadata(locale, page) {
     },
     other: {
       "content-language": locale,
-      "alternate-language": otherRoute
+      "geo.region": "RS-02",
+      "geo.placename": locale === "hu" ? "Zenta" : "Senta",
+      "geo.position": `${business.coordinates.latitude};${business.coordinates.longitude}`,
+      ICBM: `${business.coordinates.latitude}, ${business.coordinates.longitude}`
     }
+  };
+}
+
+export function organizationJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${siteUrl}/#organization`,
+    name: siteName,
+    legalName: business.legalName,
+    url: siteUrl,
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteUrl}/resources/logo/logo.png`,
+      width: 378,
+      height: 250
+    },
+    sameAs: [business.facebook],
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: business.phone,
+      email: business.email,
+      contactType: "customer service",
+      areaServed: "RS",
+      availableLanguage: ["sr", "hu"]
+    }
+  };
+}
+
+export function websiteJsonLd(locale = "sr") {
+  const content = locales[locale];
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${siteUrl}/#website`,
+    name: siteName,
+    url: siteUrl,
+    inLanguage: locale,
+    publisher: {
+      "@id": `${siteUrl}/#organization`
+    },
+    description: content.meta.homeDescription
   };
 }
 
@@ -475,7 +571,12 @@ export function localBusinessJsonLd(locale = "sr") {
     telephone: business.phone,
     email: business.email,
     foundingDate: business.founded,
+    slogan:
+      locale === "hu" ? "Megbízható felvásárlás és újrahasznosítás" : "Pouzdan otkup i reciklaža neopasnog otpada",
     priceRange: "$$",
+    parentOrganization: {
+      "@id": `${siteUrl}/#organization`
+    },
     address: {
       "@type": "PostalAddress",
       streetAddress: "Karađorđeva 109",
@@ -548,6 +649,45 @@ export function localBusinessJsonLd(locale = "sr") {
   };
 }
 
+export function serviceCatalogJsonLd(locale = "sr") {
+  const content = locales[locale];
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "OfferCatalog",
+    "@id": `${siteUrl}${cleanRoutes[locale].home}#services-catalog`,
+    name: content.services.title,
+    url: `${siteUrl}${cleanRoutes[locale].home}#services`,
+    inLanguage: locale,
+    itemListElement: content.services.items.map((service) => ({
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: service.title,
+        serviceType: locale === "hu" ? "Másodlagos nyersanyagok felvásárlása" : "Otkup sekundarnih sirovina",
+        provider: {
+          "@id": `${siteUrl}/#jedina-nada`
+        },
+        areaServed: {
+          "@type": "Country",
+          name: "Serbia"
+        },
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: service.title,
+          itemListElement: service.items.map((item) => ({
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Thing",
+              name: item
+            }
+          }))
+        }
+      }
+    }))
+  };
+}
+
 export function faqJsonLd(locale = "sr") {
   const content = locales[locale];
 
@@ -561,6 +701,68 @@ export function faqJsonLd(locale = "sr") {
         "@type": "Answer",
         text: item.answer
       }
+    }))
+  };
+}
+
+export function breadcrumbJsonLd(locale = "sr", page = "home") {
+  const content = locales[locale];
+  const routeKey = pageRouteKey(page);
+  const items = [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: content.nav.home,
+      item: absoluteUrl(cleanRoutes[locale].home)
+    }
+  ];
+
+  if (routeKey === "gallery") {
+    items.push({
+      "@type": "ListItem",
+      position: 2,
+      name: content.nav.gallery,
+      item: absoluteUrl(cleanRoutes[locale].gallery)
+    });
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items
+  };
+}
+
+export function galleryPageJsonLd(locale = "sr") {
+  const content = locales[locale];
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${siteUrl}${cleanRoutes[locale].gallery}#webpage`,
+    name: content.meta.galleryTitle,
+    description: content.meta.galleryDescription,
+    url: absoluteUrl(cleanRoutes[locale].gallery),
+    inLanguage: locale,
+    isPartOf: {
+      "@id": `${siteUrl}/#website`
+    },
+    about: {
+      "@id": `${siteUrl}/#jedina-nada`
+    },
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: `${siteUrl}/resources/gallery/10.jpg`,
+      width: 960,
+      height: 720
+    },
+    hasPart: galleryImages.map((image) => ({
+      "@type": "ImageObject",
+      contentUrl: `${siteUrl}${image.fullJpg}`,
+      thumbnailUrl: `${siteUrl}${image.thumb}`,
+      width: image.width,
+      height: image.height,
+      caption: `${content.gallery.imageAlt} ${image.id}`
     }))
   };
 }

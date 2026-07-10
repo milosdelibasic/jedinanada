@@ -335,6 +335,7 @@ main {
 
 .hero-copy h1 {
   max-width: 13.5ch;
+  font-size: clamp(2.03rem, 6.3vw, 4.37rem);
 }
 
 .hero-copy .lead {
@@ -443,13 +444,41 @@ main {
 .about-section,
 .recycling-section,
 .contact-section {
+  position: relative;
+  isolation: isolate;
   padding: 68px 0;
 }
 
+.about-section::before,
+.recycling-section::before,
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  z-index: -1;
+  width: 100vw;
+  transform: translateX(-50%);
+}
+
 .about-section {
-  background: #eef7e9;
-  box-shadow: 0 0 0 100vmax #eef7e9;
-  clip-path: inset(0 -100vmax);
+  color: #fff;
+}
+
+.about-section::before {
+  background:
+    radial-gradient(circle at 12% 12%, rgba($color-lime, 0.14), transparent 28%),
+    radial-gradient(circle at 90% 8%, rgba($color-blue, 0.18), transparent 30%),
+    linear-gradient(135deg, #0f3d2e 0%, #123428 58%, #0b241c 100%);
+}
+
+.about-section .eyebrow {
+  color: $color-lime;
+}
+
+.about-section .section-heading h2 {
+  color: #fff;
 }
 
 .about-layout {
@@ -464,14 +493,14 @@ main {
   min-height: 100%;
   flex-direction: column;
   justify-content: center;
-  border-left: 5px solid $color-green;
+  border-left: 5px solid $color-lime;
   padding-block: 12px;
   padding-left: 22px;
 }
 
 .about-copy p {
   margin: 0 0 16px;
-  color: $color-muted;
+  color: rgba(255, 255, 255, 0.78);
   font-size: 1.05rem;
 }
 
@@ -487,12 +516,12 @@ main {
   gap: 14px;
   align-items: start;
   overflow: hidden;
-  border: 1px solid $color-line;
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 8px;
-  background: linear-gradient(135deg, #fff 0%, #f8fcf4 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.07) 100%);
   padding: 18px;
   font-weight: 800;
-  box-shadow: $shadow-card;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.16);
 }
 
 .fact-panel div::after {
@@ -501,7 +530,7 @@ main {
   width: 90px;
   height: 90px;
   border-radius: 999px;
-  background: rgba($color-lime, 0.14);
+  background: rgba($color-lime, 0.1);
 }
 
 .fact-panel div:nth-child(odd)::after {
@@ -531,7 +560,7 @@ main {
 
 .fact-panel small {
   margin-top: 4px;
-  color: $color-muted;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 0.92rem;
   font-weight: 650;
   line-height: 1.45;
@@ -540,14 +569,13 @@ main {
 .services-section {
   position: relative;
   overflow: hidden;
-  background-color: #f5faf1;
+  background-color: #edf7e8;
   background-image:
-    radial-gradient(circle at 12% 12%, rgba($color-lime, 0.22), transparent 26%),
-    radial-gradient(circle at 88% 18%, rgba($color-blue, 0.1), transparent 24%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(239, 249, 235, 0.86)),
-    url("/vectors/material-pattern.svg");
-  background-repeat: no-repeat, no-repeat, no-repeat, repeat;
-  background-size: 720px 720px, 620px 620px, 100% 100%, 240px 240px;
+    radial-gradient(circle at 12% 10%, rgba($color-lime, 0.2), transparent 28%),
+    radial-gradient(circle at 88% 16%, rgba($color-blue, 0.12), transparent 26%),
+    linear-gradient(180deg, #edf7e8 0%, #f6fbf3 52%, #e8f4e4 100%);
+  background-repeat: no-repeat;
+  background-size: 780px 780px, 680px 680px, 100% 100%;
   padding: 72px 0;
 }
 
@@ -555,7 +583,10 @@ main {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.36);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.52), transparent 34%),
+    linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  opacity: 0.7;
   pointer-events: none;
 }
 
@@ -702,13 +733,28 @@ main {
   display: grid;
   gap: 28px;
   align-items: center;
+  color: #fff;
+}
+
+.recycling-section::before {
+  background:
+    radial-gradient(circle at 12% 18%, rgba($color-lime, 0.12), transparent 28%),
+    radial-gradient(circle at 88% 20%, rgba($color-blue, 0.18), transparent 30%),
+    linear-gradient(135deg, #102f2a 0%, #0c3a34 54%, #091f1c 100%);
+}
+
+.recycling-section .eyebrow {
+  color: $color-lime;
+}
+
+.recycling-copy h2 {
+  color: #fff;
 }
 
 .recycling-visual {
   position: relative;
   order: 2;
   overflow: hidden;
-  border: 1px solid rgba($color-line, 0.95);
   border-radius: 8px;
   background: #fff;
   box-shadow: 0 22px 58px rgba(15, 61, 46, 0.14);
@@ -740,7 +786,7 @@ main {
 }
 
 .recycling-copy p:not(.eyebrow) {
-  color: $color-muted;
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .impact-list {
@@ -752,18 +798,21 @@ main {
 }
 
 .impact-list li {
-  border-left: 4px solid $color-blue;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-left: 4px solid $color-lime;
   border-radius: 8px;
-  background: #f8fcfb;
+  background: rgba(255, 255, 255, 0.1);
   padding: 14px 16px;
-  color: #294c4a;
+  color: rgba(255, 255, 255, 0.84);
   font-weight: 700;
-  box-shadow: 0 10px 26px rgba(15, 61, 46, 0.08);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14);
 }
 
 .gallery-preview {
-  background: $color-green-dark;
-  color: #fff;
+  background:
+    radial-gradient(circle at 88% 12%, rgba($color-lime, 0.16), transparent 28%),
+    linear-gradient(180deg, #f8fbf5 0%, #eef7e9 100%);
+  color: $color-ink;
 }
 
 .preview-layout {
@@ -785,40 +834,50 @@ main {
 }
 
 .preview-layout p:not(.eyebrow) {
-  color: rgba(255, 255, 255, 0.78);
+  color: $color-muted;
 }
 
 .preview-layout .eyebrow {
-  color: $color-lime;
+  color: $color-green;
 }
 
 .preview-layout .button-primary {
   margin-top: 14px;
-  color: $color-green-dark;
-  background: #fff;
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+  color: #fff;
+  background: $color-green-dark;
+  box-shadow: $shadow-tight;
 }
 
 .preview-layout .button-primary:hover {
-  background: #edf7e8;
+  background: #14543f;
 }
 
 .faq-section {
   padding: 68px 0;
+  color: #fff;
   background:
-    radial-gradient(circle at 12% 10%, rgba($color-lime, 0.18), transparent 30%),
-    linear-gradient(135deg, #eef7f1 0%, #f7fbf7 55%, #edf5f3 100%);
-  border-top: 1px solid rgba($color-line, 0.72);
-  border-bottom: 1px solid rgba($color-line, 0.72);
+    radial-gradient(circle at 12% 10%, rgba($color-lime, 0.13), transparent 30%),
+    radial-gradient(circle at 86% 12%, rgba($color-amber, 0.1), transparent 28%),
+    linear-gradient(135deg, #0f3d2e 0%, #102d25 58%, #0a2019 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.faq-section .eyebrow {
+  color: $color-lime;
+}
+
+.faq-section .section-heading h2 {
+  color: #fff;
 }
 
 .faq-list {
   display: grid;
   gap: 10px;
   margin-top: 28px;
-  max-width: 920px;
-  margin-right: auto;
-  margin-left: auto;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .faq-item {
@@ -836,60 +895,81 @@ main {
   transform: translateY(-2px);
 }
 
-.faq-item summary {
+.faq-question {
   display: flex;
+  width: 100%;
   gap: 18px;
   align-items: center;
   justify-content: space-between;
   min-height: 64px;
+  border: 0;
   padding: 18px 18px;
   color: $color-green-dark;
+  background: transparent;
   font-family: var(--font-heading);
   font-size: 1.04rem;
   font-weight: 800;
   line-height: 1.25;
+  text-align: left;
   cursor: pointer;
-  list-style: none;
   transition: color 180ms ease, background-color 180ms ease;
 }
 
-.faq-item summary::-webkit-details-marker {
-  display: none;
-}
-
-.faq-item summary::after {
-  content: "+";
-  display: grid;
+.faq-question::after {
+  content: "";
   flex: 0 0 30px;
   width: 30px;
   height: 30px;
-  place-items: center;
   border-radius: 999px;
   background: rgba($color-green, 0.1);
-  color: $color-green;
-  font-family: var(--font-body);
-  font-size: 1.25rem;
-  font-weight: 800;
-  line-height: 1;
-  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
+  background-image:
+    linear-gradient(45deg, transparent 50%, $color-green 50%),
+    linear-gradient(135deg, $color-green 50%, transparent 50%);
+  background-position: calc(50% - 4px) 52%, calc(50% + 4px) 52%;
+  background-repeat: no-repeat;
+  background-size: 8px 8px, 8px 8px;
+  transition: transform 220ms ease, background-color 180ms ease, background-position 180ms ease;
 }
 
-.faq-item summary:hover,
-.faq-item[open] summary {
+.faq-question:hover,
+.faq-item.is-open .faq-question {
   background: rgba($color-green, 0.045);
   color: $color-green;
 }
 
-.faq-item[open] summary::after {
-  content: "-";
+.faq-item.is-open .faq-question::after {
   background: $color-green;
-  color: #fff;
   transform: rotate(180deg);
+  background-image:
+    linear-gradient(45deg, transparent 50%, #fff 50%),
+    linear-gradient(135deg, #fff 50%, transparent 50%);
+  background-position: calc(50% - 4px) 52%, calc(50% + 4px) 52%;
+  background-repeat: no-repeat;
+  background-size: 8px 8px, 8px 8px;
+}
+
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 260ms ease;
+}
+
+.faq-item.is-open .faq-answer {
+  grid-template-rows: 1fr;
+}
+
+.faq-answer-inner {
+  overflow: hidden;
+  padding: 0 18px;
+  transition: padding 260ms ease;
+}
+
+.faq-item.is-open .faq-answer-inner {
+  padding: 10px 18px 20px;
 }
 
 .faq-item p {
   margin: 0;
-  padding: 0 18px 20px;
   color: $color-muted;
   max-width: 74ch;
 }
@@ -898,6 +978,12 @@ main {
   display: grid;
   gap: 24px;
   align-items: center;
+}
+
+.contact-section::before {
+  background:
+    radial-gradient(circle at 88% 18%, rgba($color-amber, 0.1), transparent 28%),
+    linear-gradient(180deg, #fffaf0 0%, #f7f5ec 100%);
 }
 
 .contact-list {
@@ -1050,7 +1136,6 @@ main {
   aspect-ratio: 1 / 1;
   min-height: 0;
   justify-self: center;
-  border: 1px solid $color-line;
   border-radius: 8px;
   box-shadow: $shadow-tight;
 }
@@ -1297,7 +1382,7 @@ main {
   }
 
   .hero-media {
-    padding-top: 56px;
+    padding-top: 78px;
   }
 
   .about-layout,
@@ -1332,7 +1417,11 @@ main {
   }
 
   .main-nav {
-    position: static;
+    position: fixed;
+    top: 22px;
+    right: max(16px, calc((100vw - 1180px) / 2));
+    bottom: auto;
+    z-index: 51;
     width: auto;
     height: auto;
     min-height: 0;
