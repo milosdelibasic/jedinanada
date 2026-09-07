@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Icon from "@/components/Icon";
 import { business } from "@/data/site";
 
 export default function Header({ locale, content, active = "home" }) {
@@ -19,6 +20,10 @@ export default function Header({ locale, content, active = "home" }) {
   const navigationLabel = locale === "hu" ? "Fő navigáció" : "Glavna navigacija";
   const brandTagline = locale === "hu" ? "Újrahasznosítás · Zenta" : "Reciklaža · Senta";
   const skipLabel = locale === "hu" ? "Ugrás a tartalomhoz" : "Preskoči na sadržaj";
+
+  useEffect(() => {
+    document.documentElement.lang = locale;
+  }, [locale]);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -73,7 +78,7 @@ export default function Header({ locale, content, active = "home" }) {
     window.addEventListener("keydown", closeOnEscape);
     window.addEventListener("keydown", keepFocusInMenu);
     desktopQuery.addEventListener("change", closeAtDesktop);
-    window.requestAnimationFrame(() => navigationRef.current?.querySelector("a")?.focus());
+    window.requestAnimationFrame(() => navigationRef.current?.querySelector("a")?.focus({ preventScroll: true }));
 
     return () => {
       window.removeEventListener("keydown", closeOnEscape);
@@ -150,7 +155,7 @@ export default function Header({ locale, content, active = "home" }) {
       <header className="site-header">
         <div className="header-inner">
           <a className="brand" href={content.homeHref} aria-label="Jedina Nada DOO">
-            <img src="/resources/logo/logo.webp" alt="" width="76" height="50" />
+            <img className="original-logo" src="/resources/logo/logo.webp" alt="" width="76" height="50" />
             <span className="brand-copy">
               <strong>Jedina Nada</strong>
               <small>{brandTagline}</small>
@@ -177,19 +182,19 @@ export default function Header({ locale, content, active = "home" }) {
                 {label}
               </a>
             ))}
-            <a className="language-link" href={alternateHref} hrefLang={locale === "sr" ? "hu" : "sr"}>
-              <span>{content.alternateLang}</span>
-            </a>
             <a className="nav-call" href={`tel:${business.phone}`} onClick={closeMenu}>
-              <small>{content.contact.call}</small>
-              <strong>{business.phoneDisplay}</strong>
+              <Icon name="phone" size={17} /><strong>{business.phoneDisplay}</strong>
+            </a>
+            <a className="language-link" href={alternateHref} hrefLang={locale === "sr" ? "hu" : "sr"} lang={locale === "sr" ? "hu" : "sr"}>
+              <img src={locale === "sr" ? "/resources/icons/lang/hungary.png" : "/resources/icons/lang/serbia.png"} alt="" width="24" height="16" />
+              <span>{locale === "sr" ? "Magyar" : "Srpski"}</span>
+              <small>{content.alternateLang}</small>
             </a>
           </nav>
 
           <div className="header-actions">
             <a className="header-call" href={`tel:${business.phone}`}>
-              <small>{content.contact.call}</small>
-              <strong>{business.phoneDisplay}</strong>
+              <Icon name="phone" size={17} /><strong>{business.phoneDisplay}</strong>
             </a>
             <a className="header-language" href={alternateHref} hrefLang={locale === "sr" ? "hu" : "sr"}>
               {content.alternateLang}

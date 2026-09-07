@@ -110,7 +110,7 @@ export const locales = {
       home: "Početna",
       about: "O nama",
       services: "Otkup",
-      process: "Kako funkcioniše",
+      process: "Kako do otkupa",
       gallery: "Galerija",
       recycling: "Značaj reciklaže",
       faq: "FAQ",
@@ -118,9 +118,9 @@ export const locales = {
     },
     hero: {
       eyebrow: "Reciklaža i sekundarne sirovine u Senti",
-      title: "Pouzdan otkup i reciklaža neopasnog otpada.",
+      title: "Otkup sekundarnih sirovina u Senti.",
       text:
-        "Jedina Nada DOO od 2010. godine otkupljuje, sortira i priprema sekundarne sirovine za dalju preradu, za građane i firme.",
+        "Otkupljujemo metal, plastiku, papir i staklo od građana i firmi. Pozovite nas za uslove otkupa i dogovor o prijemu.",
       imageAlt: "Utovar metala u dvorištu firme Jedina Nada DOO",
       vanAlt: "Vozilo firme Jedina Nada DOO za otkup i reciklažu",
       photoLabel: "Otkup · sortiranje · priprema",
@@ -133,12 +133,12 @@ export const locales = {
       ]
     },
     about: {
-      eyebrow: "O preduzeću",
-      title: "Lokalna firma sa jasnim procesom i dugim iskustvom.",
+      eyebrow: "Upoznajte Jedinu Nadu",
+      title: "Iz Sente. Za čistije sutra.",
       paragraphs: [
-        "Kompanija Jedina Nada DOO uspešno posluje od osnivanja 2010. godine, sa sedištem na adresi Karađorđeva 109 u Senti.",
-        "Preduzeće vodi direktorka Nada Cvijanović. Kao firma koju vodi žena, Jedina Nada posebno neguje odgovoran, precizan i dogovoran odnos sa ljudima i firmama koje sarađuju sa nama.",
-        "Bavimo se neopasnim otpadom: otkupljujemo, sortiramo i pripremamo sekundarne sirovine za dalju preradu.",
+        "Naša priča počinje 2010. godine u Senti. Od tada pomažemo građanima i firmama da materijalima koje više ne koriste pronađu novu svrhu.",
+        "Iza Jedine Nade stoje ljudi koji veruju u jasan dogovor i odgovoran rad. Preduzeće vodi Nada Cvijanović, a poverenje gradimo kroz svakodnevnu saradnju sa našim komšijama i poslovnim partnerima.",
+        "Na adresi Karađorđeva 109 otkupljujemo, sortiramo i pripremamo neopasan otpad za dalju preradu. Lokalno radimo. Dugoročno razmišljamo.",
         "Neopasni otpad je svaki otpad koji nema karakteristike opasnog otpada, uključujući plastične i staklene boce, papir, plastiku, gvožđe i tekstil."
       ],
       facts: [
@@ -165,9 +165,9 @@ export const locales = {
       ]
     },
     services: {
-      eyebrow: "Otkup materijala",
-      title: "Materijali koje otkupljujemo",
-      text: "Lista ispod prikazuje glavne grupe. Otkupljujemo i druge sekundarne sirovine, pa nas kontaktirajte za konkretan materijal.",
+      eyebrow: "Šta otkupljujemo",
+      title: "Za vas višak. Za nas sirovina.",
+      text: "Plastika, metali, papir i staklo. Javite nam vrstu i količinu materijala da proverimo uslove otkupa.",
       ask: "Pitajte za ovaj materijal",
       items: [
         {
@@ -198,24 +198,24 @@ export const locales = {
     },
     process: {
       eyebrow: "Jednostavan dogovor",
-      title: "Od prvog kontakta do materijala spremnog za dalju preradu.",
+      title: "Jednostavno do dogovora.",
       text:
-        "Sarađujemo sa građanima, preduzetnicima i firmama. Recite nam šta imate, a mi ćemo objasniti sledeći korak.",
+        "Bez komplikovanja. U tri koraka materijal koji vam više nije potreban kreće ka novoj nameni.",
       cta: "Pozovite i proverite materijal",
       items: [
         {
           icon: "/vectors/contact-person.svg",
-          title: "Javite koji materijal imate",
+          title: "Javite nam šta imate",
           text: "Telefonom ili emailom nam opišite vrstu i približnu količinu materijala."
         },
         {
           icon: "/vectors/recycling-buy.svg",
-          title: "Dogovaramo prijem",
+          title: "Dogovorimo otkup",
           text: "Potvrđujemo da li materijal otkupljujemo i dogovaramo praktičan način prijema."
         },
         {
           icon: "/vectors/recycling-prepare.svg",
-          title: "Sortiramo i pripremamo",
+          title: "Dajemo novu svrhu",
           text: "Primljeni materijal razvrstavamo i pripremamo za sledeću fazu reciklaže."
         }
       ]
@@ -224,7 +224,7 @@ export const locales = {
       eyebrow: "Značaj reciklaže",
       title: "Reciklaža čuva resurse i smanjuje otpad na deponijama.",
       text:
-        "Reciklaža obuhvata sakupljanje, izdvajanje, preradu i izradu novih materijala iz iskorišćenih stvari. Tako se smanjuje potreba za novim sirovinama i čuva životna sredina.",
+        "Svaki materijal koji vratimo u upotrebu znači manje otpada u prirodi i manju potrebu za novim sirovinama. Velike promene počinju malim, lokalnim koracima.",
       imageAlt: "Balirane PET boce pripremljene za dalju reciklažu",
       imageBadge: "Pripremljeno za dalju reciklažu",
       points: [
@@ -236,10 +236,10 @@ export const locales = {
     },
     gallery: {
       title: "Galerija",
-      eyebrow: "Naše dvorište i materijali",
+      eyebrow: "Iz našeg dvorišta",
       text: "Pogledajte fotografije prostora, materijala i rada preduzeća Jedina Nada DOO.",
       open: "Otvori fotografiju",
-      openGallery: "Pogledajte celu galeriju",
+      openGallery: "Sve fotografije",
       photoCount: "Fotografija",
       close: "Zatvori",
       previous: "Prethodna",
@@ -249,7 +249,7 @@ export const locales = {
     },
     faq: {
       eyebrow: "Česta pitanja",
-      title: "Kratko o otkupu i saradnji",
+      title: "Dobro je znati.",
       items: [
         {
           question: "Koje materijale otkupljujete?",
@@ -272,7 +272,7 @@ export const locales = {
     },
     contact: {
       eyebrow: "Kontakt",
-      title: "Javite nam koji materijal imate i dogovorićemo prijem.",
+      title: "Imate sirovine? Čujemo se.",
       details: "Kontakt podaci",
       addressLabel: "Adresa",
       personLabel: "Kontakt osoba",
@@ -326,7 +326,7 @@ export const locales = {
       home: "Kezdőlap",
       about: "Rólunk",
       services: "Felvásárlás",
-      process: "Hogyan működik",
+      process: "Az átvétel menete",
       gallery: "Galéria",
       recycling: "Az újrahasznosítás",
       faq: "FAQ",
@@ -334,9 +334,9 @@ export const locales = {
     },
     hero: {
       eyebrow: "Újrahasznosítás és másodlagos nyersanyagok Zentán",
-      title: "Megbízható felvásárlás és újrahasznosítás.",
+      title: "Másodlagos nyersanyagok felvásárlása Zentán.",
       text:
-        "A Jedina Nada DOO 2010 óta vásárolja fel, válogatja és készíti elő a másodlagos nyersanyagokat további feldolgozásra, lakosság és cégek számára.",
+        "Fémet, műanyagot, papírt és üveget vásárolunk fel magánszemélyektől és cégektől. Hívjon minket a feltételek és az átvétel egyeztetéséhez.",
       imageAlt: "Fém rakodása a Jedina Nada DOO telephelyén",
       vanAlt: "A Jedina Nada DOO járműve hulladékfelvásárláshoz és újrahasznosításhoz",
       photoLabel: "Felvásárlás · válogatás · előkészítés",
@@ -350,7 +350,7 @@ export const locales = {
     },
     about: {
       eyebrow: "A vállalkozásról",
-      title: "Helyi cég átlátható folyamattal és sokéves tapasztalattal.",
+      title: "Zentáról. Egy tisztább holnapért.",
       paragraphs: [
         "A Jedina Nada DOO 2010-es alapítása óta sikeresen működik, székhelye Zentán, a Karađorđeva 109 címen található.",
         "A vállalkozást Nada Cvijanović igazgatónő vezeti. Női vezetésű cégként különösen fontos számunkra a felelős, pontos és korrekt együttműködés.",
@@ -382,8 +382,8 @@ export const locales = {
     },
     services: {
       eyebrow: "Anyagfelvásárlás",
-      title: "Anyagok, amelyeket felvásárolunk",
-      text: "Az alábbiak a fő anyagcsoportok. Más másodlagos nyersanyagokat is átveszünk, ezért konkrét anyag esetén keressen minket.",
+      title: "Önnek felesleg. Nekünk alapanyag.",
+      text: "Mondja el az anyag fajtáját és hozzávetőleges mennyiségét, mi pedig tájékoztatjuk a felvásárlás feltételeiről.",
       ask: "Kérdezzen erről az anyagról",
       items: [
         {
@@ -414,14 +414,14 @@ export const locales = {
     },
     process: {
       eyebrow: "Egyszerű egyeztetés",
-      title: "Az első kapcsolatfelvételtől a további feldolgozásra kész anyagig.",
+      title: "Egyszerűen megegyezünk.",
       text:
-        "Lakossággal, vállalkozókkal és cégekkel dolgozunk. Mondja el, milyen anyaga van, mi pedig elmagyarázzuk a következő lépést.",
+        "Lakossággal, vállalkozókkal és cégekkel dolgozunk. Mondja el, mije van, mi pedig elmagyarázzuk a következő lépést.",
       cta: "Hívjon és érdeklődjön az anyagról",
       items: [
         {
           icon: "/vectors/contact-person.svg",
-          title: "Mondja el, milyen anyaga van",
+          title: "Mondja el, mije van",
           text: "Telefonon vagy emailben írja le az anyag fajtáját és hozzávetőleges mennyiségét."
         },
         {
@@ -431,7 +431,7 @@ export const locales = {
         },
         {
           icon: "/vectors/recycling-prepare.svg",
-          title: "Válogatjuk és előkészítjük",
+          title: "Új célt adunk neki",
           text: "Az átvett anyagot szétválogatjuk és előkészítjük az újrahasznosítás következő szakaszára."
         }
       ]
@@ -465,7 +465,7 @@ export const locales = {
     },
     faq: {
       eyebrow: "Gyakori kérdések",
-      title: "Röviden az átvételről és az együttműködésről",
+      title: "Jó tudni.",
       items: [
         {
           question: "Milyen anyagokat vásárolnak fel?",
@@ -488,7 +488,7 @@ export const locales = {
     },
     contact: {
       eyebrow: "Kapcsolat",
-      title: "Írja meg, milyen anyaga van, és egyeztetjük az átvételt.",
+      title: "Van eladó anyaga? Beszéljünk.",
       details: "Elérhetőségek",
       addressLabel: "Cím",
       personLabel: "Kapcsolattartó",

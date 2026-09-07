@@ -1,3 +1,4 @@
+import "@fontsource-variable/manrope";
 import "./styles/globals.scss";
 import { business, siteName, siteUrl } from "@/data/site";
 

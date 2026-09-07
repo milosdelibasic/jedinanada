@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Icon from "@/components/Icon";
 
 export default function FaqAccordion({ items }) {
   const [openIndex, setOpenIndex] = useState(0);
@@ -23,6 +24,7 @@ export default function FaqAccordion({ items }) {
               onClick={() => setOpenIndex(isOpen ? -1 : index)}
             >
               <span>{item.question}</span>
+              <span className="faq-toggle" aria-hidden="true"><Icon name="plus" size={14} /></span>
             </button>
             <div className="faq-answer" id={answerId} role="region" aria-labelledby={questionId} aria-hidden={!isOpen}>
               <div className="faq-answer-inner">
