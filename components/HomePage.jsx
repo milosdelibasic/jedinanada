@@ -22,54 +22,139 @@ export default function HomePage({ locale, content }) {
       <StructuredData data={faqJsonLd(locale)} />
       <StructuredData data={breadcrumbJsonLd(locale, "home")} />
       <Header locale={locale} content={content} />
-      <main>
-        <section className="hero section-shell" id="home">
-          <div className="hero-copy">
-            <p className="eyebrow">{content.hero.eyebrow}</p>
-            <h1>{content.hero.title}</h1>
-            <p className="lead">{content.hero.text}</p>
-            <div className="hero-actions">
-              <a className="button button-primary" href="#services">
-                {content.hero.primary}
-              </a>
-              <a className="button button-secondary" href="#contact">
-                {content.hero.secondary}
-              </a>
+      <main id="main-content" lang={locale}>
+        <section className="hero" id="home">
+          <div className="hero-grid section-shell">
+            <div className="hero-copy">
+              <p className="eyebrow">{content.hero.eyebrow}</p>
+              <h1>{content.hero.title}</h1>
+              <p className="lead">{content.hero.text}</p>
+              <div className="hero-actions">
+                <a className="button button-primary" href="#services">
+                  {content.hero.primary}
+                </a>
+                <a className="button button-secondary" href={`tel:${business.phone}`}>
+                  {content.hero.secondary}
+                </a>
+              </div>
+              <div className="hero-utility">
+                <a href={business.mapUrl} target="_blank" rel="noreferrer">
+                  <img src="/vectors/location.svg" alt="" width="22" height="22" />
+                  <span>{business.address}</span>
+                </a>
+                <span>
+                  <img src="/vectors/calendar.svg" alt="" width="22" height="22" />
+                  <span>{content.contact.hours[0].label}: {content.contact.hours[0].value}</span>
+                </span>
+              </div>
             </div>
-            <dl className="hero-stats">
-              {content.hero.stats.map((stat) => (
-                <div key={stat.value}>
-                  <img src={stat.icon} alt="" width="26" height="26" />
-                  <dt>{stat.value}</dt>
-                  <dd>{stat.label}</dd>
-                </div>
-              ))}
-            </dl>
+
+            <div className="hero-media" aria-label="Jedina Nada DOO">
+              <picture className="hero-main-photo">
+                <source srcSet="/resources/gallery/10.webp" type="image/webp" />
+                <img
+                  src="/resources/gallery/10.jpg"
+                  alt={content.hero.imageAlt}
+                  width="960"
+                  height="720"
+                  fetchPriority="high"
+                />
+              </picture>
+              <picture className="hero-inset-photo">
+                <source srcSet="/assets/hero/materials.webp" type="image/webp" />
+                <img src="/resources/gallery/2.jpg" alt={content.hero.vanAlt} width="900" height="506" />
+              </picture>
+              <span className="hero-photo-label">{content.hero.photoLabel}</span>
+            </div>
           </div>
-          <div className="hero-media" aria-label="Jedina Nada DOO">
-            <picture>
-              <source srcSet="/assets/hero/materials.webp" type="image/webp" />
-              <img
-                src="/resources/gallery/2.jpg"
-                alt={content.hero.imageAlt}
-                width="900"
-                height="506"
-                fetchPriority="high"
-              />
-            </picture>
+
+          <ul className="hero-stats section-shell">
+            {content.hero.stats.map((stat) => (
+              <li key={stat.value}>
+                <img src={stat.icon} alt="" width="28" height="28" />
+                <span>
+                  <strong>{stat.value}</strong>
+                  <small>{stat.label}</small>
+                </span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="services-section" id="services">
+          <div className="section-shell">
+            <div className="section-heading section-heading-split">
+              <div>
+                <p className="eyebrow">{content.services.eyebrow}</p>
+                <h2>{content.services.title}</h2>
+              </div>
+              <p>{content.services.text}</p>
+            </div>
+            <div className="service-grid">
+              {content.services.items.map((service, index) => (
+                <article className={`service-card service-${service.key}`} key={service.key}>
+                  <div className="service-card-head">
+                    <span className="service-icon">
+                      <img src={service.icon} alt="" width="54" height="54" loading="lazy" />
+                    </span>
+                    <div className="service-title">
+                      <small>0{index + 1}</small>
+                      <h3>{service.title}</h3>
+                    </div>
+                  </div>
+                  <ul>
+                    {service.items.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                  <a href="#contact">{content.services.ask}</a>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
-        <section className="about-section section-shell" id="about">
-          <div className="section-heading">
-            <p className="eyebrow">{content.about.eyebrow}</p>
-            <h2>{content.about.title}</h2>
-          </div>
-          <div className="about-layout">
-            <div className="about-copy">
-              {content.about.paragraphs.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
+        <section className="process-section" id="process">
+          <div className="section-shell process-layout">
+            <div className="section-heading">
+              <p className="eyebrow">{content.process.eyebrow}</p>
+              <h2>{content.process.title}</h2>
+              <p>{content.process.text}</p>
+              <a className="text-link" href={`tel:${business.phone}`}>
+                {content.process.cta} <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+            <ol className="process-list">
+              {content.process.items.map((item, index) => (
+                <li key={item.title}>
+                  <span className="process-number">0{index + 1}</span>
+                  <img src={item.icon} alt="" width="38" height="38" loading="lazy" />
+                  <div>
+                    <h3>{item.title}</h3>
+                    <p>{item.text}</p>
+                  </div>
+                </li>
               ))}
+            </ol>
+          </div>
+        </section>
+
+        <section className="about-section" id="about">
+          <div className="section-shell">
+            <div className="about-layout">
+              <div className="about-intro">
+                <p className="eyebrow">{content.about.eyebrow}</p>
+                <h2>{content.about.title}</h2>
+                <div className="about-year" aria-label={`${content.hero.stats[0].value} ${content.hero.stats[0].label}`}>
+                  <strong>{content.hero.stats[0].value}</strong>
+                  <span>{content.hero.stats[0].label}</span>
+                </div>
+              </div>
+              <div className="about-copy">
+                {content.about.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
             </div>
             <div className="fact-panel">
               {content.about.facts.map((fact) => (
@@ -85,29 +170,25 @@ export default function HomePage({ locale, content }) {
           </div>
         </section>
 
-        <section className="services-section" id="services">
-          <div className="section-shell">
-            <div className="section-heading">
-              <p className="eyebrow">{content.services.eyebrow}</p>
-              <h2>{content.services.title}</h2>
-              <p>{content.services.text}</p>
+        <section className="gallery-preview" id="gallery">
+          <div className="section-shell preview-layout">
+            <div className="gallery-collage" aria-label={content.gallery.previewAlt}>
+              <picture className="gallery-collage-main">
+                <source srcSet="/resources/gallery/14.webp" type="image/webp" />
+                <img src="/resources/gallery/14.jpg" alt={content.gallery.previewAlt} width="2048" height="1152" loading="lazy" />
+              </picture>
+              <picture>
+                <source srcSet="/resources/gallery/3.webp" type="image/webp" />
+                <img src="/resources/gallery/3.jpg" alt="" width="720" height="960" loading="lazy" />
+              </picture>
             </div>
-            <div className="service-grid">
-              {content.services.items.map((service) => (
-                <article className={`service-card service-${service.key}`} key={service.key}>
-                  <div className="service-card-head">
-                    <span className="service-icon">
-                      <img src={service.icon} alt="" width="54" height="54" loading="lazy" />
-                    </span>
-                    <h3>{service.title}</h3>
-                  </div>
-                  <ul>
-                    {service.items.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                </article>
-              ))}
+            <div className="gallery-preview-copy">
+              <p className="eyebrow">{content.gallery.eyebrow}</p>
+              <h2>{content.gallery.title}</h2>
+              <p>{content.gallery.text}</p>
+              <a className="button button-dark" href={content.galleryHref}>
+                {content.gallery.openGallery}
+              </a>
             </div>
           </div>
         </section>
@@ -129,23 +210,6 @@ export default function HomePage({ locale, content }) {
                 <li key={point}>{point}</li>
               ))}
             </ul>
-          </div>
-        </section>
-
-        <section className="gallery-preview">
-          <div className="section-shell preview-layout">
-            <picture>
-              <source srcSet="/resources/gallery/10.webp" type="image/webp" />
-              <img src="/resources/gallery/10.jpg" alt={content.gallery.previewAlt} width="960" height="720" loading="lazy" />
-            </picture>
-            <div>
-              <p className="eyebrow">{content.gallery.eyebrow}</p>
-              <h2>{content.gallery.title}</h2>
-              <p>{content.gallery.text}</p>
-              <a className="button button-primary" href={content.galleryHref}>
-                {content.nav.gallery}
-              </a>
-            </div>
           </div>
         </section>
 
@@ -210,7 +274,7 @@ export default function HomePage({ locale, content }) {
           <div className="map-frame">
             <iframe
               src={business.mapEmbed}
-              title="Jedina Nada DOO Google mapa"
+              title={locale === "hu" ? "Jedina Nada DOO Google-térkép" : "Jedina Nada DOO Google mapa"}
               width="600"
               height="450"
               style={{ border: 0 }}

@@ -70,7 +70,7 @@ export const galleryImages = [
 }));
 
 const common = {
-  navIds: ["about", "services", "gallery", "recycling", "faq", "contact"]
+  navIds: ["services", "process", "about", "gallery", "recycling", "faq", "contact"]
 };
 
 export const locales = {
@@ -110,6 +110,7 @@ export const locales = {
       home: "Početna",
       about: "O nama",
       services: "Otkup",
+      process: "Kako funkcioniše",
       gallery: "Galerija",
       recycling: "Značaj reciklaže",
       faq: "FAQ",
@@ -119,10 +120,12 @@ export const locales = {
       eyebrow: "Reciklaža i sekundarne sirovine u Senti",
       title: "Pouzdan otkup i reciklaža neopasnog otpada.",
       text:
-        "Jedina Nada DOO od 2010. godine prikuplja, otkupljuje i priprema sekundarne sirovine za dalju preradu širom Srbije.",
-      imageAlt: "Vozilo firme Jedina Nada DOO za otkup i reciklažu",
+        "Jedina Nada DOO od 2010. godine otkupljuje, sortira i priprema sekundarne sirovine za dalju preradu, za građane i firme.",
+      imageAlt: "Utovar metala u dvorištu firme Jedina Nada DOO",
+      vanAlt: "Vozilo firme Jedina Nada DOO za otkup i reciklažu",
+      photoLabel: "Otkup · sortiranje · priprema",
       primary: "Šta otkupljujemo?",
-      secondary: "Kontaktirajte nas",
+      secondary: "Pozovite nas",
       stats: [
         { icon: "/vectors/calendar.svg", value: "Od 2010.", label: "iskustvo u reciklaži" },
         { icon: "/vectors/materials.svg", value: "Širok otkup", label: "plastika, metali, papir, staklo i više" },
@@ -135,7 +138,7 @@ export const locales = {
       paragraphs: [
         "Kompanija Jedina Nada DOO uspešno posluje od osnivanja 2010. godine, sa sedištem na adresi Karađorđeva 109 u Senti.",
         "Preduzeće vodi direktorka Nada Cvijanović. Kao firma koju vodi žena, Jedina Nada posebno neguje odgovoran, precizan i dogovoran odnos sa ljudima i firmama koje sarađuju sa nama.",
-        "Bavimo se reciklažom neopasnog otpada. Vršimo otkup, sortiranje, pripremu i reciklažu sekundarnih sirovina na teritoriji Srbije.",
+        "Bavimo se neopasnim otpadom: otkupljujemo, sortiramo i pripremamo sekundarne sirovine za dalju preradu.",
         "Neopasni otpad je svaki otpad koji nema karakteristike opasnog otpada, uključujući plastične i staklene boce, papir, plastiku, gvožđe i tekstil."
       ],
       facts: [
@@ -165,6 +168,7 @@ export const locales = {
       eyebrow: "Otkup materijala",
       title: "Materijali koje otkupljujemo",
       text: "Lista ispod prikazuje glavne grupe. Otkupljujemo i druge sekundarne sirovine, pa nas kontaktirajte za konkretan materijal.",
+      ask: "Pitajte za ovaj materijal",
       items: [
         {
           key: "plastic",
@@ -192,6 +196,30 @@ export const locales = {
         }
       ]
     },
+    process: {
+      eyebrow: "Jednostavan dogovor",
+      title: "Od prvog kontakta do materijala spremnog za dalju preradu.",
+      text:
+        "Sarađujemo sa građanima, preduzetnicima i firmama. Recite nam šta imate, a mi ćemo objasniti sledeći korak.",
+      cta: "Pozovite i proverite materijal",
+      items: [
+        {
+          icon: "/vectors/contact-person.svg",
+          title: "Javite koji materijal imate",
+          text: "Telefonom ili emailom nam opišite vrstu i približnu količinu materijala."
+        },
+        {
+          icon: "/vectors/recycling-buy.svg",
+          title: "Dogovaramo prijem",
+          text: "Potvrđujemo da li materijal otkupljujemo i dogovaramo praktičan način prijema."
+        },
+        {
+          icon: "/vectors/recycling-prepare.svg",
+          title: "Sortiramo i pripremamo",
+          text: "Primljeni materijal razvrstavamo i pripremamo za sledeću fazu reciklaže."
+        }
+      ]
+    },
     recycling: {
       eyebrow: "Značaj reciklaže",
       title: "Reciklaža čuva resurse i smanjuje otpad na deponijama.",
@@ -211,6 +239,8 @@ export const locales = {
       eyebrow: "Naše dvorište i materijali",
       text: "Pogledajte fotografije prostora, materijala i rada preduzeća Jedina Nada DOO.",
       open: "Otvori fotografiju",
+      openGallery: "Pogledajte celu galeriju",
+      photoCount: "Fotografija",
       close: "Zatvori",
       previous: "Prethodna",
       next: "Sledeća",
@@ -296,6 +326,7 @@ export const locales = {
       home: "Kezdőlap",
       about: "Rólunk",
       services: "Felvásárlás",
+      process: "Hogyan működik",
       gallery: "Galéria",
       recycling: "Az újrahasznosítás",
       faq: "FAQ",
@@ -305,10 +336,12 @@ export const locales = {
       eyebrow: "Újrahasznosítás és másodlagos nyersanyagok Zentán",
       title: "Megbízható felvásárlás és újrahasznosítás.",
       text:
-        "A Jedina Nada DOO 2010 óta gyűjti, vásárolja fel és készíti elő a másodlagos nyersanyagokat további feldolgozásra Szerbia területén.",
-      imageAlt: "A Jedina Nada DOO járműve hulladékfelvásárláshoz és újrahasznosításhoz",
+        "A Jedina Nada DOO 2010 óta vásárolja fel, válogatja és készíti elő a másodlagos nyersanyagokat további feldolgozásra, lakosság és cégek számára.",
+      imageAlt: "Fém rakodása a Jedina Nada DOO telephelyén",
+      vanAlt: "A Jedina Nada DOO járműve hulladékfelvásárláshoz és újrahasznosításhoz",
+      photoLabel: "Felvásárlás · válogatás · előkészítés",
       primary: "Mit vásárolunk fel?",
-      secondary: "Kapcsolat",
+      secondary: "Hívjon minket",
       stats: [
         { icon: "/vectors/calendar.svg", value: "2010 óta", label: "tapasztalat az újrahasznosításban" },
         { icon: "/vectors/materials.svg", value: "Széles körű", label: "műanyag, fém, papír, üveg és egyéb anyagok" },
@@ -321,7 +354,7 @@ export const locales = {
       paragraphs: [
         "A Jedina Nada DOO 2010-es alapítása óta sikeresen működik, székhelye Zentán, a Karađorđeva 109 címen található.",
         "A vállalkozást Nada Cvijanović igazgatónő vezeti. Női vezetésű cégként különösen fontos számunkra a felelős, pontos és korrekt együttműködés.",
-        "Nem veszélyes hulladék újrahasznosításával foglalkozunk. Másodlagos nyersanyagokat vásárolunk fel, válogatunk, előkészítünk és hasznosítunk újra Szerbia területén.",
+        "Nem veszélyes hulladékkal foglalkozunk: másodlagos nyersanyagokat vásárolunk fel, válogatunk és készítünk elő további feldolgozásra.",
         "A nem veszélyes hulladék minden olyan hulladék, amely nem rendelkezik veszélyes tulajdonságokkal, például műanyag és üveg palack, papír, műanyag, vas és textil."
       ],
       facts: [
@@ -351,6 +384,7 @@ export const locales = {
       eyebrow: "Anyagfelvásárlás",
       title: "Anyagok, amelyeket felvásárolunk",
       text: "Az alábbiak a fő anyagcsoportok. Más másodlagos nyersanyagokat is átveszünk, ezért konkrét anyag esetén keressen minket.",
+      ask: "Kérdezzen erről az anyagról",
       items: [
         {
           key: "plastic",
@@ -378,6 +412,30 @@ export const locales = {
         }
       ]
     },
+    process: {
+      eyebrow: "Egyszerű egyeztetés",
+      title: "Az első kapcsolatfelvételtől a további feldolgozásra kész anyagig.",
+      text:
+        "Lakossággal, vállalkozókkal és cégekkel dolgozunk. Mondja el, milyen anyaga van, mi pedig elmagyarázzuk a következő lépést.",
+      cta: "Hívjon és érdeklődjön az anyagról",
+      items: [
+        {
+          icon: "/vectors/contact-person.svg",
+          title: "Mondja el, milyen anyaga van",
+          text: "Telefonon vagy emailben írja le az anyag fajtáját és hozzávetőleges mennyiségét."
+        },
+        {
+          icon: "/vectors/recycling-buy.svg",
+          title: "Egyeztetjük az átvételt",
+          text: "Megerősítjük, hogy átvesszük-e az anyagot, és egyeztetjük az átvétel gyakorlati módját."
+        },
+        {
+          icon: "/vectors/recycling-prepare.svg",
+          title: "Válogatjuk és előkészítjük",
+          text: "Az átvett anyagot szétválogatjuk és előkészítjük az újrahasznosítás következő szakaszára."
+        }
+      ]
+    },
     recycling: {
       eyebrow: "Miért fontos",
       title: "Az újrahasznosítás erőforrásokat takarít meg és csökkenti a hulladékot.",
@@ -397,6 +455,8 @@ export const locales = {
       eyebrow: "Telephelyünk és anyagaink",
       text: "Tekintse meg a Jedina Nada DOO telephelyéről, anyagairól és munkájáról készült fotókat.",
       open: "Fotó megnyitása",
+      openGallery: "A teljes galéria megtekintése",
+      photoCount: "Fotó",
       close: "Bezárás",
       previous: "Előző",
       next: "Következő",

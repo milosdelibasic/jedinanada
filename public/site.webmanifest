@@ -7,8 +7,8 @@
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#f8fbf5",
-  "theme_color": "#0f3d2e",
+  "background_color": "#f5f1e7",
+  "theme_color": "#113d2e",
   "icons": [
     {
       "src": "/resources/logo/logo150h.png",

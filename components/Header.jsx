@@ -1,11 +1,24 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { business } from "@/data/site";
 
 export default function Header({ locale, content, active = "home" }) {
   const [open, setOpen] = useState(false);
   const [currentActive, setCurrentActive] = useState(active);
-  const alternateHref = currentActive === "gallery" ? content.galleryAlternateHref : content.alternateHref;
+  const menuButtonRef = useRef(null);
+  const navigationRef = useRef(null);
+  const alternateHref =
+    active === "gallery"
+      ? content.galleryAlternateHref
+      : currentActive === "home"
+        ? content.alternateHref
+        : `${content.alternateHref}#${currentActive}`;
+  const menuLabel = locale === "hu" ? "Menü megnyitása" : "Otvori meni";
+  const closeLabel = locale === "hu" ? "Menü bezárása" : "Zatvori meni";
+  const navigationLabel = locale === "hu" ? "Fő navigáció" : "Glavna navigacija";
+  const brandTagline = locale === "hu" ? "Újrahasznosítás · Zenta" : "Reciklaža · Senta";
+  const skipLabel = locale === "hu" ? "Ugrás a tartalomhoz" : "Preskoči na sadržaj";
 
   useEffect(() => {
     const root = document.documentElement;
@@ -14,37 +27,58 @@ export default function Header({ locale, content, active = "home" }) {
     root.classList.toggle("nav-open", open);
     body.classList.toggle("nav-open", open);
 
-    if (!open) {
-      return () => {
-        root.classList.remove("nav-open");
-        body.classList.remove("nav-open");
-      };
-    }
-
-    const scrollY = window.scrollY;
-    const previousBodyStyle = {
-      position: body.style.position,
-      top: body.style.top,
-      right: body.style.right,
-      left: body.style.left,
-      width: body.style.width
-    };
-
-    body.style.position = "fixed";
-    body.style.top = `-${scrollY}px`;
-    body.style.right = "0";
-    body.style.left = "0";
-    body.style.width = "100%";
-
     return () => {
       root.classList.remove("nav-open");
       body.classList.remove("nav-open");
-      body.style.position = previousBodyStyle.position;
-      body.style.top = previousBodyStyle.top;
-      body.style.right = previousBodyStyle.right;
-      body.style.left = previousBodyStyle.left;
-      body.style.width = previousBodyStyle.width;
-      window.scrollTo(0, scrollY);
+    };
+  }, [open]);
+
+  useEffect(() => {
+    if (!open) return undefined;
+
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    };
+    const keepFocusInMenu = (event) => {
+      if (event.key !== "Tab") return;
+
+      const navLinks = [...(navigationRef.current?.querySelectorAll("a") || [])];
+      const focusable = [menuButtonRef.current, ...navLinks].filter(Boolean);
+      const first = focusable[0];
+      const firstLink = navLinks[0];
+      const last = focusable[focusable.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last?.focus();
+      } else if (event.shiftKey && document.activeElement === firstLink) {
+        event.preventDefault();
+        first?.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first?.focus();
+      } else if (!event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        firstLink?.focus();
+      }
+    };
+    const desktopQuery = window.matchMedia("(min-width: 1120px)");
+    const closeAtDesktop = (event) => {
+      if (event.matches) setOpen(false);
+    };
+
+    window.addEventListener("keydown", closeOnEscape);
+    window.addEventListener("keydown", keepFocusInMenu);
+    desktopQuery.addEventListener("change", closeAtDesktop);
+    window.requestAnimationFrame(() => navigationRef.current?.querySelector("a")?.focus());
+
+    return () => {
+      window.removeEventListener("keydown", closeOnEscape);
+      window.removeEventListener("keydown", keepFocusInMenu);
+      desktopQuery.removeEventListener("change", closeAtDesktop);
     };
   }, [open]);
 
@@ -54,7 +88,7 @@ export default function Header({ locale, content, active = "home" }) {
       return undefined;
     }
 
-    const sectionIds = ["home", ...content.navIds.filter((id) => id !== "gallery")];
+    const sectionIds = ["home", ...content.navIds];
     const updateActiveSection = () => {
       const headerOffset = 132;
       let nextActive = "home";
@@ -83,67 +117,107 @@ export default function Header({ locale, content, active = "home" }) {
 
   const homePrefix = content.homeHref;
   const links = [
-    ["about", content.nav.about, `${homePrefix}#about`],
     ["services", content.nav.services, `${homePrefix}#services`],
-    ["gallery", content.nav.gallery, content.galleryHref],
-    ["recycling", content.nav.recycling, `${homePrefix}#recycling`],
-    ["faq", content.nav.faq, `${homePrefix}#faq`],
+    ["process", content.nav.process, `${homePrefix}#process`],
+    ["about", content.nav.about, `${homePrefix}#about`],
+    ["gallery", content.nav.gallery, active === "gallery" ? content.galleryHref : `${homePrefix}#gallery`],
     ["contact", content.nav.contact, `${homePrefix}#contact`]
   ];
 
+  const closeMenu = () => {
+    setOpen(false);
+    window.requestAnimationFrame(() => menuButtonRef.current?.focus());
+  };
+
+  const closeForNavigation = (key, href) => {
+    setOpen(false);
+    if (!href.includes("#")) return;
+
+    window.setTimeout(() => {
+      const target = document.getElementById(key);
+      const heading = target?.querySelector("h1, h2");
+      if (!heading) return;
+
+      heading.setAttribute("tabindex", "-1");
+      heading.focus({ preventScroll: true });
+      heading.addEventListener("blur", () => heading.removeAttribute("tabindex"), { once: true });
+    }, 0);
+  };
+
   return (
     <>
+      <a className="skip-link" href="#main-content">{skipLabel}</a>
       <header className="site-header">
-        <a className="brand" href={content.homeHref} aria-label="Jedina Nada DOO">
-          <img src="/resources/logo/logo.webp" alt="" width="76" height="50" />
-          <span>Jedina Nada</span>
-        </a>
+        <div className="header-inner">
+          <a className="brand" href={content.homeHref} aria-label="Jedina Nada DOO">
+            <img src="/resources/logo/logo.webp" alt="" width="76" height="50" />
+            <span className="brand-copy">
+              <strong>Jedina Nada</strong>
+              <small>{brandTagline}</small>
+            </span>
+          </a>
 
-        <button
-          className={open ? "menu-button is-open" : "menu-button"}
-          type="button"
-          aria-label={open ? "Close navigation" : "Open navigation"}
-          aria-expanded={open}
-          onClick={() => setOpen((value) => !value)}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
+          <nav id="primary-navigation" ref={navigationRef} className={open ? "main-nav is-open" : "main-nav"} aria-label={navigationLabel}>
+            <a
+              href={content.homeHref}
+              className={currentActive === "home" ? "is-active" : ""}
+              aria-current={currentActive === "home" ? "page" : undefined}
+              onClick={() => closeForNavigation("home", content.homeHref)}
+            >
+              {content.nav.home}
+            </a>
+            {links.map(([key, label, href]) => (
+              <a
+                key={key}
+                href={href}
+                className={currentActive === key ? "is-active" : ""}
+                aria-current={currentActive === key ? (active === "gallery" ? "page" : "location") : undefined}
+                onClick={() => closeForNavigation(key, href)}
+              >
+                {label}
+              </a>
+            ))}
+            <a className="language-link" href={alternateHref} hrefLang={locale === "sr" ? "hu" : "sr"}>
+              <span>{content.alternateLang}</span>
+            </a>
+            <a className="nav-call" href={`tel:${business.phone}`} onClick={closeMenu}>
+              <small>{content.contact.call}</small>
+              <strong>{business.phoneDisplay}</strong>
+            </a>
+          </nav>
+
+          <div className="header-actions">
+            <a className="header-call" href={`tel:${business.phone}`}>
+              <small>{content.contact.call}</small>
+              <strong>{business.phoneDisplay}</strong>
+            </a>
+            <a className="header-language" href={alternateHref} hrefLang={locale === "sr" ? "hu" : "sr"}>
+              {content.alternateLang}
+            </a>
+            <button
+              ref={menuButtonRef}
+              className={open ? "menu-button is-open" : "menu-button"}
+              type="button"
+              aria-label={open ? closeLabel : menuLabel}
+              aria-expanded={open}
+              aria-controls="primary-navigation"
+              onClick={() => setOpen((value) => !value)}
+            >
+              <span />
+              <span />
+              <span />
+            </button>
+          </div>
+        </div>
       </header>
 
       <button
         className={open ? "nav-backdrop is-open" : "nav-backdrop"}
         type="button"
-        aria-label="Close navigation"
-        tabIndex={open ? 0 : -1}
-        onClick={() => setOpen(false)}
+        aria-label={closeLabel}
+        tabIndex={-1}
+        onClick={closeMenu}
       />
-
-      <nav className={open ? "main-nav is-open" : "main-nav"} aria-label="Primary navigation">
-        <a
-          href={content.homeHref}
-          className={currentActive === "home" ? "is-active" : ""}
-          aria-current={currentActive === "home" ? "page" : undefined}
-          onClick={() => setOpen(false)}
-        >
-          {content.nav.home}
-        </a>
-        {links.map(([key, label, href]) => (
-          <a
-            key={key}
-            href={href}
-            className={currentActive === key ? "is-active" : ""}
-            aria-current={currentActive === key ? "page" : undefined}
-            onClick={() => setOpen(false)}
-          >
-            {label}
-          </a>
-        ))}
-        <a className="language-link" href={alternateHref} hrefLang={locale === "sr" ? "hu" : "sr"}>
-          {content.alternateLang}
-        </a>
-      </nav>
     </>
   );
 }

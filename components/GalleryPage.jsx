@@ -19,7 +19,7 @@ export default function GalleryPage({ locale, content }) {
       <StructuredData data={galleryPageJsonLd(locale)} />
       <StructuredData data={breadcrumbJsonLd(locale, "gallery")} />
       <Header locale={locale} content={content} active="gallery" />
-      <main>
+      <main id="main-content" lang={locale}>
         <section className="gallery-hero section-shell">
           <p className="eyebrow">{content.gallery.eyebrow}</p>
           <h1>{content.gallery.title}</h1>

@@ -31,6 +31,12 @@ export default function Footer({ content }) {
         <span>Copyright © {new Date().getFullYear()} Jedina Nada DOO.</span>
         <span>{content.footer.copyright}</span>
       </div>
+      <div className="mobile-contact-bar" aria-label={content.contact.details}>
+        <a href={`tel:${business.phone}`}>{content.contact.call}</a>
+        <a href={business.mapUrl} target="_blank" rel="noreferrer">
+          {content.contact.addressLabel}
+        </a>
+      </div>
     </footer>
   );
 }
