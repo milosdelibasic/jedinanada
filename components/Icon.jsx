@@ -1,5 +1,6 @@
 export default function Icon({ name = "arrow", size = 20, className = "" }) {
   const paths = {
+    facebook: <path fill="currentColor" stroke="none" d="M14 22v-9h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.4C17.3 1.2 16.2 1 15 1c-3 0-5 1.8-5 5v3H7v4h3v9z" />,
     plus: <path d="M5 12h14M12 5v14" />,
     arrow: <><path d="M5 12h14M13 6l6 6-6 6" /></>,
     diagonal: <><path d="M6 18 18 6M6 6h12v12" /></>,

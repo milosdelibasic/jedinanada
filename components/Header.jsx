@@ -125,7 +125,7 @@ export default function Header({ locale, content, active = "home" }) {
     ["services", content.nav.services, `${homePrefix}#services`],
     ["process", content.nav.process, `${homePrefix}#process`],
     ["about", content.nav.about, `${homePrefix}#about`],
-    ["gallery", content.nav.gallery, active === "gallery" ? content.galleryHref : `${homePrefix}#gallery`],
+    ["gallery", content.nav.gallery, content.galleryHref],
     ["contact", content.nav.contact, `${homePrefix}#contact`]
   ];
 
@@ -134,19 +134,8 @@ export default function Header({ locale, content, active = "home" }) {
     window.requestAnimationFrame(() => menuButtonRef.current?.focus());
   };
 
-  const closeForNavigation = (key, href) => {
+  const closeForNavigation = () => {
     setOpen(false);
-    if (!href.includes("#")) return;
-
-    window.setTimeout(() => {
-      const target = document.getElementById(key);
-      const heading = target?.querySelector("h1, h2");
-      if (!heading) return;
-
-      heading.setAttribute("tabindex", "-1");
-      heading.focus({ preventScroll: true });
-      heading.addEventListener("blur", () => heading.removeAttribute("tabindex"), { once: true });
-    }, 0);
   };
 
   return (

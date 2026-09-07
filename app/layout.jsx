@@ -1,5 +1,6 @@
 import "@fontsource-variable/manrope";
 import "./styles/globals.scss";
+import SectionNavigation from "@/components/SectionNavigation";
 import { business, siteName, siteUrl } from "@/data/site";
 
 const defaultDescription =
@@ -79,7 +80,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="sr">
-      <body>{children}</body>
+      <body><SectionNavigation />{children}</body>
     </html>
   );
 }
