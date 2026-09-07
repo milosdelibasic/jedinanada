@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && node scripts/postbuild.mjs",
-    "start": "next start"
+    "start": "next start",
+    "check:seo": "npm run build && node scripts/check-seo.mjs"
   },
   "dependencies": {
     "@fontsource-variable/manrope": "^5.3.0",

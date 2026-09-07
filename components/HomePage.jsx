@@ -3,7 +3,7 @@ import FaqAccordion from "@/components/FaqAccordion";
 import Header from "@/components/Header";
 import Icon from "@/components/Icon";
 import StructuredData from "@/components/StructuredData";
-import { breadcrumbJsonLd, business, faqJsonLd, localBusinessJsonLd, organizationJsonLd, serviceCatalogJsonLd, websiteJsonLd } from "@/data/site";
+import { business, pageJsonLd } from "@/data/site";
 
 export default function HomePage({ locale, content }) {
   const hu = locale === "hu";
@@ -11,12 +11,7 @@ export default function HomePage({ locale, content }) {
   const services = materialOrder.map(key => content.services.items.find(item => item.key === key));
   return (
     <>
-      <StructuredData data={organizationJsonLd()} />
-      <StructuredData data={websiteJsonLd(locale)} />
-      <StructuredData data={localBusinessJsonLd(locale)} />
-      <StructuredData data={serviceCatalogJsonLd(locale)} />
-      <StructuredData data={faqJsonLd(locale)} />
-      <StructuredData data={breadcrumbJsonLd(locale, "home")} />
+      <StructuredData data={pageJsonLd(locale, "home")} />
       <Header locale={locale} content={content} />
       <main id="main-content" lang={locale}>
         <section className="hero section-shell" id="home">

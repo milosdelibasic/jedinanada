@@ -15,24 +15,18 @@ export const metadata = {
     template: "%s | Jedina Nada DOO"
   },
   description: defaultDescription,
-  keywords: [
-    "Jedina Nada DOO",
-    "reciklaža Senta",
-    "otkup sekundarnih sirovina",
-    "neopasan otpad",
-    "plastika",
-    "metal",
-    "papir",
-    "staklo"
-  ],
   authors: [{ name: siteName, url: siteUrl }],
   creator: siteName,
   publisher: siteName,
   category: "recycling",
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION || undefined,
+    other: process.env.BING_SITE_VERIFICATION ? { "msvalidate.01": process.env.BING_SITE_VERIFICATION } : undefined
+  },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
-    apple: "/resources/logo/logo150h.png"
+    icon: [{ url: "/assets/seo/favicon.png", sizes: "96x96", type: "image/png" }],
+    shortcut: "/assets/seo/favicon.png",
+    apple: "/assets/seo/apple-touch-icon.png"
   },
   manifest: "/site.webmanifest",
   appleWebApp: {
@@ -54,7 +48,7 @@ export const metadata = {
     locale: "sr_RS",
     images: [
       {
-        url: `${siteUrl}/og-image.jpg`,
+        url: `${siteUrl}/assets/seo/share-sr.jpg`,
         width: 1200,
         height: 630,
         alt: "Jedina Nada DOO Senta"
@@ -65,7 +59,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Jedina Nada DOO Senta - Reciklaža",
     description: defaultDescription,
-    images: [`${siteUrl}/og-image.jpg`]
+    images: [`${siteUrl}/assets/seo/share-sr.jpg`]
   },
   other: {
     "geo.region": "RS-02",

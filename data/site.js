@@ -83,12 +83,12 @@ export const locales = {
     homeHref: cleanRoutes.sr.home,
     galleryHref: cleanRoutes.sr.gallery,
     meta: {
-      homeTitle: "Jedina Nada DOO Senta - Otkup i reciklaža neopasnog otpada",
-      galleryTitle: "Galerija - Jedina Nada DOO Senta",
+      homeTitle: "Otkup sekundarnih sirovina Senta | Jedina Nada",
+      galleryTitle: "Reciklažno dvorište u Senti — galerija | Jedina Nada",
       homeDescription:
-        "Jedina Nada DOO iz Sente vrši otkup, preradu i reciklažu sekundarnih sirovina i neopasnog otpada: plastike, metala, stakla i papira.",
+        "Otkup metala, plastike, papira i stakla u Senti za građane i firme. Jedina Nada, Karađorđeva 109. Pozovite 062 178 87 81 za uslove otkupa.",
       galleryDescription:
-        "Pogledajte galeriju firme Jedina Nada DOO iz Sente, preduzeća za otkup i reciklažu neopasnog otpada.",
+        "Fotografije reciklažnog dvorišta Jedina Nada u Senti: otkup metala, baliranje plastike i priprema sekundarnih sirovina za transport. Karađorđeva 109.",
       homeKeywords: [
         "Jedina Nada DOO",
         "reciklaža Senta",
@@ -252,6 +252,14 @@ export const locales = {
       title: "Dobro je znati.",
       items: [
         {
+          question: "Koja je cena otkupa sekundarnih sirovina?",
+          answer: "Za aktuelne uslove i cenu otkupa pozovite 062 178 87 81. Recite nam koju vrstu materijala imate i približnu količinu, kako bismo mogli da dogovorimo otkup."
+        },
+        {
+          question: "Kako da pripremim materijal za otkup?",
+          answer: "Ako je moguće, razdvojite metal, plastiku, papir i staklo. Pre dolaska nam javite vrstu i približnu količinu materijala da proverimo šta primamo i dogovorimo način prijema."
+        },
+        {
           question: "Koje materijale otkupljujete?",
           answer:
             "Otkupljujemo plastiku, metale, papir, staklo i druge sekundarne sirovine. Za konkretan materijal najbolje je da nas kontaktirate direktno."
@@ -299,12 +307,12 @@ export const locales = {
     homeHref: cleanRoutes.hu.home,
     galleryHref: cleanRoutes.hu.gallery,
     meta: {
-      homeTitle: "Jedina Nada DOO Zenta - Újrahasznosítás",
-      galleryTitle: "Galéria - Jedina Nada DOO Zenta",
+      homeTitle: "Másodlagos nyersanyagok felvásárlása Zenta | Jedina Nada",
+      galleryTitle: "Zentai újrahasznosító telephely — galéria | Jedina Nada",
       homeDescription:
-        "A zentai Jedina Nada DOO másodlagos nyersanyagok és nem veszélyes hulladék felvásárlásával, feldolgozásával és újrahasznosításával foglalkozik.",
+        "Fém, műanyag, papír és üveg felvásárlása Zentán, lakosságtól és cégektől. Jedina Nada, Karađorđeva 109. Érdeklődjön: 062 178 87 81.",
       galleryDescription:
-        "Tekintse meg a zentai Jedina Nada DOO galériáját, a nem veszélyes hulladék felvásárlásával és újrahasznosításával foglalkozó vállalkozást.",
+        "Képek a Jedina Nada zentai telephelyéről: fémfelvásárlás, műanyagbálák és másodlagos nyersanyagok előkészítése szállításra. Karađorđeva 109.",
       homeKeywords: [
         "Jedina Nada DOO",
         "újrahasznosítás Zenta",
@@ -468,6 +476,14 @@ export const locales = {
       title: "Jó tudni.",
       items: [
         {
+          question: "Mennyi a másodlagos nyersanyagok felvásárlási ára?",
+          answer: "Az aktuális árakról és feltételekről a 062 178 87 81-es számon érdeklődhet. Mondja el az anyag fajtáját és hozzávetőleges mennyiségét, hogy egyeztethessük a felvásárlást."
+        },
+        {
+          question: "Hogyan készítsem elő az anyagot az átvételre?",
+          answer: "Lehetőség szerint válogassa külön a fémet, műanyagot, papírt és üveget. Érkezés előtt jelezze az anyag fajtáját és hozzávetőleges mennyiségét, hogy megerősíthessük az átvételt."
+        },
+        {
           question: "Milyen anyagokat vásárolnak fel?",
           answer:
             "Műanyagot, fémeket, papírt, üveget és más másodlagos nyersanyagokat vásárolunk fel. Konkrét anyag esetén érdemes közvetlenül felvenni velünk a kapcsolatot."
@@ -516,9 +532,8 @@ export function createPageMetadata(locale, page) {
   const description = pageDescription(content, page);
 
   return {
-    title,
+    title: { absolute: title },
     description,
-    keywords: pageKeywords(content, page),
     category: "recycling",
     alternates: {
       canonical: absoluteUrl(route),
@@ -549,10 +564,10 @@ export function createPageMetadata(locale, page) {
       type: "website",
       images: [
         {
-          url: `${siteUrl}/og-image.jpg`,
+          url: `${siteUrl}/assets/seo/share-${locale}.jpg`,
           width: 1200,
           height: 630,
-          alt: "Jedina Nada DOO Senta"
+          alt: locale === "hu" ? "Jedina Nada — másodlagos nyersanyagok felvásárlása Zentán" : "Jedina Nada — otkup sekundarnih sirovina u Senti"
         }
       ]
     },
@@ -560,7 +575,7 @@ export function createPageMetadata(locale, page) {
       card: "summary_large_image",
       title,
       description,
-      images: [`${siteUrl}/og-image.jpg`]
+      images: [`${siteUrl}/assets/seo/share-${locale}.jpg`]
     },
     other: {
       "content-language": locale,
@@ -607,7 +622,8 @@ export function websiteJsonLd(locale = "sr") {
     "@id": `${siteUrl}/#website`,
     name: siteName,
     url: siteUrl,
-    inLanguage: locale,
+    inLanguage: ["sr", "hu"],
+    alternateName: "Jedina Nada",
     publisher: {
       "@id": `${siteUrl}/#organization`
     },
@@ -627,16 +643,14 @@ export function localBusinessJsonLd(locale = "sr") {
     description: content.meta.homeDescription,
     url: siteUrl,
     logo: `${siteUrl}/resources/logo/logo.png`,
-    image: `${siteUrl}/og-image.jpg`,
+    image: ["14", "10", "11"].map(id => `${siteUrl}/resources/gallery/${id}.jpg`),
+    hasMap: business.mapUrl,
+    hasOfferCatalog: { "@id": `${siteUrl}${cleanRoutes[locale].home}#services-catalog` },
     telephone: business.phone,
     email: business.email,
     foundingDate: business.founded,
     slogan:
       locale === "hu" ? "Megbízható felvásárlás és újrahasznosítás" : "Pouzdan otkup i reciklaža neopasnog otpada",
-    priceRange: "$$",
-    parentOrganization: {
-      "@id": `${siteUrl}/#organization`
-    },
     address: {
       "@type": "PostalAddress",
       streetAddress: "Karađorđeva 109",
@@ -716,14 +730,16 @@ export function serviceCatalogJsonLd(locale = "sr") {
     "@context": "https://schema.org",
     "@type": "OfferCatalog",
     "@id": `${siteUrl}${cleanRoutes[locale].home}#services-catalog`,
-    name: content.services.title,
+    name: locale === "hu" ? "Másodlagos nyersanyagok felvásárlása Zentán" : "Otkup sekundarnih sirovina u Senti",
     url: `${siteUrl}${cleanRoutes[locale].home}#services`,
     inLanguage: locale,
     itemListElement: content.services.items.map((service) => ({
       "@type": "Offer",
       itemOffered: {
         "@type": "Service",
-        name: service.title,
+        name: `${locale === "hu" ? "Felvásárlás" : "Otkup"}: ${service.title}`,
+        description: service.items.join(", "),
+        url: `${siteUrl}${cleanRoutes[locale].home}#services`,
         serviceType: locale === "hu" ? "Másodlagos nyersanyagok felvásárlása" : "Otkup sekundarnih sirovina",
         provider: {
           "@id": `${siteUrl}/#jedina-nada`
@@ -789,6 +805,7 @@ export function breadcrumbJsonLd(locale = "sr", page = "home") {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id": `${siteUrl}${cleanRoutes[locale][routeKey]}#breadcrumb`,
     itemListElement: items
   };
 }
@@ -824,5 +841,36 @@ export function galleryPageJsonLd(locale = "sr") {
       height: image.height,
       caption: `${content.gallery.imageAlt} ${image.id}`
     }))
+  };
+}
+
+// A connected graph describes one business, its website and the current page.
+export function pageJsonLd(locale = "sr", page = "home") {
+  const route = cleanRoutes[locale][pageRouteKey(page)];
+  const content = locales[locale];
+  const organization = organizationJsonLd();
+  const localBusiness = localBusinessJsonLd(locale);
+  const company = { ...organization, ...localBusiness, "@id": `${siteUrl}/#organization` };
+  const website = websiteJsonLd(locale);
+  const catalog = serviceCatalogJsonLd(locale);
+  for (const offer of catalog.itemListElement) {
+    offer.itemOffered.provider = { "@id": company["@id"] };
+  }
+  const webpage = page === "gallery" ? galleryPageJsonLd(locale) : {
+    "@type": ["WebPage", "FAQPage"],
+    "@id": `${siteUrl}${route}#webpage`,
+    name: content.meta.homeTitle,
+    description: content.meta.homeDescription,
+    url: `${siteUrl}${route}`,
+    inLanguage: locale,
+    mainEntity: faqJsonLd(locale).mainEntity
+  };
+  webpage.about = { "@id": company["@id"] };
+  webpage.isPartOf = { "@id": website["@id"] };
+  webpage.breadcrumb = { "@id": `${siteUrl}${route}#breadcrumb` };
+  const nodes = [company, website, webpage, breadcrumbJsonLd(locale, page), catalog];
+  return {
+    "@context": "https://schema.org",
+    "@graph": nodes.map(({ "@context": context, ...node }) => node)
   };
 }

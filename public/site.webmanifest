@@ -7,24 +7,18 @@
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#f5f1e7",
-  "theme_color": "#113d2e",
+  "background_color": "#f8f9f4",
+  "theme_color": "#20392f",
   "icons": [
     {
-      "src": "/resources/logo/logo150h.png",
-      "sizes": "227x150",
+      "src": "/assets/seo/icon-192.png",
+      "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/resources/logo/logo.png",
-      "sizes": "378x250",
+      "src": "/assets/seo/icon-512.png",
+      "sizes": "512x512",
       "type": "image/png"
-    },
-    {
-      "src": "/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any"
     }
   ]
 }
