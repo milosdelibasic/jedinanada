@@ -1,6 +1,7 @@
 import "@fontsource-variable/manrope";
 import "./styles/globals.scss";
 import SectionNavigation from "@/components/SectionNavigation";
+import FirebaseAnalytics from "@/components/FirebaseAnalytics";
 import { business, siteName, siteUrl } from "@/data/site";
 
 const defaultDescription =
@@ -83,7 +84,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="sr">
-      <body><SectionNavigation />{children}</body>
+      <body><FirebaseAnalytics /><SectionNavigation />{children}</body>
     </html>
   );
 }
