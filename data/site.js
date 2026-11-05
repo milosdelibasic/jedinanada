@@ -33,9 +33,17 @@ export const business = {
 
 const absoluteUrl = (path = "/") => `${siteUrl}${path}`;
 const pageRouteKey = (page) => (page === "gallery" ? "gallery" : "home");
-const pageTitle = (content, page) => (page === "gallery" ? content.meta.galleryTitle : content.meta.homeTitle);
-const pageDescription = (content, page) => (page === "gallery" ? content.meta.galleryDescription : content.meta.homeDescription);
+export const pageTitle = (content, page) => (page === "gallery" ? content.meta.galleryTitle : content.meta.homeTitle);
+export const pageDescription = (content, page) => (page === "gallery" ? content.meta.galleryDescription : content.meta.homeDescription);
 const pageKeywords = (content, page) => (page === "gallery" ? content.meta.galleryKeywords : content.meta.homeKeywords);
+
+export const seoPageKeys = ["home", "gallery"];
+export const contentUpdated = "2026-11-05";
+
+const galleryCaptions = {
+  sr: ["Tabla za otkup sekundarnih sirovina Jedina Nada u Senti", "Vozilo Jedine Nade sa oznakama otkupa i reciklaže", "Kamion pri prijemu metala u reciklažnom dvorištu", "Metalne cevi i profili razvrstani u dvorištu", "Bale PET ambalaže pripremljene za dalju preradu", "Skladištenje balirane plastične ambalaže", "Složeni karton u skladištu sekundarnih sirovina", "Različiti metalni profili i cevi za reciklažu", "Razvrstane bale ambalaže u dvorištu Jedine Nade", "Utovar metalnog otpada kamionskom dizalicom", "Balirana PET ambalaža u reciklažnom dvorištu", "Prijem materijala pored kamiona u dvorištu", "Bale plastične ambalaže utovarene na kamion", "Pripremljene bale plastike na lokaciji u Senti", "Plastična ambalaža u zoni za prijem i pripremu", "Dostavno vozilo sa oznakama firme Jedina Nada", "Razdvojene količine bakra i drugih metalnih sirovina", "Rad dizalice pri utovaru sekundarnih sirovina", "Arhivska fotografija dokumenta OHSAS 18001:2007", "Arhivska fotografija dokumenta ISO 9001:2008", "Arhivska fotografija dokumenta ISO 14001:2004", "Vizitkarte firme Jedina Nada i kontakt osobe"],
+  hu: ["A Jedina Nada másodlagosnyersanyag-felvásárlási táblája Zentán", "A Jedina Nada felvásárlási és újrahasznosítási feliratú járműve", "Teherautó a fém átvételénél az újrahasznosító telepen", "Különválogatott fémcsövek és profilok az udvaron", "További feldolgozásra előkészített PET-bálák", "Bálázott műanyag csomagolás tárolása", "Felhalmozott karton a másodlagos nyersanyagok raktárában", "Különböző újrahasznosításra váró fémprofilok és csövek", "Különválogatott csomagolásbálák a Jedina Nada udvarán", "Fémhulladék rakodása teherautódaruval", "Bálázott PET csomagolás az újrahasznosító telepen", "Anyagátvétel a teherautó mellett az udvaron", "Teherautóra rakodott műanyag csomagolásbálák", "Előkészített műanyagbálák a zentai telephelyen", "Műanyag csomagolás az átvételi és előkészítési területen", "A Jedina Nada feliratú szállítójármű", "Különválogatott réz és egyéb fém nyersanyagok", "Daru másodlagos nyersanyagok rakodása közben", "Az OHSAS 18001:2007 dokumentum archív fényképe", "Az ISO 9001:2008 dokumentum archív fényképe", "Az ISO 14001:2004 dokumentum archív fényképe", "A Jedina Nada és a kapcsolattartó névjegykártyái"]
+};
 
 export const galleryImages = [
   [1, 1536, 2048],
@@ -64,6 +72,7 @@ export const galleryImages = [
   id,
   width,
   height,
+  captions: { sr: galleryCaptions.sr[id - 1], hu: galleryCaptions.hu[id - 1] },
   thumb: `/assets/gallery/thumbs/${id}.webp`,
   fullWebp: `/resources/gallery/${id}.webp`,
   fullJpg: `/resources/gallery/${id}.jpg`
@@ -839,7 +848,7 @@ export function galleryPageJsonLd(locale = "sr") {
       thumbnailUrl: `${siteUrl}${image.thumb}`,
       width: image.width,
       height: image.height,
-      caption: `${content.gallery.imageAlt} ${image.id}`
+      caption: image.captions[locale]
     }))
   };
 }

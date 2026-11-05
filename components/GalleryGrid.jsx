@@ -89,11 +89,11 @@ export default function GalleryGrid({ content }) {
             type="button"
             key={image.id}
             onClick={(event) => openImage(index, event)}
-            aria-label={`${content.gallery.open} ${image.id}`}
+            aria-label={`${content.gallery.open}: ${image.captions[content.lang]}`}
           >
             <img
               src={image.thumb}
-              alt={`${content.gallery.imageAlt} ${image.id}`}
+              alt={image.captions[content.lang]}
               width="720"
               height={Math.round((720 / image.width) * image.height)}
               loading={index < 4 ? "eager" : "lazy"}
@@ -121,7 +121,7 @@ export default function GalleryGrid({ content }) {
               <source srcSet={activeImage.fullWebp} type="image/webp" />
               <img
                 src={activeImage.fullJpg}
-                alt={`${content.gallery.imageAlt} ${activeImage.id}`}
+                alt={activeImage.captions[content.lang]}
                 width={activeImage.width}
                 height={activeImage.height}
               />

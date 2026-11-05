@@ -36,9 +36,10 @@ export default function FirebaseAnalytics() {
       const link = event.target.closest?.("a[href]");
       if (!link) return;
       const protocol = link.protocol.toLowerCase();
-      if (protocol !== "tel:" && protocol !== "mailto:") return;
+      const directions = link.origin === "https://www.google.com" && link.pathname === "/maps/search/";
+      if (protocol !== "tel:" && protocol !== "mailto:" && !directions) return;
 
-      const method = protocol === "tel:" ? "phone" : "email";
+      const method = directions ? "directions" : protocol === "tel:" ? "phone" : "email";
       const parameters = {
         contact_method: method,
         page_path: window.location.pathname,

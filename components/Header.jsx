@@ -143,7 +143,7 @@ export default function Header({ locale, content, active = "home" }) {
       <a className="skip-link" href="#main-content">{skipLabel}</a>
       <header className="site-header">
         <div className="header-inner">
-          <a className="brand" href={content.homeHref} aria-label="Jedina Nada DOO">
+          <a className="brand" href={content.homeHref}>
             <img className="original-logo" src="/resources/logo/logo.webp" alt="" width="76" height="50" />
             <span className="brand-copy">
               <strong>Jedina Nada</strong>

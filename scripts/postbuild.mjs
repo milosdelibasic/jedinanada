@@ -1,4 +1,4 @@
-import { copyFile, readFile, writeFile } from "node:fs/promises";
+import { copyFile, readFile, readdir, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 
 const aliases = [
@@ -13,7 +13,8 @@ for (const [source, target] of aliases) {
   }
 }
 
-const hungarianPages = ["out/hu/index.html", "out/hu.html", "out/hu/gallery/index.html", "out/hu/gallery.html"];
+const hungarianPages = ["out/hu.html", ...(await readdir("out/hu", { recursive: true }))
+  .filter(file => file.endsWith(".html")).map(file => `out/hu/${file}`)];
 
 for (const page of hungarianPages) {
   if (existsSync(page)) {

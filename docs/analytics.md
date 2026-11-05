@@ -21,8 +21,9 @@ Svi linkovi za telefon i email, uključujući zaglavlje, podnožje, mobilnu trak
 
 - `phone_click` — klik na telefonski link (`tel:`).
 - `email_click` — klik na email link (`mailto:`).
+- `directions_click` — klik na link „Kako do nas” / „Útvonaltervezés” ili adresu koja otvara Google Maps.
 
-Uz događaj šaljemo `contact_method` (`phone` ili `email`), `page_path` i `link_location` (zaglavlje, podnožje, mobilna traka ili ID sekcije). Ne šaljemo adresu, broj telefona, predmet ili sadržaj emaila. Linkovi i dalje odmah otvaraju odgovarajuću aplikaciju.
+Uz događaj šaljemo `contact_method` (`phone`, `email` ili `directions`), `page_path` i `link_location` (zaglavlje, podnožje, mobilna traka ili ID sekcije). Ne šaljemo adresu, broj telefona, predmet, sadržaj emaila ili parametre adrese. Linkovi i dalje odmah otvaraju odgovarajuću aplikaciju.
 
 U **Realtime → Event count by Event name** može se proveriti prijem događaja. U redovnom izveštaju **Events** broj događaja pokazuje broj klikova, a **Total users** broj korisnika koji su kliknuli; jedan korisnik može kliknuti više puta. To su pokušaji kontakta, ne potvrđeni pozivi ili poslati emailovi.
 

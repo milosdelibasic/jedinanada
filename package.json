@@ -2,11 +2,14 @@
   "name": "jedina-nada-static",
   "version": "2.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build && node scripts/postbuild.mjs",
     "start": "next start",
-    "check:seo": "npm run build && node scripts/check-seo.mjs"
+    "check:seo": "npm run build && node scripts/check-seo.mjs",
+    "optimize:images": "node scripts/optimize-images.mjs",
+    "audit:seo:live": "node scripts/audit-live-seo.mjs"
   },
   "dependencies": {
     "@fontsource-variable/manrope": "^5.3.0",
@@ -14,6 +17,7 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "sass": "latest"
+    "sass": "latest",
+    "sharp": "0.34.5"
   }
 }
