@@ -1,0 +1,230 @@
+{
+  "date": "2026-11-05",
+  "deploymentCommit": "49d9e776c80dac353326ad7ba78ef0d2823622de",
+  "runs": [
+    {
+      "phase": "before",
+      "fetchTime": "2026-11-05T08:51:26.640Z",
+      "url": "https://jedinanada.rs/",
+      "lighthouseVersion": "13.6.0",
+      "scores": {
+        "performance": 87,
+        "accessibility": 96,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 1040.233,
+          "unit": "millisecond",
+          "display": "1.0 s"
+        },
+        "largest-contentful-paint": {
+          "value": 4037.233,
+          "unit": "millisecond",
+          "display": "4.0 s"
+        },
+        "total-blocking-time": {
+          "value": 8.5,
+          "unit": "millisecond",
+          "display": "10 ms"
+        },
+        "cumulative-layout-shift": {
+          "value": 0.001359709792119351,
+          "unit": "unitless",
+          "display": "0.001"
+        }
+      }
+    },
+    {
+      "phase": "after",
+      "fetchTime": "2026-11-05T09:28:03.896Z",
+      "url": "https://jedinanada.rs/",
+      "lighthouseVersion": "13.6.0",
+      "scores": {
+        "performance": 75,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 1537.354,
+          "unit": "millisecond",
+          "display": "1.5 s"
+        },
+        "largest-contentful-paint": {
+          "value": 6208.753999999999,
+          "unit": "millisecond",
+          "display": "6.2 s"
+        },
+        "total-blocking-time": {
+          "value": 39,
+          "unit": "millisecond",
+          "display": "40 ms"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "unit": "unitless",
+          "display": "0"
+        }
+      }
+    },
+    {
+      "phase": "after",
+      "fetchTime": "2026-11-05T09:30:13.397Z",
+      "url": "https://jedinanada.rs/",
+      "lighthouseVersion": "13.6.0",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 1045.2565,
+          "unit": "millisecond",
+          "display": "1.0 s"
+        },
+        "largest-contentful-paint": {
+          "value": 1977.2565,
+          "unit": "millisecond",
+          "display": "2.0 s"
+        },
+        "total-blocking-time": {
+          "value": 15.5,
+          "unit": "millisecond",
+          "display": "20 ms"
+        },
+        "cumulative-layout-shift": {
+          "value": 0.001359709792119351,
+          "unit": "unitless",
+          "display": "0.001"
+        }
+      }
+    },
+    {
+      "phase": "after",
+      "fetchTime": "2026-11-05T09:31:21.496Z",
+      "url": "https://jedinanada.rs/",
+      "lighthouseVersion": "13.6.0",
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 970.2155,
+          "unit": "millisecond",
+          "display": "1.0 s"
+        },
+        "largest-contentful-paint": {
+          "value": 2593.7155000000002,
+          "unit": "millisecond",
+          "display": "2.6 s"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "unit": "millisecond",
+          "display": "0 ms"
+        },
+        "cumulative-layout-shift": {
+          "value": 0.001359709792119351,
+          "unit": "unitless",
+          "display": "0.001"
+        }
+      }
+    }
+  ],
+  "liveAudit": {
+    "checkedAt": "2026-11-05T09:28:04.571Z",
+    "pageCount": 4,
+    "issues": [],
+    "sitemap": {
+      "url": "https://jedinanada.rs/sitemap.xml",
+      "status": 200,
+      "location": null,
+      "robotsHeader": null,
+      "contentType": "application/xml",
+      "lastModified": [
+        "2026-11-05"
+      ]
+    },
+    "probes": [
+      {
+        "url": "http://jedinanada.rs/",
+        "status": 301,
+        "location": "https://jedinanada.rs/",
+        "robotsHeader": null,
+        "contentType": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://www.jedinanada.rs/",
+        "status": 301,
+        "location": "https://jedinanada.rs/",
+        "robotsHeader": null,
+        "contentType": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://www.jedinanada.rs/hu/?utm_source=seo-test",
+        "status": 301,
+        "location": "https://jedinanada.rs/hu/?utm_source=seo-test",
+        "robotsHeader": null,
+        "contentType": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://jedinanada.rs/gallery.html",
+        "status": 301,
+        "location": "/gallery/",
+        "robotsHeader": null,
+        "contentType": "text/plain;charset=UTF-8"
+      },
+      {
+        "url": "https://jedinanada.rs/hu.html",
+        "status": 301,
+        "location": "/hu/",
+        "robotsHeader": null,
+        "contentType": "text/plain;charset=UTF-8"
+      },
+      {
+        "url": "https://jedinanada.rs/hu/gallery.html",
+        "status": 301,
+        "location": "/hu/gallery/",
+        "robotsHeader": null,
+        "contentType": "text/plain;charset=UTF-8"
+      },
+      {
+        "url": "https://jedinanada.rs/index.html",
+        "status": 308,
+        "location": "/",
+        "robotsHeader": null,
+        "contentType": null
+      },
+      {
+        "url": "https://jedinanada.rs/gallery/index.html",
+        "status": 308,
+        "location": "/gallery/",
+        "robotsHeader": null,
+        "contentType": null
+      },
+      {
+        "url": "https://jedinanada.rs/nepostojeca-seo-provera/",
+        "status": 404,
+        "location": null,
+        "robotsHeader": null,
+        "contentType": "text/html; charset=utf-8"
+      }
+    ]
+  },
+  "limitations": [
+    "Lighthouse is a laboratory simulation, not real-user Core Web Vitals.",
+    "Before has one measurement; after has three measurements. Timing and device load can vary."
+  ]
+}
