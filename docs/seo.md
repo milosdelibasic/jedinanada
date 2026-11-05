@@ -11,7 +11,7 @@
 - Stvarna adresa, telefon, radno vreme, godina osnivanja i fotografije dvorišta. Nema izmišljenih ocena, recenzija ili cena.
 - FAQ o ceni i pripremi materijala na oba jezika. JSON-LD odgovori odgovaraju tekstu stranice; ne predstavljamo FAQ kao obećanje posebnog prikaza u Google rezultatima.
 - Novi prikazi za deljenje (1200×630), zasebno srpski i mađarski, sa originalnim logotipom i stvarnom fotografijom dvorišta.
-- Kvadratni favicon i Apple/PWA ikonice izvedeni iz originalnog logotipa.
+- Favicon i Apple/PWA ikonice koriste pojednostavljen simbol reciklaže na tamnozelenoj podlozi, čitljiv i u malom tabu. SVG je izvor za PNG/ICO varijante (`node scripts/generate-icons.mjs`).
 - Bezbedna JSON-LD serijalizacija: `<` se escape-uje da sadržaj ne može prekinuti script tag.
 - Stare `.html` putanje ostaju dostupne sa canonical oznakama ka novim URL-ovima.
 - Prerenderovan sadržaj i metadata postoje u statičkom HTML-u. Mađarski `html lang` proverava se posle obavezne postbuild obrade.

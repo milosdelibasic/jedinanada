@@ -14,6 +14,4 @@ for (const locale of ["sr", "hu"]) {
     .composite([{input:photo,left:710,top:0},{input:logo,left:52,top:56},{input:overlay}])
     .jpeg({quality:88}).toFile(`public/assets/seo/share-${locale}.jpg`);
 }
-for (const [size,name] of [[96,"favicon"],[180,"apple-touch-icon"],[192,"icon-192"],[512,"icon-512"]]) {
-  await sharp("public/resources/logo/logo.webp").resize(size,size,{fit:"contain",background:"#f8f9f4"}).png().toFile(`public/assets/seo/${name}.png`);
-}
+await import("./generate-icons.mjs");

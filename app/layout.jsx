@@ -25,9 +25,12 @@ export const metadata = {
     other: process.env.BING_SITE_VERIFICATION ? { "msvalidate.01": process.env.BING_SITE_VERIFICATION } : undefined
   },
   icons: {
-    icon: [{ url: "/assets/seo/favicon.png", sizes: "96x96", type: "image/png" }],
-    shortcut: "/assets/seo/favicon.png",
-    apple: "/assets/seo/apple-touch-icon.png"
+    icon: [
+      { url: "/assets/seo/favicon.png?v=2", sizes: "96x96", type: "image/png" },
+      { url: "/favicon.svg?v=2", sizes: "any", type: "image/svg+xml" }
+    ],
+    shortcut: "/favicon.ico?v=2",
+    apple: "/assets/seo/apple-touch-icon.png?v=2"
   },
   manifest: "/site.webmanifest",
   appleWebApp: {
