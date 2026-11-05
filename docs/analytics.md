@@ -15,4 +15,15 @@ SDK automatski beleži posete, sesije i preglede stranica. Ne šaljemo dodatne r
 
 Za proveru posle objave otvoriti sajt bez blokatora analitike, obići početnu, galeriju i mađarsku verziju i proveriti događaje `page_view` u Realtime izveštaju.
 
+## Klikovi za kontakt
+
+Svi linkovi za telefon i email, uključujući zaglavlje, podnožje, mobilnu traku i kartice materijala na oba jezika, šalju događaje:
+
+- `phone_click` — klik na telefonski link (`tel:`).
+- `email_click` — klik na email link (`mailto:`).
+
+Uz događaj šaljemo `contact_method` (`phone` ili `email`), `page_path` i `link_location` (zaglavlje, podnožje, mobilna traka ili ID sekcije). Ne šaljemo adresu, broj telefona, predmet ili sadržaj emaila. Linkovi i dalje odmah otvaraju odgovarajuću aplikaciju.
+
+U **Realtime → Event count by Event name** može se proveriti prijem događaja. U redovnom izveštaju **Events** broj događaja pokazuje broj klikova, a **Total users** broj korisnika koji su kliknuli; jedan korisnik može kliknuti više puta. To su pokušaji kontakta, ne potvrđeni pozivi ili poslati emailovi.
+
 Dokumentacija: [Firebase Analytics za web](https://firebase.google.com/docs/analytics/web/get-started), [automatsko praćenje pregleda stranica](https://developers.google.com/analytics/devguides/collection/ga4/views).

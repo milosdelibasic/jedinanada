@@ -21,16 +21,41 @@ export default function FirebaseAnalytics() {
 
     // Share initialization across mounts; keep the SDK out of server rendering.
     initialization ??= Promise.all([import("firebase/app"), import("firebase/analytics")])
-      .then(async ([{ getApp, getApps, initializeApp }, { getAnalytics, isSupported }]) => {
+      .then(async ([{ getApp, getApps, initializeApp }, { getAnalytics, isSupported, logEvent }]) => {
         if (!(await isSupported())) return;
         const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
         // GA4 automatically measures page loads and browser history changes.
-        getAnalytics(app);
+        return { analytics: getAnalytics(app), logEvent };
       })
       .catch(() => {
         // Analytics is optional when storage or network access is blocked.
         initialization = undefined;
       });
+
+    const onContactClick = event => {
+      const link = event.target.closest?.("a[href]");
+      if (!link) return;
+      const protocol = link.protocol.toLowerCase();
+      if (protocol !== "tel:" && protocol !== "mailto:") return;
+
+      const method = protocol === "tel:" ? "phone" : "email";
+      const parameters = {
+        contact_method: method,
+        page_path: window.location.pathname,
+        link_location: link.closest(".mobile-contact-bar") ? "mobile_contact_bar"
+          : link.closest("header") ? "header"
+          : link.closest("footer") ? "footer"
+          : link.closest("section[id]")?.id || "content"
+      };
+
+      // Do not delay opening the phone/email app or send addresses and subjects.
+      initialization?.then(client => {
+        if (client) client.logEvent(client.analytics, `${method}_click`, parameters);
+      }).catch(() => { /* Contact links work even when analytics is blocked. */ });
+    };
+
+    document.addEventListener("click", onContactClick, true);
+    return () => document.removeEventListener("click", onContactClick, true);
   }, []);
 
   return null;
